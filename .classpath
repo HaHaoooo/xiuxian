@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="lib" path="build/libs/modid-1.0.jar"/>
+	<classpathentry kind="lib" path="build/reobfJar/output.jar"/>
+	<classpathentry kind="lib" path="gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="run/mods/NBTEdit-1.12-2.0.2.jar"/>
+	<classpathentry kind="lib" path="run/mods/Patchouli-1.0-23.6.jar"/>
+	<classpathentry kind="lib" path="run/mods/worldedit-forge-mc1.12.2-6.1.10-dist.jar"/>
+	<classpathentry kind="output" path="build/classes/java/main"/>
+</classpath>

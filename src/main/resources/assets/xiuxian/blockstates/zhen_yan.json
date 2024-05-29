@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "normal": {
+      "model": "xiuxian:zhen_yan"
+    },
+    "facing=north": {
+      "model": "xiuxian:zhen_yan"
+    },
+    "facing=east": {
+      "model": "xiuxian:zhen_yan",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "xiuxian:zhen_yan",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "xiuxian:zhen_yan",
+      "y": 270
+    }
+  }
+}

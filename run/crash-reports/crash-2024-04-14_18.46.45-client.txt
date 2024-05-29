@@ -1,0 +1,123 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 4/14/24 6:46 PM
+Description: Rendering screen
+
+java.lang.IllegalStateException: Timer already cancelled.
+	at java.util.Timer.sched(Timer.java:397)
+	at java.util.Timer.scheduleAtFixedRate(Timer.java:328)
+	at com.haha.xiuxian.gui.LingQi.LingQiShow.drawScreen(LingQiShow.java:74)
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1124)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1119)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:398)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at java.util.Timer.sched(Timer.java:397)
+	at java.util.Timer.scheduleAtFixedRate(Timer.java:328)
+	at com.haha.xiuxian.gui.LingQi.LingQiShow.drawScreen(LingQiShow.java:74)
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396)
+
+-- Screen render details --
+Details:
+	Screen name: com.haha.xiuxian.gui.LingQi.LingQiShow
+	Mouse location: Scaled: (223, 43). Absolute: (446, 392)
+	Screen size: Scaled: (427, 240). Absolute: (854, 480). Scale factor of 2
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player790'/161, l='MpServer', x=-1813.63, y=4.00, z=686.57]]
+	Chunk stats: MultiplayerChunkCache: 555, 555
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-1866,4,674), Chunk: (at 6,0,2 in -117,42; contains blocks -1872,0,672 to -1857,255,687), Region: (-4,1; contains chunks -128,32 to -97,63, blocks -2048,0,512 to -1537,255,1023)
+	Level time: 5188 game time, 5188 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 78 total; [EntityHorse['马'/129, l='MpServer', x=-1815.57, y=4.00, z=612.30], EntityHorse['马'/130, l='MpServer', x=-1815.77, y=4.00, z=611.16], EntitySlime['史莱姆'/131, l='MpServer', x=-1817.17, y=4.00, z=623.73], EntityHorse['马'/132, l='MpServer', x=-1812.86, y=4.00, z=612.07], EntityChicken['鸡'/136, l='MpServer', x=-1784.19, y=4.00, z=632.14], EntitySlime['史莱姆'/137, l='MpServer', x=-1792.53, y=5.17, z=639.70], EntityPig['猪'/138, l='MpServer', x=-1778.73, y=4.00, z=669.64], EntitySheep['羊'/139, l='MpServer', x=-1778.54, y=4.00, z=730.23], EntitySheep['羊'/140, l='MpServer', x=-1776.73, y=4.00, z=751.19], EntitySheep['羊'/141, l='MpServer', x=-1781.66, y=4.00, z=745.23], EntityPlayerSP['Player790'/161, l='MpServer', x=-1813.63, y=4.00, z=686.57], EntitySlime['史莱姆'/147, l='MpServer', x=-1764.02, y=4.00, z=609.20], EntitySlime['史莱姆'/148, l='MpServer', x=-1772.43, y=4.00, z=634.81], EntitySlime['史莱姆'/149, l='MpServer', x=-1776.17, y=4.00, z=648.20], EntityPig['猪'/150, l='MpServer', x=-1763.30, y=4.00, z=682.24], EntitySheep['羊'/151, l='MpServer', x=-1767.78, y=4.00, z=682.45], EntitySlime['史莱姆'/152, l='MpServer', x=-1765.02, y=4.00, z=671.33], EntityCow['牛'/153, l='MpServer', x=-1779.12, y=4.00, z=743.88], EntityPig['猪'/155, l='MpServer', x=-1759.81, y=4.00, z=686.74], EntitySheep['羊'/156, l='MpServer', x=-1755.43, y=4.00, z=693.26], EntitySheep['羊'/157, l='MpServer', x=-1753.27, y=4.00, z=695.19], EntitySheep['羊'/159, l='MpServer', x=-1734.79, y=4.00, z=698.31], EntitySlime['史莱姆'/55, l='MpServer', x=-1851.07, y=4.00, z=650.28], EntitySlime['史莱姆'/56, l='MpServer', x=-1872.25, y=4.00, z=686.94], EntitySlime['史莱姆'/57, l='MpServer', x=-1841.15, y=4.72, z=659.78], EntitySheep['羊'/58, l='MpServer', x=-1855.55, y=4.00, z=753.30], EntitySheep['羊'/59, l='MpServer', x=-1859.82, y=4.00, z=752.62], EntitySlime['史莱姆'/73, l='MpServer', x=-1841.29, y=4.00, z=620.18], EntitySlime['史莱姆'/74, l='MpServer', x=-1840.17, y=4.00, z=665.16], EntitySlime['史莱姆'/75, l='MpServer', x=-1857.19, y=4.00, z=675.46], EntityZombie['僵尸'/76, l='MpServer', x=-1851.78, y=12.00, z=679.52], EntitySpider['蜘蛛'/77, l='MpServer', x=-1852.30, y=14.10, z=688.39], EntitySpider['蜘蛛'/78, l='MpServer', x=-1849.58, y=12.00, z=687.28], EntityEnderman['末影人'/79, l='MpServer', x=-1848.46, y=12.00, z=687.70], EntityWitch['女巫'/80, l='MpServer', x=-1847.21, y=12.00, z=689.40], EntityCreeper['爬行者'/81, l='MpServer', x=-1850.65, y=12.00, z=680.74], EntityZombie['僵尸'/82, l='MpServer', x=-1852.70, y=12.00, z=687.05], EntityZombie['僵尸'/83, l='MpServer', x=-1838.79, y=12.00, z=686.50], EntitySkeleton['骷髅'/84, l='MpServer', x=-1848.70, y=12.00, z=683.13], EntitySpider['蜘蛛'/85, l='MpServer', x=-1849.37, y=12.00, z=682.01], EntityZombie['僵尸'/86, l='MpServer', x=-1841.16, y=12.00, z=679.45], EntitySpider['蜘蛛'/87, l='MpServer', x=-1849.77, y=12.00, z=684.22], EntitySkeleton['骷髅'/88, l='MpServer', x=-1841.88, y=12.00, z=679.70], EntityCreeper['爬行者'/89, l='MpServer', x=-1846.30, y=12.00, z=685.79], EntityEnderman['末影人'/90, l='MpServer', x=-1845.53, y=12.00, z=686.37], EntitySpider['蜘蛛'/91, l='MpServer', x=-1852.30, y=12.00, z=685.33], EntitySlime['史莱姆'/92, l='MpServer', x=-1849.26, y=4.14, z=672.50], EntitySpider['蜘蛛'/93, l='MpServer', x=-1847.30, y=12.00, z=687.63], EntitySpider['蜘蛛'/94, l='MpServer', x=-1851.18, y=12.00, z=689.30], EntitySkeleton['骷髅'/95, l='MpServer', x=-1852.57, y=12.00, z=689.62], EntitySpider['蜘蛛'/96, l='MpServer', x=-1848.34, y=12.00, z=689.20], EntityZombie['僵尸'/97, l='MpServer', x=-1850.12, y=12.00, z=689.70], EntitySpider['蜘蛛'/98, l='MpServer', x=-1841.58, y=12.00, z=688.80], EntitySpider['蜘蛛'/99, l='MpServer', x=-1844.46, y=12.00, z=689.30], EntitySlime['史莱姆'/100, l='MpServer', x=-1859.75, y=5.17, z=732.77], EntitySheep['羊'/101, l='MpServer', x=-1843.73, y=4.00, z=743.42], EntitySheep['羊'/102, l='MpServer', x=-1851.54, y=4.00, z=741.00], EntityCow['牛'/103, l='MpServer', x=-1850.57, y=4.00, z=762.77], EntitySlime['史莱姆'/7527, l='MpServer', x=-1849.66, y=4.00, z=631.46], EntitySlime['史莱姆'/109, l='MpServer', x=-1827.59, y=4.00, z=645.11], EntityCreeper['爬行者'/110, l='MpServer', x=-1838.47, y=12.00, z=679.79], EntityCreeper['爬行者'/111, l='MpServer', x=-1839.06, y=12.00, z=685.70], EntityCreeper['爬行者'/112, l='MpServer', x=-1846.11, y=12.00, z=688.53], EntityCreeper['爬行者'/113, l='MpServer', x=-1837.50, y=16.00, z=684.50], EntityCreeper['爬行者'/114, l='MpServer', x=-1837.50, y=16.00, z=686.50], EntitySkeleton['骷髅'/115, l='MpServer', x=-1838.70, y=16.00, z=680.30], EntityCreeper['爬行者'/116, l='MpServer', x=-1837.99, y=16.00, z=680.54], EntityZombie['僵尸'/117, l='MpServer', x=-1839.30, y=16.00, z=679.70], EntityCreeper['爬行者'/118, l='MpServer', x=-1837.50, y=16.00, z=682.50], EntityZombie['僵尸'/119, l='MpServer', x=-1838.40, y=12.00, z=688.71], EntityCreeper['爬行者'/120, l='MpServer', x=-1838.45, y=12.00, z=684.73], EntitySkeleton['骷髅'/121, l='MpServer', x=-1839.10, y=12.00, z=687.78], EntitySkeleton['骷髅'/122, l='MpServer', x=-1839.10, y=12.00, z=688.42], EntityZombie['僵尸'/123, l='MpServer', x=-1847.19, y=12.00, z=686.54], EntitySkeleton['骷髅'/124, l='MpServer', x=-1838.70, y=16.00, z=688.70], EntitySkeleton['骷髅'/125, l='MpServer', x=-1839.30, y=16.00, z=689.30], EntitySkeleton['骷髅'/126, l='MpServer', x=-1838.05, y=16.00, z=688.48], EntitySlime['史莱姆'/127, l='MpServer', x=-1829.31, y=4.34, z=611.93]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:420)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2741)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:419)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Mac OS X (x86_64) version 13.6.5
+	Java Version: 1.8.0_402, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 1080296168 bytes (1030 MB) / 1751646208 bytes (1670 MB) up to 3817865216 bytes (3641 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2860 7 mods loaded, 7 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID        | Version      | Source                                                             | Signature |
+	|:------ |:--------- |:------------ |:------------------------------------------------------------------ |:--------- |
+	| LCHIJA | minecraft | 1.12.2       | minecraft.jar                                                      | None      |
+	| LCHIJA | mcp       | 9.42         | minecraft.jar                                                      | None      |
+	| LCHIJA | FML       | 8.0.99.99    | forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12-recomp.jar | None      |
+	| LCHIJA | forge     | 14.23.5.2860 | forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12-recomp.jar | None      |
+	| LCHIJA | xiuxian   | 1.0          | main                                                               | None      |
+	| LCHIJA | nbtedit   | 1.11.2-2.0.2 | NBTEdit-1.12-2.0.2.jar                                             | None      |
+	| LCHIJA | patchouli | 1.0-23.6     | Patchouli-1.0-23.6.jar                                             | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'Apple' Version: '2.1 Metal - 83.1' Renderer: 'Apple M2 Pro'
+	Patchouli open book context: n/a
+	Launched Version: ${MC_VERSION}
+	LWJGL: 2.9.2
+	OpenGL: Apple M2 Pro GL version 2.1 Metal - 83.1, Apple
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because ARB_framebuffer_object is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	CPU: 12x Apple M2 Pro

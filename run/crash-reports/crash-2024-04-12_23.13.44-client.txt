@@ -1,0 +1,152 @@
+---- Minecraft Crash Report ----
+// Quite honestly, I wouldn't worry myself about that.
+
+Time: 4/12/24 11:13 PM
+Description: Rendering entity in world
+
+java.lang.ClassCastException: net.minecraft.entity.passive.EntityVillager cannot be cast to net.minecraft.entity.player.EntityPlayer
+	at com.haha.xiuxian.events.WalkingPosChanged.onRenderPlayer(WalkingPosChanged.java:15)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_17_WalkingPosChanged_onRenderPlayer_Pre.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraft.client.renderer.entity.RenderLivingBase.doRender(RenderLivingBase.java:78)
+	at net.minecraft.client.renderer.entity.RenderLiving.doRender(RenderLiving.java:48)
+	at net.minecraft.client.renderer.entity.RenderLiving.doRender(RenderLiving.java:16)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntity(RenderManager.java:384)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntityStatic(RenderManager.java:368)
+	at net.minecraft.client.renderer.RenderGlobal.renderEntities(RenderGlobal.java:628)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorldPass(EntityRenderer.java:1347)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1259)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1062)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1119)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:398)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at com.haha.xiuxian.events.WalkingPosChanged.onRenderPlayer(WalkingPosChanged.java:15)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_17_WalkingPosChanged_onRenderPlayer_Pre.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraft.client.renderer.entity.RenderLivingBase.doRender(RenderLivingBase.java:78)
+	at net.minecraft.client.renderer.entity.RenderLiving.doRender(RenderLiving.java:48)
+	at net.minecraft.client.renderer.entity.RenderLiving.doRender(RenderLiving.java:16)
+
+-- Entity being rendered --
+Details:
+	Entity Type: minecraft:villager (net.minecraft.entity.passive.EntityVillager)
+	Entity ID: 79
+	Entity Name: 村民
+	Entity's Exact location: 1228.46, 4.00, 1407.74
+	Entity's Block location: World: (1228,4,1407), Chunk: (at 12,0,15 in 76,87; contains blocks 1216,0,1392 to 1231,255,1407), Region: (2,2; contains chunks 64,64 to 95,95, blocks 1024,0,1024 to 1535,255,1535)
+	Entity's Momentum: 0.00, -0.06, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+
+-- Renderer details --
+Details:
+	Assigned renderer: net.minecraft.client.renderer.entity.RenderVillager@5ba0ad41
+	Location: -2.18,-2.01,15.89 - World: (-3,-3,15), Chunk: (at 13,-1,15 in -1,0; contains blocks -16,0,0 to -1,255,15), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Rotation: 175.78125
+	Delta: 0.67999643
+Stacktrace:
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntity(RenderManager.java:384)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntityStatic(RenderManager.java:368)
+	at net.minecraft.client.renderer.RenderGlobal.renderEntities(RenderGlobal.java:628)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorldPass(EntityRenderer.java:1347)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1259)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player667'/101, l='MpServer', x=1230.64, y=6.01, z=1391.85]]
+	Chunk stats: MultiplayerChunkCache: 622, 622
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (1115,4,1475), Chunk: (at 11,0,3 in 69,92; contains blocks 1104,0,1472 to 1119,255,1487), Region: (2,2; contains chunks 64,64 to 95,95, blocks 1024,0,1024 to 1535,255,1535)
+	Level time: 7222 game time, 7222 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 46 total; [EntitySlime['史莱姆'/67, l='MpServer', x=1209.34, y=4.00, z=1315.64], EntitySlime['史莱姆'/68, l='MpServer', x=1214.69, y=4.00, z=1340.28], EntityVillager['村民'/69, l='MpServer', x=1203.30, y=3.94, z=1400.56], EntityVillager['村民'/70, l='MpServer', x=1202.71, y=5.00, z=1401.50], EntityVillager['村民'/71, l='MpServer', x=1209.29, y=4.00, z=1392.50], EntityVillager['村民'/72, l='MpServer', x=1215.68, y=4.00, z=1401.30], EntityVillager['村民'/73, l='MpServer', x=1207.49, y=4.00, z=1414.08], EntitySlime['史莱姆'/75, l='MpServer', x=1222.50, y=5.42, z=1343.65], EntitySlime['史莱姆'/76, l='MpServer', x=1219.06, y=4.00, z=1333.38], EntityVillager['村民'/77, l='MpServer', x=1224.89, y=5.00, z=1400.23], EntityVillager['村民'/78, l='MpServer', x=1221.66, y=4.94, z=1392.68], EntityVillager['村民'/79, l='MpServer', x=1228.46, y=4.00, z=1407.74], EntityVillager['村民'/80, l='MpServer', x=1224.53, y=5.00, z=1414.34], EntityVillager['村民'/81, l='MpServer', x=1220.56, y=3.94, z=1419.21], EntityItem['item.item.potato'/82, l='MpServer', x=1217.35, y=5.00, z=1423.12], EntitySlime['史莱姆'/83, l='MpServer', x=1227.25, y=4.00, z=1423.70], EntityItem['item.item.potato'/84, l='MpServer', x=1217.36, y=4.94, z=1428.02], EntitySlime['史莱姆'/86, l='MpServer', x=1236.27, y=4.00, z=1372.09], EntityVillager['村民'/87, l='MpServer', x=1240.55, y=3.94, z=1429.37], EntitySlime['史莱姆'/88, l='MpServer', x=1240.40, y=3.94, z=1424.61], EntitySlime['史莱姆'/89, l='MpServer', x=1240.58, y=4.00, z=1462.20], EntitySlime['史莱姆'/90, l='MpServer', x=1239.85, y=4.00, z=1464.15], EntitySlime['史莱姆'/91, l='MpServer', x=1237.91, y=5.00, z=1463.16], EntitySlime['史莱姆'/92, l='MpServer', x=1259.10, y=4.75, z=1350.82], EntitySlime['史莱姆'/93, l='MpServer', x=1249.40, y=4.75, z=1460.26], EntitySlime['史莱姆'/94, l='MpServer', x=1249.86, y=5.50, z=1458.59], EntitySlime['史莱姆'/95, l='MpServer', x=1256.91, y=5.00, z=1457.74], EntitySlime['史莱姆'/97, l='MpServer', x=1276.36, y=4.00, z=1315.42], EntityPlayerSP['Player667'/101, l='MpServer', x=1230.64, y=6.01, z=1391.85], EntityVillager['村民'/42, l='MpServer', x=1166.59, y=4.00, z=1397.51], EntitySlime['史莱姆'/43, l='MpServer', x=1154.11, y=4.00, z=1394.38], EntitySlime['史莱姆'/44, l='MpServer', x=1181.72, y=4.00, z=1317.20], EntityVillager['村民'/45, l='MpServer', x=1170.50, y=6.00, z=1388.64], EntityVillager['村民'/46, l='MpServer', x=1179.45, y=4.00, z=1394.72], EntityVillager['村民'/47, l='MpServer', x=1183.53, y=4.00, z=1403.32], EntitySlime['史莱姆'/48, l='MpServer', x=1183.53, y=4.00, z=1426.23], EntitySlime['史莱姆'/52, l='MpServer', x=1193.79, y=4.00, z=1318.49], EntitySlime['史莱姆'/53, l='MpServer', x=1198.29, y=5.50, z=1321.31], EntitySlime['史莱姆'/54, l='MpServer', x=1184.23, y=4.00, z=1323.49], EntitySlime['史莱姆'/55, l='MpServer', x=1189.45, y=4.00, z=1328.81], EntityVillager['村民'/56, l='MpServer', x=1184.30, y=5.00, z=1392.30], EntityVillager['村民'/57, l='MpServer', x=1192.43, y=5.00, z=1406.62], EntityVillager['村民'/58, l='MpServer', x=1190.93, y=5.00, z=1397.49], EntityVillager['村民'/59, l='MpServer', x=1197.29, y=4.00, z=1410.55], EntitySlime['史莱姆'/60, l='MpServer', x=1190.03, y=5.42, z=1440.01], EntitySlime['史莱姆'/61, l='MpServer', x=1196.44, y=5.00, z=1435.00]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:420)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2741)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:419)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Mac OS X (x86_64) version 13.6.5
+	Java Version: 1.8.0_402, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 871300904 bytes (830 MB) / 1557135360 bytes (1485 MB) up to 3817865216 bytes (3641 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2860 7 mods loaded, 7 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID        | Version      | Source                                                             | Signature |
+	|:------ |:--------- |:------------ |:------------------------------------------------------------------ |:--------- |
+	| LCHIJA | minecraft | 1.12.2       | minecraft.jar                                                      | None      |
+	| LCHIJA | mcp       | 9.42         | minecraft.jar                                                      | None      |
+	| LCHIJA | FML       | 8.0.99.99    | forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12-recomp.jar | None      |
+	| LCHIJA | forge     | 14.23.5.2860 | forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12-recomp.jar | None      |
+	| LCHIJA | xiuxian   | 1.0          | main                                                               | None      |
+	| LCHIJA | nbtedit   | 1.11.2-2.0.2 | NBTEdit-1.12-2.0.2.jar                                             | None      |
+	| LCHIJA | patchouli | 1.0-23.6     | Patchouli-1.0-23.6.jar                                             | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'Apple' Version: '2.1 Metal - 83.1' Renderer: 'Apple M2 Pro'
+	Patchouli open book context: n/a
+	Launched Version: ${MC_VERSION}
+	LWJGL: 2.9.2
+	OpenGL: Apple M2 Pro GL version 2.1 Metal - 83.1, Apple
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because ARB_framebuffer_object is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	CPU: 12x Apple M2 Pro

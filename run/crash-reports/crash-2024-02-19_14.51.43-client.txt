@@ -1,0 +1,123 @@
+---- Minecraft Crash Report ----
+// Would you like a cupcake?
+
+Time: 2/19/24 2:51 PM
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at net.minecraft.client.gui.inventory.GuiContainer.initGui(GuiContainer.java:66)
+	at com.haha.xiuxian.Key.KeyBindProperties$KeySettingGui.initGui(KeyBindProperties.java:73)
+	at com.haha.xiuxian.Key.KeyBindProperties.onKeyPressed(KeyBindProperties.java:37)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_24_KeyBindProperties_onKeyPressed_KeyInputEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraftforge.fml.common.FMLCommonHandler.fireKeyInput(FMLCommonHandler.java:565)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2017)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1808)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1098)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:398)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at net.minecraft.client.gui.inventory.GuiContainer.initGui(GuiContainer.java:66)
+	at com.haha.xiuxian.Key.KeyBindProperties$KeySettingGui.initGui(KeyBindProperties.java:73)
+	at com.haha.xiuxian.Key.KeyBindProperties.onKeyPressed(KeyBindProperties.java:37)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_24_KeyBindProperties_onKeyPressed_KeyInputEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraftforge.fml.common.FMLCommonHandler.fireKeyInput(FMLCommonHandler.java:565)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2017)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player507'/73, l='MpServer', x=520.01, y=4.00, z=-750.63]]
+	Chunk stats: MultiplayerChunkCache: 621, 621
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (506,4,-764), Chunk: (at 10,0,4 in 31,-48; contains blocks 496,0,-768 to 511,255,-753), Region: (0,-2; contains chunks 0,-64 to 31,-33, blocks 0,0,-1024 to 511,255,-513)
+	Level time: 6061 game time, 6061 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 49 total; [EntitySlime['史莱姆'/5, l='MpServer', x=445.82, y=4.92, z=-759.87], EntitySlime['史莱姆'/7, l='MpServer', x=445.02, y=4.00, z=-722.60], EntitySlime['史莱姆'/11, l='MpServer', x=457.35, y=4.00, z=-737.12], EntitySlime['史莱姆'/13, l='MpServer', x=469.87, y=4.95, z=-672.48], EntityItem['item.item.slimeball'/14, l='MpServer', x=484.85, y=4.00, z=-792.49], EntityXPOrb['经验球'/15, l='MpServer', x=484.46, y=4.00, z=-794.91], EntityItem['item.item.slimeball'/16, l='MpServer', x=491.83, y=4.00, z=-776.10], EntitySlime['史莱姆'/17, l='MpServer', x=488.32, y=4.27, z=-780.10], EntityItem['item.item.slimeball'/18, l='MpServer', x=493.10, y=4.00, z=-764.23], EntityPlayerSP['Player507'/73, l='MpServer', x=520.01, y=4.00, z=-750.63], EntityXPOrb['经验球'/19, l='MpServer', x=493.16, y=4.00, z=-765.12], EntityCow['牛'/20, l='MpServer', x=495.10, y=4.00, z=-699.22], EntitySlime['史莱姆'/21, l='MpServer', x=505.98, y=4.27, z=-827.08], EntityHorse['马'/22, l='MpServer', x=508.21, y=4.00, z=-793.57], EntityItem['item.item.slimeball'/23, l='MpServer', x=506.52, y=4.00, z=-784.02], EntityXPOrb['经验球'/24, l='MpServer', x=503.97, y=4.00, z=-789.15], EntitySlime['史莱姆'/25, l='MpServer', x=505.28, y=4.04, z=-733.33], EntityChicken['鸡'/26, l='MpServer', x=509.49, y=4.00, z=-703.07], EntityPig['猪'/27, l='MpServer', x=505.96, y=4.00, z=-686.77], EntityChicken['鸡'/30, l='MpServer', x=516.13, y=4.00, z=-820.24], EntityHorse['马'/31, l='MpServer', x=513.43, y=4.00, z=-809.30], EntityHorse['马'/32, l='MpServer', x=512.92, y=4.00, z=-807.62], EntitySlime['史莱姆'/33, l='MpServer', x=519.40, y=4.04, z=-712.85], EntityPig['猪'/34, l='MpServer', x=516.65, y=4.00, z=-700.20], EntitySlime['史莱姆'/35, l='MpServer', x=524.39, y=4.00, z=-688.96], EntitySlime['史莱姆'/36, l='MpServer', x=515.77, y=4.64, z=-687.94], EntitySlime['史莱姆'/38, l='MpServer', x=531.48, y=5.17, z=-758.75], EntitySlime['史莱姆'/39, l='MpServer', x=537.87, y=5.10, z=-755.08], EntityItem['item.item.slimeball'/40, l='MpServer', x=534.78, y=4.00, z=-740.38], EntityXPOrb['经验球'/41, l='MpServer', x=528.66, y=4.00, z=-750.08], EntitySlime['史莱姆'/42, l='MpServer', x=540.29, y=5.08, z=-746.58], EntitySlime['史莱姆'/43, l='MpServer', x=544.47, y=4.14, z=-754.31], EntityXPOrb['经验球'/44, l='MpServer', x=534.02, y=4.00, z=-733.83], EntitySlime['史莱姆'/45, l='MpServer', x=532.30, y=4.42, z=-717.50], EntitySlime['史莱姆'/51, l='MpServer', x=546.83, y=4.28, z=-771.53], EntitySlime['史莱姆'/52, l='MpServer', x=548.39, y=4.72, z=-754.21], EntitySlime['史莱姆'/53, l='MpServer', x=550.08, y=4.00, z=-735.93], EntitySlime['史莱姆'/54, l='MpServer', x=556.88, y=4.00, z=-733.00], EntitySlime['史莱姆'/56, l='MpServer', x=567.21, y=4.81, z=-757.44], EntitySlime['史莱姆'/57, l='MpServer', x=560.75, y=4.00, z=-761.87], EntitySlime['史莱姆'/58, l='MpServer', x=567.03, y=4.14, z=-752.06], EntitySlime['史莱姆'/59, l='MpServer', x=577.47, y=4.64, z=-742.37], EntitySlime['史莱姆'/60, l='MpServer', x=574.97, y=4.64, z=-735.94], EntitySlime['史莱姆'/61, l='MpServer', x=564.63, y=4.28, z=-715.31], EntityHorse['马'/63, l='MpServer', x=585.58, y=4.00, z=-825.81], EntityHorse['马'/64, l='MpServer', x=584.54, y=4.00, z=-818.04], EntitySheep['羊'/65, l='MpServer', x=581.65, y=4.00, z=-808.77], EntitySlime['史莱姆'/66, l='MpServer', x=586.39, y=4.81, z=-763.29], EntitySlime['史莱姆'/68, l='MpServer', x=596.72, y=5.08, z=-742.59]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:420)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2741)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:427)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Mac OS X (x86_64) version 13.0
+	Java Version: 1.8.0_392, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 674285792 bytes (643 MB) / 1583349760 bytes (1510 MB) up to 3817865216 bytes (3641 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2860 6 mods loaded, 6 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID        | Version      | Source                                                             | Signature |
+	|:------ |:--------- |:------------ |:------------------------------------------------------------------ |:--------- |
+	| LCHIJA | minecraft | 1.12.2       | minecraft.jar                                                      | None      |
+	| LCHIJA | mcp       | 9.42         | minecraft.jar                                                      | None      |
+	| LCHIJA | FML       | 8.0.99.99    | forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12-recomp.jar | None      |
+	| LCHIJA | forge     | 14.23.5.2860 | forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12-recomp.jar | None      |
+	| LCHIJA | xiuxian   | 1.0          | main                                                               | None      |
+	| LCHIJA | nbtedit   | 1.11.2-2.0.2 | NBTEdit-1.12-2.0.2.jar                                             | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'Apple' Version: '2.1 Metal - 83' Renderer: 'Apple M2 Pro'
+	Launched Version: ${MC_VERSION}
+	LWJGL: 2.9.2
+	OpenGL: Apple M2 Pro GL version 2.1 Metal - 83, Apple
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because ARB_framebuffer_object is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	CPU: 12x Apple M2 Pro

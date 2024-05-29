@@ -1,0 +1,48 @@
+# Items
+item.xiuxian.ling_gen_test.name=神秘的八卦罗盘
+item.xiuxian.low_ling_shi.name=§a下品灵石
+item.xiuxian.mid_ling_shi.name=§b中品灵石
+item.xiuxian.high_ling_shi.name=§c上品灵石
+item.xiuxian.extreme_ling_shi.name=§e极品灵石
+item.xiuxian.gongfa.name=功法（无效果）
+item.xiuxian.metal_gongfa.name=金属性功法（未知）
+item.xiuxian.wood_gongfa.name=木属性功法（未知）
+item.xiuxian.water_gongfa.name=水属性功法（未知）
+item.xiuxian.fire_gongfa.name=火属性功法（未知）
+item.xiuxian.dirt_gongfa.name=土属性功法（未知）
+item.xiuxian.empty_gongfa.name=空属性功法（未知）
+item.xiuxian.double_jump_fu_lu.name=腾空挪移符箓
+item.xiuxian.flame_explode_fu_lu.name=赤焰天星爆符箓
+
+# Blocks
+tile.xiuxian.low_ling_shi_main_block.name=§a下品灵石母岩
+tile.xiuxian.low_ling_shi_ore_1.name=§a下品灵石矿簇（发芽）
+tile.xiuxian.low_ling_shi_ore_2.name=§a下品灵石矿簇（生长阶段1）
+tile.xiuxian.low_ling_shi_ore_3.name=§a下品灵石矿簇（生长阶段2）
+tile.xiuxian.low_ling_shi_ore_4.name=§a下品灵石矿簇（成熟
+tile.xiuxian.mid_ling_shi_main_block.name=§b中品灵石母岩
+tile.xiuxian.mid_ling_shi_ore_1.name=§b中品灵石矿簇（发芽）
+tile.xiuxian.huai_yang_cao.name=怀阳草
+
+tile.xiuxian.zhen_yan.name=阵盘
+
+# Creative Tabs
+itemGroup.xiuxian.item=修仙·物品
+itemGroup.xiuxian.block=修仙·方块
+itemGroup.xiuxian.zhenfa=修仙·阵法
+itemGroup.xiuxian.gongfa=修仙·功法
+itemGroup.xiuxian.fabao=修仙·法宝
+
+# Keys
+key.categories.xiuxian=修仙
+key.xiuxian.key_1=属性页面
+key.xiuxian.key_2=ui收缩
+key.xiuxian.key_3=神识
+
+# Configs
+config.xiuxian.general.metal=金灵根
+config.xiuxian.general.wood=木灵根
+config.xiuxian.general.water=水灵根
+config.xiuxian.general.fire=火灵根
+config.xiuxian.general.dirt=土灵根
+config.xiuxian.general.empty=空

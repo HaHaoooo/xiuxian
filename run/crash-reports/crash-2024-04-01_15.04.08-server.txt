@@ -1,0 +1,89 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 4/1/24 3:04 PM
+Description: Exception ticking world
+
+java.lang.ArrayIndexOutOfBoundsException: 1289
+	at com.haha.xiuxian.Items.Crops.HuaiYang.findStoneNearLava(HuaiYang.java:99)
+	at com.haha.xiuxian.Items.Crops.HuaiYang.generate(HuaiYang.java:83)
+	at net.minecraftforge.fml.common.registry.GameRegistry.generateWorld(GameRegistry.java:167)
+	at net.minecraft.world.chunk.Chunk.populate(Chunk.java:1020)
+	at net.minecraft.world.chunk.Chunk.populate(Chunk.java:985)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:157)
+	at net.minecraft.server.management.PlayerChunkMapEntry.providePlayerChunk(PlayerChunkMapEntry.java:126)
+	at net.minecraft.server.management.PlayerChunkMap.tick(PlayerChunkMap.java:170)
+	at net.minecraft.world.WorldServer.tick(WorldServer.java:227)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:756)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:668)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:185)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.haha.xiuxian.Items.Crops.HuaiYang.findStoneNearLava(HuaiYang.java:99)
+	at com.haha.xiuxian.Items.Crops.HuaiYang.generate(HuaiYang.java:83)
+	at net.minecraftforge.fml.common.registry.GameRegistry.generateWorld(GameRegistry.java:167)
+	at net.minecraft.world.chunk.Chunk.populate(Chunk.java:1020)
+	at net.minecraft.world.chunk.Chunk.populate(Chunk.java:985)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:157)
+	at net.minecraft.server.management.PlayerChunkMapEntry.providePlayerChunk(PlayerChunkMapEntry.java:126)
+	at net.minecraft.server.management.PlayerChunkMap.tick(PlayerChunkMap.java:170)
+	at net.minecraft.world.WorldServer.tick(WorldServer.java:227)
+
+-- Affected level --
+Details:
+	Level name: 新的世界
+	All players: 1 total; [EntityPlayerMP['Player554'/60, l='新的世界', x=1227.50, y=83.39, z=-274.93]]
+	Chunk stats: ServerChunkCache: 718 Drop: 0
+	Level seed: -2424918308719566072
+	Level generator: ID 01 - flat, ver 0. Features enabled: true
+	Level generator options: 3;minecraft:bedrock,59*minecraft:stone,3*minecraft:dirt,minecraft:grass;1;village,biome_1,decoration,stronghold,mineshaft,lake,lava_lake,dungeon
+	Level spawn location: World: (1043,4,-247), Chunk: (at 3,0,9 in 65,-16; contains blocks 1040,0,-256 to 1055,255,-241), Region: (2,-1; contains chunks 64,-32 to 95,-1, blocks 1024,0,-512 to 1535,255,-1)
+	Level time: 5961 game time, 5961 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 42361 (now: false), thunder time: 153678 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:756)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:668)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:185)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Thread.java:750)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Mac OS X (x86_64) version 13.6.5
+	Java Version: 1.8.0_392, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 493428120 bytes (470 MB) / 1709178880 bytes (1630 MB) up to 3817865216 bytes (3641 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2860 7 mods loaded, 7 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID        | Version      | Source                                                             | Signature |
+	|:------ |:--------- |:------------ |:------------------------------------------------------------------ |:--------- |
+	| LCHIJA | minecraft | 1.12.2       | minecraft.jar                                                      | None      |
+	| LCHIJA | mcp       | 9.42         | minecraft.jar                                                      | None      |
+	| LCHIJA | FML       | 8.0.99.99    | forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12-recomp.jar | None      |
+	| LCHIJA | forge     | 14.23.5.2860 | forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12-recomp.jar | None      |
+	| LCHIJA | xiuxian   | 1.0          | main                                                               | None      |
+	| LCHIJA | nbtedit   | 1.11.2-2.0.2 | NBTEdit-1.12-2.0.2.jar                                             | None      |
+	| LCHIJA | patchouli | 1.0-23.6     | Patchouli-1.0-23.6.jar                                             | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Patchouli open book context: n/a
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player554'/60, l='新的世界', x=1227.50, y=83.39, z=-274.93]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

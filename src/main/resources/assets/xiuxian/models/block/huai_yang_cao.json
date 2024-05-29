@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "xiuxian:crops/huai_yang_cao",
+    "particle": "xiuxian:crops/huai_yang_cao"
+  }
+}

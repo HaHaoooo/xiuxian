@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "xiuxian:crops/huai_yang_cao"
+  }
+}
