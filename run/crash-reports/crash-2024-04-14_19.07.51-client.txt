@@ -7,8 +7,8 @@ Description: Unexpected error
 java.lang.IllegalStateException: Timer already cancelled.
 	at java.util.Timer.sched(Timer.java:397)
 	at java.util.Timer.scheduleAtFixedRate(Timer.java:328)
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.startTimer(LingQiShow.java:129)
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.initGui(LingQiShow.java:60)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.startTimer(LingQiShow.java:129)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.initGui(LingQiShow.java:60)
 	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:478)
 	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1018)
 	at com.haha.xiuxian.key.LingqiCheck.openGui(LingqiCheck.java:27)
@@ -43,8 +43,8 @@ Thread: Client thread
 Stacktrace:
 	at java.util.Timer.sched(Timer.java:397)
 	at java.util.Timer.scheduleAtFixedRate(Timer.java:328)
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.startTimer(LingQiShow.java:129)
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.initGui(LingQiShow.java:60)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.startTimer(LingQiShow.java:129)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.initGui(LingQiShow.java:60)
 	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:478)
 	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1018)
 	at com.haha.xiuxian.key.LingqiCheck.openGui(LingqiCheck.java:27)

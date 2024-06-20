@@ -5,7 +5,7 @@ Time: 4/14/24 5:00 PM
 Description: Ticking memory connection
 
 java.lang.NullPointerException: Ticking memory connection
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.saveData(LingQiShow.java:155)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.saveData(LingQiShow.java:155)
 	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_25_LingQiShow_saveData_PlayerLoggedInEvent.invoke(.dynamic)
 	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
 	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
@@ -29,7 +29,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Thread: Server thread
 Stacktrace:
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.saveData(LingQiShow.java:155)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.saveData(LingQiShow.java:155)
 	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_25_LingQiShow_saveData_PlayerLoggedInEvent.invoke(.dynamic)
 	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
 	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)

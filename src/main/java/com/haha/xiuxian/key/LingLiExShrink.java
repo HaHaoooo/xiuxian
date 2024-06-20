@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 import org.lwjgl.input.Keyboard;
 
-import static com.haha.xiuxian.gui.Hud.LingLiEx.*;
+import static com.haha.xiuxian.gui.hud.LingLiEx.*;
 @Mod.EventBusSubscriber
 public class LingLiExShrink {
     public static KeyBinding KEY2;

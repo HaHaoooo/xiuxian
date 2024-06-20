@@ -1,10 +1,10 @@
 package com.haha.xiuxian.proxy;
 
-import com.haha.xiuxian.capabilities.Chunk.DataContainer;
-import com.haha.xiuxian.capabilities.Chunk.DataContainerImpl;
-import com.haha.xiuxian.capabilities.Chunk.DataStorage;
-import com.haha.xiuxian.capabilities.PlayerData.Attach.DataHandler;
-import com.haha.xiuxian.capabilities.PlayerData.Attach.DataInject;
+import com.haha.xiuxian.capabilities.chunk.DataContainer;
+import com.haha.xiuxian.capabilities.chunk.DataContainerImpl;
+import com.haha.xiuxian.capabilities.chunk.DataStorage;
+import com.haha.xiuxian.capabilities.playerdata.attach.DataHandler;
+import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
 import com.haha.xiuxian.nbt.PlayerData;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.CapabilityManager;

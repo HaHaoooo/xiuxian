@@ -1,9 +1,9 @@
 package com.haha.xiuxian.creativetabs;
 
-import com.haha.xiuxian.blocks.LingShi.Low.LowLingShiMainBlock;
-import com.haha.xiuxian.blocks.ZhenFa.ZhenYan;
-import com.haha.xiuxian.items.Gongfa.Gongfa;
+import com.haha.xiuxian.blocks.lingshi.Low.LowLingShiMainBlock;
+import com.haha.xiuxian.blocks.zhenfa.ZhenYan;
 import com.haha.xiuxian.items.LingGenTest;
+import com.haha.xiuxian.items.gongfa.Gongfa;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;

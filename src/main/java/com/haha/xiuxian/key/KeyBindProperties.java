@@ -1,7 +1,7 @@
 package com.haha.xiuxian.key;
 
-import com.haha.xiuxian.gui.PropertyShow.PropertyGui;
 import com.haha.xiuxian.XiuXian;
+import com.haha.xiuxian.gui.propertyshow.PropertyGui;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.client.settings.KeyConflictContext;

@@ -6,7 +6,7 @@ Description: Exception in server tick loop
 
 java.lang.NullPointerException: Exception in server tick loop
 	at java.util.Objects.requireNonNull(Objects.java:203)
-	at com.haha.xiuxian.gui.LingQi.LingQiEnvironment.onChunkLoad(LingQiEnvironment.java:19)
+	at com.haha.xiuxian.gui.lingqi.LingQiEnvironment.onChunkLoad(LingQiEnvironment.java:19)
 	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_13_LingQiEnvironment_onChunkLoad_Load.invoke(.dynamic)
 	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
 	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)

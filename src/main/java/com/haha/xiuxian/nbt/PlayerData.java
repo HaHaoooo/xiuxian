@@ -1,9 +1,9 @@
 package com.haha.xiuxian.nbt;
 
-import com.haha.xiuxian.capabilities.PlayerData.Storage.DataContainer;
-import com.haha.xiuxian.capabilities.PlayerData.Attach.DataInject;
-import com.haha.xiuxian.worldgen.InitialHouse;
 import com.haha.xiuxian.XiuXian;
+import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
+import com.haha.xiuxian.capabilities.playerdata.storage.DataContainer;
+import com.haha.xiuxian.worldgen.InitialHouse;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;

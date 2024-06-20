@@ -1,7 +1,7 @@
 package com.haha.xiuxian.events;
 
-import com.haha.xiuxian.capabilities.PlayerData.Attach.DataInject;
 import com.haha.xiuxian.XiuXian;
+import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumParticleTypes;

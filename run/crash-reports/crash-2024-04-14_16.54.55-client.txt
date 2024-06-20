@@ -5,7 +5,7 @@ Time: 4/14/24 4:54 PM
 Description: Rendering screen
 
 java.lang.NullPointerException: Rendering screen
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.drawScreen(LingQiShow.java:77)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.drawScreen(LingQiShow.java:77)
 	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396)
 	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1124)
 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1119)
@@ -31,12 +31,12 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Thread: Client thread
 Stacktrace:
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.drawScreen(LingQiShow.java:77)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.drawScreen(LingQiShow.java:77)
 	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396)
 
 -- Screen render details --
 Details:
-	Screen name: com.haha.xiuxian.gui.LingQi.LingQiShow
+	Screen name: com.haha.xiuxian.gui.lingqi.LingQiShow
 	Mouse location: Scaled: (237, 80). Absolute: (474, 319)
 	Screen size: Scaled: (427, 240). Absolute: (854, 480). Scale factor of 2
 

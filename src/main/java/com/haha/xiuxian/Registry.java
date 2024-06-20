@@ -1,27 +1,33 @@
 package com.haha.xiuxian;
 
-import com.haha.xiuxian.blocks.LingShi.Low.*;
-import com.haha.xiuxian.blocks.LingShi.Mid.MidLingShiMainBlock;
-import com.haha.xiuxian.blocks.LingShi.Mid.MidLingShiOre1;
-import com.haha.xiuxian.blocks.ZhenFa.ZhenYan;
-import com.haha.xiuxian.items.Crops.HuaiYang;
-import com.haha.xiuxian.items.FaBao.FlameExplode;
-import com.haha.xiuxian.items.FaBao.JumpFuLu;
-import com.haha.xiuxian.items.Gongfa.*;
+import com.haha.xiuxian.blocks.lingshi.Low.*;
+import com.haha.xiuxian.blocks.lingshi.Mid.MidLingShiMainBlock;
+import com.haha.xiuxian.blocks.lingshi.Mid.MidLingShiOre1;
+import com.haha.xiuxian.blocks.zhenfa.ZhenYan;
+import com.haha.xiuxian.entity.ZhenFaEntity1;
+import com.haha.xiuxian.entity.renderer.ZhenFaEntity1Renderer;
 import com.haha.xiuxian.items.LingGenTest;
-import com.haha.xiuxian.items.LingShi.ExtremeLingShi;
-import com.haha.xiuxian.items.LingShi.HighLingShi;
-import com.haha.xiuxian.items.LingShi.LowLingShi;
-import com.haha.xiuxian.items.LingShi.MidLingShi;
+import com.haha.xiuxian.items.crops.HuaiYang;
+import com.haha.xiuxian.items.fabao.FlameExplode;
+import com.haha.xiuxian.items.fabao.JumpFuLu;
+import com.haha.xiuxian.items.gongfa.*;
+import com.haha.xiuxian.items.lingshi.ExtremeLingShi;
+import com.haha.xiuxian.items.lingshi.HighLingShi;
+import com.haha.xiuxian.items.lingshi.LowLingShi;
+import com.haha.xiuxian.items.lingshi.MidLingShi;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootTableList;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.EntityEntry;
+import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
 
 import java.util.ArrayList;
 
@@ -57,7 +63,7 @@ public class Registry {
     }
 
     @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block>  event){
+    public static void registerBlocks(RegistryEvent.Register<Block> event){
         blockRegsitry.add(LowLingShiMainBlock.INSTANCE);
         blockRegsitry.add(LowLingShiOre1.INSTANCE);
         blockRegsitry.add(LowLingShiOre2.INSTANCE);
@@ -86,6 +92,21 @@ public class Registry {
         for (Item itemBlocks : itemBlockRegistry) {
             event.getRegistry().registerAll(itemBlocks);
         }
+    }
+
+    @SubscribeEvent
+    public static void registerEntity(RegistryEvent.Register<EntityEntry> event){
+        event.getRegistry().register(EntityEntryBuilder.create()
+                        .entity(ZhenFaEntity1.class)
+                        .id(new ResourceLocation(XiuXian.MODID, "zhen_fa_entity_1"), 1000)
+                        .name("xiuxian.zhen_fa_entity_1")
+                        .tracker(64, 10, true)
+                        .build());
+    }
+
+    @SubscribeEvent
+    public static void registerEntityRenderer(ModelRegistryEvent event){
+        RenderingRegistry.registerEntityRenderingHandler(ZhenFaEntity1.class, new ZhenFaEntity1Renderer.Factory());
     }
 
     @Mod.EventHandler

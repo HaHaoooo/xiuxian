@@ -26641,3 +26641,622 @@
 [05-28 17:45:14] [TRACE]: NBTEdit save loaded successfully.
 [05-28 17:45:14] [TRACE]: NBTEdit saved successfully.
 [05-28 17:46:39] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-28 19:12:36] [TRACE]: NBTEdit Initalized
+[05-28 19:12:36] [TRACE]: NBTEdit save loaded successfully.
+[05-28 19:12:36] [TRACE]: NBTEdit saved successfully.
+[05-28 19:12:44] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-28 19:16:15] [TRACE]: NBTEdit Initalized
+[05-28 19:16:15] [TRACE]: NBTEdit save loaded successfully.
+[05-28 19:16:15] [TRACE]: NBTEdit saved successfully.
+[05-28 19:16:23] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-28 19:22:31] [TRACE]: NBTEdit Initalized
+[05-28 19:22:31] [TRACE]: NBTEdit save loaded successfully.
+[05-28 19:22:31] [TRACE]: NBTEdit saved successfully.
+[05-28 19:22:41] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-28 19:23:07] [TRACE]: Player423 issued command "/nbtedit"
+[05-28 19:23:20] [TRACE]: Player423 issued command "/nbtedit"
+[05-28 19:23:22] [TRACE]: Player423 issued command "/nbtedit 78"
+[05-28 19:26:17] [TRACE]: NBTEdit Initalized
+[05-28 19:26:18] [TRACE]: NBTEdit save loaded successfully.
+[05-28 19:26:18] [TRACE]: NBTEdit saved successfully.
+[05-28 19:26:25] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-28 19:27:37] [TRACE]: NBTEdit Initalized
+[05-28 19:27:38] [TRACE]: NBTEdit save loaded successfully.
+[05-28 19:27:38] [TRACE]: NBTEdit saved successfully.
+[05-28 19:27:47] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-28 19:32:40] [TRACE]: NBTEdit Initalized
+[05-28 19:32:40] [TRACE]: NBTEdit save loaded successfully.
+[05-28 19:32:40] [TRACE]: NBTEdit saved successfully.
+[05-28 19:32:48] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-28 19:36:52] [TRACE]: NBTEdit Initalized
+[05-28 19:36:52] [TRACE]: NBTEdit save loaded successfully.
+[05-28 19:36:52] [TRACE]: NBTEdit saved successfully.
+[05-28 19:36:59] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-28 19:38:41] [TRACE]: NBTEdit Initalized
+[05-28 19:38:41] [TRACE]: NBTEdit save loaded successfully.
+[05-28 19:38:41] [TRACE]: NBTEdit saved successfully.
+[05-28 19:38:48] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-28 19:41:32] [TRACE]: NBTEdit Initalized
+[05-28 19:41:32] [TRACE]: NBTEdit save loaded successfully.
+[05-28 19:41:32] [TRACE]: NBTEdit saved successfully.
+[05-28 19:41:39] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-28 19:42:31] [TRACE]: NBTEdit Initalized
+[05-28 19:42:31] [TRACE]: NBTEdit save loaded successfully.
+[05-28 19:42:31] [TRACE]: NBTEdit saved successfully.
+[05-28 19:44:02] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-28 20:10:39] [TRACE]: NBTEdit Initalized
+[05-28 20:10:39] [TRACE]: NBTEdit save loaded successfully.
+[05-28 20:10:39] [TRACE]: NBTEdit saved successfully.
+[05-28 20:10:47] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 18:49:56] [TRACE]: NBTEdit Initalized
+[05-29 18:49:56] [TRACE]: NBTEdit save loaded successfully.
+[05-29 18:49:56] [TRACE]: NBTEdit saved successfully.
+[05-29 18:50:03] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 20:33:18] [TRACE]: NBTEdit Initalized
+[05-29 20:33:19] [TRACE]: NBTEdit save loaded successfully.
+[05-29 20:33:19] [TRACE]: NBTEdit saved successfully.
+[05-29 20:33:26] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 20:35:59] [TRACE]: NBTEdit Initalized
+[05-29 20:35:59] [TRACE]: NBTEdit save loaded successfully.
+[05-29 20:35:59] [TRACE]: NBTEdit saved successfully.
+[05-29 20:36:07] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 20:40:17] [TRACE]: NBTEdit Initalized
+[05-29 20:40:17] [TRACE]: NBTEdit save loaded successfully.
+[05-29 20:40:17] [TRACE]: NBTEdit saved successfully.
+[05-29 20:40:24] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 20:49:29] [TRACE]: NBTEdit Initalized
+[05-29 20:49:29] [TRACE]: NBTEdit save loaded successfully.
+[05-29 20:49:29] [TRACE]: NBTEdit saved successfully.
+[05-29 20:49:36] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 20:50:41] [TRACE]: NBTEdit Initalized
+[05-29 20:50:41] [TRACE]: NBTEdit save loaded successfully.
+[05-29 20:50:41] [TRACE]: NBTEdit saved successfully.
+[05-29 20:50:48] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 20:53:36] [TRACE]: NBTEdit Initalized
+[05-29 20:53:36] [TRACE]: NBTEdit save loaded successfully.
+[05-29 20:53:36] [TRACE]: NBTEdit saved successfully.
+[05-29 20:53:43] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 21:32:04] [TRACE]: NBTEdit Initalized
+[05-29 21:32:04] [TRACE]: NBTEdit save loaded successfully.
+[05-29 21:32:04] [TRACE]: NBTEdit saved successfully.
+[05-29 21:32:15] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 21:34:17] [TRACE]: NBTEdit Initalized
+[05-29 21:34:18] [TRACE]: NBTEdit save loaded successfully.
+[05-29 21:34:18] [TRACE]: NBTEdit saved successfully.
+[05-29 21:34:25] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 21:36:18] [TRACE]: NBTEdit Initalized
+[05-29 21:36:18] [TRACE]: NBTEdit save loaded successfully.
+[05-29 21:36:18] [TRACE]: NBTEdit saved successfully.
+[05-29 21:36:34] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 21:38:01] [TRACE]: NBTEdit Initalized
+[05-29 21:38:01] [TRACE]: NBTEdit save loaded successfully.
+[05-29 21:38:01] [TRACE]: NBTEdit saved successfully.
+[05-29 21:38:08] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 21:39:10] [TRACE]: NBTEdit Initalized
+[05-29 21:39:10] [TRACE]: NBTEdit save loaded successfully.
+[05-29 21:39:10] [TRACE]: NBTEdit saved successfully.
+[05-29 21:39:21] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 21:46:57] [TRACE]: NBTEdit Initalized
+[05-29 21:46:57] [TRACE]: NBTEdit save loaded successfully.
+[05-29 21:46:57] [TRACE]: NBTEdit saved successfully.
+[05-29 21:47:04] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 21:47:42] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 21:48:51] [TRACE]: NBTEdit Initalized
+[05-29 21:48:51] [TRACE]: NBTEdit save loaded successfully.
+[05-29 21:48:51] [TRACE]: NBTEdit saved successfully.
+[05-29 21:48:58] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 21:52:37] [TRACE]: NBTEdit Initalized
+[05-29 21:52:37] [TRACE]: NBTEdit save loaded successfully.
+[05-29 21:52:37] [TRACE]: NBTEdit saved successfully.
+[05-29 21:52:45] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 22:34:14] [TRACE]: NBTEdit Initalized
+[05-29 22:34:14] [TRACE]: NBTEdit save loaded successfully.
+[05-29 22:34:14] [TRACE]: NBTEdit saved successfully.
+[05-29 22:34:23] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 22:57:34] [TRACE]: NBTEdit Initalized
+[05-29 22:57:34] [TRACE]: NBTEdit save loaded successfully.
+[05-29 22:57:34] [TRACE]: NBTEdit saved successfully.
+[05-29 22:57:42] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 23:03:07] [TRACE]: NBTEdit Initalized
+[05-29 23:03:07] [TRACE]: NBTEdit save loaded successfully.
+[05-29 23:03:07] [TRACE]: NBTEdit saved successfully.
+[05-29 23:03:14] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 23:08:51] [TRACE]: NBTEdit Initalized
+[05-29 23:08:52] [TRACE]: NBTEdit save loaded successfully.
+[05-29 23:08:52] [TRACE]: NBTEdit saved successfully.
+[05-29 23:09:00] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 23:10:19] [TRACE]: NBTEdit Initalized
+[05-29 23:10:19] [TRACE]: NBTEdit save loaded successfully.
+[05-29 23:10:19] [TRACE]: NBTEdit saved successfully.
+[05-29 23:10:26] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 23:11:53] [TRACE]: NBTEdit Initalized
+[05-29 23:11:53] [TRACE]: NBTEdit save loaded successfully.
+[05-29 23:11:53] [TRACE]: NBTEdit saved successfully.
+[05-29 23:12:01] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 23:14:17] [TRACE]: NBTEdit Initalized
+[05-29 23:14:17] [TRACE]: NBTEdit save loaded successfully.
+[05-29 23:14:17] [TRACE]: NBTEdit saved successfully.
+[05-29 23:14:24] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 23:16:13] [TRACE]: NBTEdit Initalized
+[05-29 23:16:13] [TRACE]: NBTEdit save loaded successfully.
+[05-29 23:16:13] [TRACE]: NBTEdit saved successfully.
+[05-29 23:16:21] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-29 23:18:18] [TRACE]: NBTEdit Initalized
+[05-29 23:18:18] [TRACE]: NBTEdit save loaded successfully.
+[05-29 23:18:18] [TRACE]: NBTEdit saved successfully.
+[05-29 23:18:25] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-30 13:19:24] [TRACE]: NBTEdit Initalized
+[05-30 13:19:24] [TRACE]: NBTEdit save loaded successfully.
+[05-30 13:19:24] [TRACE]: NBTEdit saved successfully.
+[05-30 13:19:33] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-30 13:21:52] [TRACE]: NBTEdit Initalized
+[05-30 13:21:52] [TRACE]: NBTEdit save loaded successfully.
+[05-30 13:21:52] [TRACE]: NBTEdit saved successfully.
+[05-30 13:21:59] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-30 13:23:39] [TRACE]: NBTEdit Initalized
+[05-30 13:23:39] [TRACE]: NBTEdit save loaded successfully.
+[05-30 13:23:39] [TRACE]: NBTEdit saved successfully.
+[05-30 13:23:47] [TRACE]: Server Starting -- Added "/nbtedit" command
+[05-30 13:25:17] [TRACE]: NBTEdit Initalized
+[05-30 13:25:17] [TRACE]: NBTEdit save loaded successfully.
+[05-30 13:25:17] [TRACE]: NBTEdit saved successfully.
+[05-30 13:25:25] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-01 21:29:50] [TRACE]: NBTEdit Initalized
+[06-01 21:29:50] [TRACE]: NBTEdit save loaded successfully.
+[06-01 21:29:50] [TRACE]: NBTEdit saved successfully.
+[06-01 21:30:00] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-04 12:25:56] [TRACE]: NBTEdit Initalized
+[06-04 12:25:56] [TRACE]: NBTEdit save loaded successfully.
+[06-04 12:25:56] [TRACE]: NBTEdit saved successfully.
+[06-04 12:26:05] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-11 23:03:54] [TRACE]: NBTEdit Initalized
+[06-11 23:03:54] [TRACE]: NBTEdit save loaded successfully.
+[06-11 23:03:54] [TRACE]: NBTEdit saved successfully.
+[06-11 23:04:03] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-11 23:06:59] [TRACE]: NBTEdit Initalized
+[06-11 23:06:59] [TRACE]: NBTEdit save loaded successfully.
+[06-11 23:06:59] [TRACE]: NBTEdit saved successfully.
+[06-11 23:07:08] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-11 23:11:41] [TRACE]: NBTEdit Initalized
+[06-11 23:11:41] [TRACE]: NBTEdit save loaded successfully.
+[06-11 23:11:41] [TRACE]: NBTEdit saved successfully.
+[06-11 23:11:59] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-11 23:18:03] [TRACE]: NBTEdit Initalized
+[06-11 23:18:03] [TRACE]: NBTEdit save loaded successfully.
+[06-11 23:18:03] [TRACE]: NBTEdit saved successfully.
+[06-11 23:18:11] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-11 23:22:54] [TRACE]: NBTEdit Initalized
+[06-11 23:22:54] [TRACE]: NBTEdit save loaded successfully.
+[06-11 23:22:54] [TRACE]: NBTEdit saved successfully.
+[06-11 23:23:01] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-11 23:27:08] [TRACE]: NBTEdit Initalized
+[06-11 23:27:08] [TRACE]: NBTEdit save loaded successfully.
+[06-11 23:27:08] [TRACE]: NBTEdit saved successfully.
+[06-11 23:27:17] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-16 20:48:12] [TRACE]: NBTEdit Initalized
+[06-16 20:48:12] [TRACE]: NBTEdit save loaded successfully.
+[06-16 20:48:12] [TRACE]: NBTEdit saved successfully.
+[06-16 20:48:23] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-16 21:57:42] [TRACE]: NBTEdit Initalized
+[06-16 21:57:42] [TRACE]: NBTEdit save loaded successfully.
+[06-16 21:57:42] [TRACE]: NBTEdit saved successfully.
+[06-16 21:57:54] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-16 22:00:50] [TRACE]: NBTEdit Initalized
+[06-16 22:00:50] [TRACE]: NBTEdit save loaded successfully.
+[06-16 22:00:50] [TRACE]: NBTEdit saved successfully.
+[06-16 22:01:05] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-16 22:04:41] [TRACE]: NBTEdit Initalized
+[06-16 22:04:41] [TRACE]: NBTEdit save loaded successfully.
+[06-16 22:04:41] [TRACE]: NBTEdit saved successfully.
+[06-16 22:04:50] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-16 22:12:41] [TRACE]: NBTEdit Initalized
+[06-16 22:12:41] [TRACE]: NBTEdit save loaded successfully.
+[06-16 22:12:41] [TRACE]: NBTEdit saved successfully.
+[06-16 22:12:54] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-16 22:18:54] [TRACE]: NBTEdit Initalized
+[06-16 22:18:55] [TRACE]: NBTEdit save loaded successfully.
+[06-16 22:18:55] [TRACE]: NBTEdit saved successfully.
+[06-16 22:19:05] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-16 22:21:03] [TRACE]: NBTEdit Initalized
+[06-16 22:21:03] [TRACE]: NBTEdit save loaded successfully.
+[06-16 22:21:03] [TRACE]: NBTEdit saved successfully.
+[06-16 22:21:12] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-16 22:22:53] [TRACE]: NBTEdit Initalized
+[06-16 22:22:53] [TRACE]: NBTEdit save loaded successfully.
+[06-16 22:22:53] [TRACE]: NBTEdit saved successfully.
+[06-16 22:23:02] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 21:05:21] [TRACE]: NBTEdit Initalized
+[06-17 21:05:21] [TRACE]: NBTEdit save loaded successfully.
+[06-17 21:05:21] [TRACE]: NBTEdit saved successfully.
+[06-17 21:05:32] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 21:11:45] [TRACE]: NBTEdit Initalized
+[06-17 21:11:45] [TRACE]: NBTEdit save loaded successfully.
+[06-17 21:11:45] [TRACE]: NBTEdit saved successfully.
+[06-17 21:11:56] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 21:15:09] [TRACE]: NBTEdit Initalized
+[06-17 21:15:09] [TRACE]: NBTEdit save loaded successfully.
+[06-17 21:15:09] [TRACE]: NBTEdit saved successfully.
+[06-17 21:15:19] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 21:17:44] [TRACE]: NBTEdit Initalized
+[06-17 21:17:44] [TRACE]: NBTEdit save loaded successfully.
+[06-17 21:17:44] [TRACE]: NBTEdit saved successfully.
+[06-17 21:17:57] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 21:19:05] [TRACE]: NBTEdit Initalized
+[06-17 21:19:05] [TRACE]: NBTEdit save loaded successfully.
+[06-17 21:19:05] [TRACE]: NBTEdit saved successfully.
+[06-17 21:19:15] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 21:29:51] [TRACE]: NBTEdit Initalized
+[06-17 21:29:52] [TRACE]: NBTEdit save loaded successfully.
+[06-17 21:29:52] [TRACE]: NBTEdit saved successfully.
+[06-17 21:30:00] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 21:34:02] [TRACE]: NBTEdit Initalized
+[06-17 21:34:02] [TRACE]: NBTEdit save loaded successfully.
+[06-17 21:34:02] [TRACE]: NBTEdit saved successfully.
+[06-17 21:34:15] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 21:48:08] [TRACE]: NBTEdit Initalized
+[06-17 21:48:08] [TRACE]: NBTEdit save loaded successfully.
+[06-17 21:48:08] [TRACE]: NBTEdit saved successfully.
+[06-17 21:48:17] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 21:52:39] [TRACE]: NBTEdit Initalized
+[06-17 21:52:39] [TRACE]: NBTEdit save loaded successfully.
+[06-17 21:52:39] [TRACE]: NBTEdit saved successfully.
+[06-17 21:52:50] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 22:03:20] [TRACE]: NBTEdit Initalized
+[06-17 22:03:20] [TRACE]: NBTEdit save loaded successfully.
+[06-17 22:03:20] [TRACE]: NBTEdit saved successfully.
+[06-17 22:03:30] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 22:08:53] [TRACE]: NBTEdit Initalized
+[06-17 22:08:53] [TRACE]: NBTEdit save loaded successfully.
+[06-17 22:08:53] [TRACE]: NBTEdit saved successfully.
+[06-17 22:09:08] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 22:18:44] [TRACE]: NBTEdit Initalized
+[06-17 22:18:44] [TRACE]: NBTEdit save loaded successfully.
+[06-17 22:18:44] [TRACE]: NBTEdit saved successfully.
+[06-17 22:19:00] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 22:24:06] [TRACE]: NBTEdit Initalized
+[06-17 22:24:06] [TRACE]: NBTEdit save loaded successfully.
+[06-17 22:24:06] [TRACE]: NBTEdit saved successfully.
+[06-17 22:24:15] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 22:28:39] [TRACE]: NBTEdit Initalized
+[06-17 22:28:39] [TRACE]: NBTEdit save loaded successfully.
+[06-17 22:28:39] [TRACE]: NBTEdit saved successfully.
+[06-17 22:28:50] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 22:34:54] [TRACE]: NBTEdit Initalized
+[06-17 22:34:54] [TRACE]: NBTEdit save loaded successfully.
+[06-17 22:34:54] [TRACE]: NBTEdit saved successfully.
+[06-17 22:35:16] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 22:54:23] [TRACE]: NBTEdit Initalized
+[06-17 22:54:24] [TRACE]: NBTEdit save loaded successfully.
+[06-17 22:54:24] [TRACE]: NBTEdit saved successfully.
+[06-17 22:54:33] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 22:59:20] [TRACE]: NBTEdit Initalized
+[06-17 22:59:20] [TRACE]: NBTEdit save loaded successfully.
+[06-17 22:59:20] [TRACE]: NBTEdit saved successfully.
+[06-17 22:59:34] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:01:48] [TRACE]: NBTEdit Initalized
+[06-17 23:01:48] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:01:48] [TRACE]: NBTEdit saved successfully.
+[06-17 23:02:00] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:03:18] [TRACE]: NBTEdit Initalized
+[06-17 23:03:18] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:03:18] [TRACE]: NBTEdit saved successfully.
+[06-17 23:03:36] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:04:49] [TRACE]: NBTEdit Initalized
+[06-17 23:04:49] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:04:49] [TRACE]: NBTEdit saved successfully.
+[06-17 23:05:01] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:14:32] [TRACE]: NBTEdit Initalized
+[06-17 23:14:32] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:14:32] [TRACE]: NBTEdit saved successfully.
+[06-17 23:14:42] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:16:38] [TRACE]: NBTEdit Initalized
+[06-17 23:16:38] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:16:38] [TRACE]: NBTEdit saved successfully.
+[06-17 23:16:46] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:27:53] [TRACE]: NBTEdit Initalized
+[06-17 23:27:53] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:27:53] [TRACE]: NBTEdit saved successfully.
+[06-17 23:28:01] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:29:07] [TRACE]: NBTEdit Initalized
+[06-17 23:29:07] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:29:07] [TRACE]: NBTEdit saved successfully.
+[06-17 23:29:19] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:31:30] [TRACE]: NBTEdit Initalized
+[06-17 23:31:30] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:31:30] [TRACE]: NBTEdit saved successfully.
+[06-17 23:31:47] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:35:39] [TRACE]: NBTEdit Initalized
+[06-17 23:35:39] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:35:39] [TRACE]: NBTEdit saved successfully.
+[06-17 23:35:52] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:38:20] [TRACE]: NBTEdit Initalized
+[06-17 23:38:20] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:38:20] [TRACE]: NBTEdit saved successfully.
+[06-17 23:38:31] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:40:05] [TRACE]: NBTEdit Initalized
+[06-17 23:40:05] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:40:05] [TRACE]: NBTEdit saved successfully.
+[06-17 23:40:13] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-17 23:43:17] [TRACE]: NBTEdit Initalized
+[06-17 23:43:17] [TRACE]: NBTEdit save loaded successfully.
+[06-17 23:43:17] [TRACE]: NBTEdit saved successfully.
+[06-17 23:43:28] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 22:17:16] [TRACE]: NBTEdit Initalized
+[06-18 22:17:16] [TRACE]: NBTEdit save loaded successfully.
+[06-18 22:17:16] [TRACE]: NBTEdit saved successfully.
+[06-18 22:17:30] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 22:18:47] [TRACE]: NBTEdit Initalized
+[06-18 22:18:47] [TRACE]: NBTEdit save loaded successfully.
+[06-18 22:18:47] [TRACE]: NBTEdit saved successfully.
+[06-18 22:18:54] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 22:21:00] [TRACE]: NBTEdit Initalized
+[06-18 22:21:00] [TRACE]: NBTEdit save loaded successfully.
+[06-18 22:21:00] [TRACE]: NBTEdit saved successfully.
+[06-18 22:21:09] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 22:27:50] [TRACE]: NBTEdit Initalized
+[06-18 22:27:50] [TRACE]: NBTEdit save loaded successfully.
+[06-18 22:27:50] [TRACE]: NBTEdit saved successfully.
+[06-18 22:28:04] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 22:30:32] [TRACE]: NBTEdit Initalized
+[06-18 22:30:32] [TRACE]: NBTEdit save loaded successfully.
+[06-18 22:30:32] [TRACE]: NBTEdit saved successfully.
+[06-18 22:30:44] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 22:34:17] [TRACE]: NBTEdit Initalized
+[06-18 22:34:17] [TRACE]: NBTEdit save loaded successfully.
+[06-18 22:34:17] [TRACE]: NBTEdit saved successfully.
+[06-18 22:35:02] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 22:38:08] [TRACE]: NBTEdit Initalized
+[06-18 22:38:08] [TRACE]: NBTEdit save loaded successfully.
+[06-18 22:38:08] [TRACE]: NBTEdit saved successfully.
+[06-18 22:38:20] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 22:42:16] [TRACE]: NBTEdit Initalized
+[06-18 22:42:16] [TRACE]: NBTEdit save loaded successfully.
+[06-18 22:42:16] [TRACE]: NBTEdit saved successfully.
+[06-18 22:42:27] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 22:55:48] [TRACE]: NBTEdit Initalized
+[06-18 22:55:48] [TRACE]: NBTEdit save loaded successfully.
+[06-18 22:55:48] [TRACE]: NBTEdit saved successfully.
+[06-18 22:56:01] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 22:59:50] [TRACE]: NBTEdit Initalized
+[06-18 22:59:50] [TRACE]: NBTEdit save loaded successfully.
+[06-18 22:59:50] [TRACE]: NBTEdit saved successfully.
+[06-18 23:00:05] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 23:06:17] [TRACE]: NBTEdit Initalized
+[06-18 23:06:18] [TRACE]: NBTEdit save loaded successfully.
+[06-18 23:06:18] [TRACE]: NBTEdit saved successfully.
+[06-18 23:06:26] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 23:08:52] [TRACE]: NBTEdit Initalized
+[06-18 23:08:52] [TRACE]: NBTEdit save loaded successfully.
+[06-18 23:08:52] [TRACE]: NBTEdit saved successfully.
+[06-18 23:09:01] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 23:12:18] [TRACE]: NBTEdit Initalized
+[06-18 23:12:18] [TRACE]: NBTEdit save loaded successfully.
+[06-18 23:12:18] [TRACE]: NBTEdit saved successfully.
+[06-18 23:12:32] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 23:14:05] [TRACE]: NBTEdit Initalized
+[06-18 23:14:05] [TRACE]: NBTEdit save loaded successfully.
+[06-18 23:14:05] [TRACE]: NBTEdit saved successfully.
+[06-18 23:14:17] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 23:17:02] [TRACE]: NBTEdit Initalized
+[06-18 23:17:02] [TRACE]: NBTEdit save loaded successfully.
+[06-18 23:17:02] [TRACE]: NBTEdit saved successfully.
+[06-18 23:17:15] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 23:22:58] [TRACE]: NBTEdit Initalized
+[06-18 23:22:58] [TRACE]: NBTEdit save loaded successfully.
+[06-18 23:22:58] [TRACE]: NBTEdit saved successfully.
+[06-18 23:23:06] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 23:24:16] [TRACE]: NBTEdit Initalized
+[06-18 23:24:16] [TRACE]: NBTEdit save loaded successfully.
+[06-18 23:24:16] [TRACE]: NBTEdit saved successfully.
+[06-18 23:24:24] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-18 23:25:33] [TRACE]: NBTEdit Initalized
+[06-18 23:25:34] [TRACE]: NBTEdit save loaded successfully.
+[06-18 23:25:34] [TRACE]: NBTEdit saved successfully.
+[06-18 23:25:47] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 12:45:04] [TRACE]: NBTEdit Initalized
+[06-19 12:45:04] [TRACE]: NBTEdit save loaded successfully.
+[06-19 12:45:04] [TRACE]: NBTEdit saved successfully.
+[06-19 12:45:13] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 12:46:50] [TRACE]: NBTEdit Initalized
+[06-19 12:46:50] [TRACE]: NBTEdit save loaded successfully.
+[06-19 12:46:50] [TRACE]: NBTEdit saved successfully.
+[06-19 12:46:59] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 12:50:07] [TRACE]: NBTEdit Initalized
+[06-19 12:50:07] [TRACE]: NBTEdit save loaded successfully.
+[06-19 12:50:07] [TRACE]: NBTEdit saved successfully.
+[06-19 15:55:12] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 15:56:48] [TRACE]: NBTEdit Initalized
+[06-19 15:56:48] [TRACE]: NBTEdit save loaded successfully.
+[06-19 15:56:48] [TRACE]: NBTEdit saved successfully.
+[06-19 15:56:57] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:00:48] [TRACE]: NBTEdit Initalized
+[06-19 21:00:48] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:00:48] [TRACE]: NBTEdit saved successfully.
+[06-19 21:01:02] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:02:29] [TRACE]: NBTEdit Initalized
+[06-19 21:02:29] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:02:29] [TRACE]: NBTEdit saved successfully.
+[06-19 21:02:37] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:34:13] [TRACE]: NBTEdit Initalized
+[06-19 21:34:13] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:34:13] [TRACE]: NBTEdit saved successfully.
+[06-19 21:34:20] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:36:45] [TRACE]: NBTEdit Initalized
+[06-19 21:36:45] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:36:45] [TRACE]: NBTEdit saved successfully.
+[06-19 21:36:54] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:38:43] [TRACE]: NBTEdit Initalized
+[06-19 21:38:43] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:38:43] [TRACE]: NBTEdit saved successfully.
+[06-19 21:38:51] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:42:41] [TRACE]: NBTEdit Initalized
+[06-19 21:42:41] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:42:41] [TRACE]: NBTEdit saved successfully.
+[06-19 21:42:50] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:44:23] [TRACE]: NBTEdit Initalized
+[06-19 21:44:23] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:44:23] [TRACE]: NBTEdit saved successfully.
+[06-19 21:44:32] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:46:17] [TRACE]: NBTEdit Initalized
+[06-19 21:46:17] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:46:17] [TRACE]: NBTEdit saved successfully.
+[06-19 21:46:27] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:46:44] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:49:08] [TRACE]: NBTEdit Initalized
+[06-19 21:49:08] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:49:08] [TRACE]: NBTEdit saved successfully.
+[06-19 21:49:15] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:50:11] [TRACE]: NBTEdit Initalized
+[06-19 21:50:11] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:50:11] [TRACE]: NBTEdit saved successfully.
+[06-19 21:50:20] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:52:20] [TRACE]: NBTEdit Initalized
+[06-19 21:52:20] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:52:20] [TRACE]: NBTEdit saved successfully.
+[06-19 21:52:30] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:55:12] [TRACE]: NBTEdit Initalized
+[06-19 21:55:12] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:55:12] [TRACE]: NBTEdit saved successfully.
+[06-19 21:55:21] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 21:58:16] [TRACE]: NBTEdit Initalized
+[06-19 21:58:17] [TRACE]: NBTEdit save loaded successfully.
+[06-19 21:58:17] [TRACE]: NBTEdit saved successfully.
+[06-19 21:58:26] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:00:09] [TRACE]: NBTEdit Initalized
+[06-19 22:00:09] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:00:09] [TRACE]: NBTEdit saved successfully.
+[06-19 22:00:17] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:03:51] [TRACE]: NBTEdit Initalized
+[06-19 22:03:51] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:03:51] [TRACE]: NBTEdit saved successfully.
+[06-19 22:03:58] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:07:10] [TRACE]: NBTEdit Initalized
+[06-19 22:07:10] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:07:10] [TRACE]: NBTEdit saved successfully.
+[06-19 22:07:17] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:13:25] [TRACE]: NBTEdit Initalized
+[06-19 22:13:25] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:13:25] [TRACE]: NBTEdit saved successfully.
+[06-19 22:13:33] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:15:12] [TRACE]: NBTEdit Initalized
+[06-19 22:15:12] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:15:12] [TRACE]: NBTEdit saved successfully.
+[06-19 22:15:23] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:16:38] [TRACE]: NBTEdit Initalized
+[06-19 22:16:38] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:16:38] [TRACE]: NBTEdit saved successfully.
+[06-19 22:16:46] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:18:11] [TRACE]: NBTEdit Initalized
+[06-19 22:18:11] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:18:11] [TRACE]: NBTEdit saved successfully.
+[06-19 22:18:20] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:21:44] [TRACE]: NBTEdit Initalized
+[06-19 22:21:44] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:21:44] [TRACE]: NBTEdit saved successfully.
+[06-19 22:21:54] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:23:18] [TRACE]: NBTEdit Initalized
+[06-19 22:23:18] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:23:18] [TRACE]: NBTEdit saved successfully.
+[06-19 22:23:26] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:24:33] [TRACE]: NBTEdit Initalized
+[06-19 22:24:34] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:24:34] [TRACE]: NBTEdit saved successfully.
+[06-19 22:24:42] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:54:46] [TRACE]: NBTEdit Initalized
+[06-19 22:54:46] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:54:46] [TRACE]: NBTEdit saved successfully.
+[06-19 22:54:58] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 22:57:14] [TRACE]: NBTEdit Initalized
+[06-19 22:57:14] [TRACE]: NBTEdit save loaded successfully.
+[06-19 22:57:14] [TRACE]: NBTEdit saved successfully.
+[06-19 22:57:25] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 23:09:14] [TRACE]: NBTEdit Initalized
+[06-19 23:09:15] [TRACE]: NBTEdit save loaded successfully.
+[06-19 23:09:15] [TRACE]: NBTEdit saved successfully.
+[06-19 23:09:23] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 23:11:48] [TRACE]: NBTEdit Initalized
+[06-19 23:11:48] [TRACE]: NBTEdit save loaded successfully.
+[06-19 23:11:48] [TRACE]: NBTEdit saved successfully.
+[06-19 23:11:55] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 23:14:25] [TRACE]: NBTEdit Initalized
+[06-19 23:14:25] [TRACE]: NBTEdit save loaded successfully.
+[06-19 23:14:25] [TRACE]: NBTEdit saved successfully.
+[06-19 23:14:32] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 23:17:49] [TRACE]: NBTEdit Initalized
+[06-19 23:17:49] [TRACE]: NBTEdit save loaded successfully.
+[06-19 23:17:49] [TRACE]: NBTEdit saved successfully.
+[06-19 23:18:04] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 23:21:06] [TRACE]: NBTEdit Initalized
+[06-19 23:21:06] [TRACE]: NBTEdit save loaded successfully.
+[06-19 23:21:06] [TRACE]: NBTEdit saved successfully.
+[06-19 23:21:14] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 23:22:38] [TRACE]: NBTEdit Initalized
+[06-19 23:22:38] [TRACE]: NBTEdit save loaded successfully.
+[06-19 23:22:39] [TRACE]: NBTEdit saved successfully.
+[06-19 23:22:47] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-19 23:25:49] [TRACE]: NBTEdit Initalized
+[06-19 23:25:49] [TRACE]: NBTEdit save loaded successfully.
+[06-19 23:25:49] [TRACE]: NBTEdit saved successfully.
+[06-19 23:25:59] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 20:38:59] [TRACE]: NBTEdit Initalized
+[06-20 20:38:59] [TRACE]: NBTEdit save loaded successfully.
+[06-20 20:38:59] [TRACE]: NBTEdit saved successfully.
+[06-20 20:39:15] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 20:40:38] [TRACE]: NBTEdit Initalized
+[06-20 20:40:38] [TRACE]: NBTEdit save loaded successfully.
+[06-20 20:40:38] [TRACE]: NBTEdit saved successfully.
+[06-20 20:41:07] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 20:49:10] [TRACE]: NBTEdit Initalized
+[06-20 20:49:10] [TRACE]: NBTEdit save loaded successfully.
+[06-20 20:49:10] [TRACE]: NBTEdit saved successfully.
+[06-20 20:49:19] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 20:50:37] [TRACE]: NBTEdit Initalized
+[06-20 20:50:37] [TRACE]: NBTEdit save loaded successfully.
+[06-20 20:50:37] [TRACE]: NBTEdit saved successfully.
+[06-20 20:50:47] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 20:53:28] [TRACE]: NBTEdit Initalized
+[06-20 20:53:28] [TRACE]: NBTEdit save loaded successfully.
+[06-20 20:53:28] [TRACE]: NBTEdit saved successfully.
+[06-20 20:53:43] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 21:25:17] [TRACE]: NBTEdit Initalized
+[06-20 21:25:17] [TRACE]: NBTEdit save loaded successfully.
+[06-20 21:25:17] [TRACE]: NBTEdit saved successfully.
+[06-20 21:25:27] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 21:25:37] [TRACE]: Player622 issued command "/nbtedit 160"
+[06-20 21:26:04] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 21:26:19] [TRACE]: Player622 issued command "/nbtedit 12503"
+[06-20 21:27:11] [TRACE]: NBTEdit Initalized
+[06-20 21:27:11] [TRACE]: NBTEdit save loaded successfully.
+[06-20 21:27:11] [TRACE]: NBTEdit saved successfully.
+[06-20 21:27:18] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 21:27:32] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 21:27:46] [TRACE]: Player754 issued command "/nbtedit 7715"
+[06-20 21:38:15] [TRACE]: NBTEdit Initalized
+[06-20 21:38:15] [TRACE]: NBTEdit save loaded successfully.
+[06-20 21:38:15] [TRACE]: NBTEdit saved successfully.
+[06-20 21:38:28] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 21:38:38] [TRACE]: Player659 issued command "/nbtedit 24"
+[06-20 22:09:52] [TRACE]: NBTEdit Initalized
+[06-20 22:09:52] [TRACE]: NBTEdit save loaded successfully.
+[06-20 22:09:52] [TRACE]: NBTEdit saved successfully.
+[06-20 22:10:05] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 22:10:15] [TRACE]: Player419 issued command "/nbtedit 58"
+[06-20 22:12:02] [TRACE]: NBTEdit Initalized
+[06-20 22:12:03] [TRACE]: NBTEdit save loaded successfully.
+[06-20 22:12:03] [TRACE]: NBTEdit saved successfully.
+[06-20 22:12:13] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 22:12:24] [TRACE]: Player261 issued command "/nbtedit 65"
+[06-20 22:15:49] [TRACE]: NBTEdit Initalized
+[06-20 22:15:49] [TRACE]: NBTEdit save loaded successfully.
+[06-20 22:15:49] [TRACE]: NBTEdit saved successfully.
+[06-20 22:15:58] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 22:16:06] [TRACE]: Player687 issued command "/nbtedit 68"
+[06-20 22:41:07] [TRACE]: NBTEdit Initalized
+[06-20 22:41:07] [TRACE]: NBTEdit save loaded successfully.
+[06-20 22:41:07] [TRACE]: NBTEdit saved successfully.
+[06-20 22:42:25] [TRACE]: Server Starting -- Added "/nbtedit" command
+[06-20 22:42:33] [TRACE]: Player871 issued command "/nbtedit 71"
+[06-20 22:43:28] [TRACE]: NBTEdit Initalized
+[06-20 22:43:28] [TRACE]: NBTEdit save loaded successfully.
+[06-20 22:43:28] [TRACE]: NBTEdit saved successfully.
+[06-20 22:43:41] [TRACE]: Server Starting -- Added "/nbtedit" command

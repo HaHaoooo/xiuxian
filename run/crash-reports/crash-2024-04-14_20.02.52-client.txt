@@ -7,8 +7,8 @@ Description: Updating screen events
 java.lang.IllegalStateException: Timer already cancelled.
 	at java.util.Timer.sched(Timer.java:397)
 	at java.util.Timer.scheduleAtFixedRate(Timer.java:328)
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.startTimer(LingQiShow.java:127)
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.mouseClicked(LingQiShow.java:121)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.startTimer(LingQiShow.java:127)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.mouseClicked(LingQiShow.java:121)
 	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:533)
 	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:501)
 	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1759)
@@ -37,14 +37,14 @@ Thread: Client thread
 Stacktrace:
 	at java.util.Timer.sched(Timer.java:397)
 	at java.util.Timer.scheduleAtFixedRate(Timer.java:328)
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.startTimer(LingQiShow.java:127)
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.mouseClicked(LingQiShow.java:121)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.startTimer(LingQiShow.java:127)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.mouseClicked(LingQiShow.java:121)
 	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:533)
 	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:501)
 
 -- Affected screen --
 Details:
-	Screen name: com.haha.xiuxian.gui.LingQi.LingQiShow
+	Screen name: com.haha.xiuxian.gui.lingqi.LingQiShow
 
 -- Affected level --
 Details:

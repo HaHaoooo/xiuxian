@@ -1,6 +1,6 @@
 package com.haha.xiuxian.key;
 
-import com.haha.xiuxian.gui.LingQi.LingQiShow;
+import com.haha.xiuxian.gui.lingqi.LingQiShow;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.client.settings.KeyConflictContext;

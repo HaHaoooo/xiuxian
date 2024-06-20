@@ -7,7 +7,7 @@ Description: Rendering screen
 java.lang.IllegalStateException: Timer already cancelled.
 	at java.util.Timer.sched(Timer.java:397)
 	at java.util.Timer.scheduleAtFixedRate(Timer.java:328)
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.drawScreen(LingQiShow.java:74)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.drawScreen(LingQiShow.java:74)
 	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396)
 	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1124)
 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1119)
@@ -35,12 +35,12 @@ Thread: Client thread
 Stacktrace:
 	at java.util.Timer.sched(Timer.java:397)
 	at java.util.Timer.scheduleAtFixedRate(Timer.java:328)
-	at com.haha.xiuxian.gui.LingQi.LingQiShow.drawScreen(LingQiShow.java:74)
+	at com.haha.xiuxian.gui.lingqi.LingQiShow.drawScreen(LingQiShow.java:74)
 	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396)
 
 -- Screen render details --
 Details:
-	Screen name: com.haha.xiuxian.gui.LingQi.LingQiShow
+	Screen name: com.haha.xiuxian.gui.lingqi.LingQiShow
 	Mouse location: Scaled: (223, 43). Absolute: (446, 392)
 	Screen size: Scaled: (427, 240). Absolute: (854, 480). Scale factor of 2
 
