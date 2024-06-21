@@ -24,6 +24,7 @@ public class GongFaInfo extends GuiScreen {
     private final int radius;
     double[] angles = new double[]{0, 0, 0, 0, 0, 0};
     double[] bounds = new double[6];
+    private final String element;
 
     public GongFaInfo(String fileName, int radius) throws IOException {
         Path path = Paths.get(System.getProperty("user.dir").replace("run", "src"), "main", "resources", "assets", "gongfa", fileName);
@@ -44,6 +45,7 @@ public class GongFaInfo extends GuiScreen {
         this.bounds[3] = properties.getDouble("defence");
         this.bounds[4] = properties.getDouble("comprehension");
         this.bounds[5] = properties.getDouble("spirit");
+        this.element = fileName.split("/")[0];
     }
 
     @Override
@@ -65,6 +67,19 @@ public class GongFaInfo extends GuiScreen {
             ThickInnerHexagon(centerX, centerY, i * 5);
         }
         GraphHelper.drawPolygonalHexagon(centerX, centerY, angles[0], angles[1], angles[2], angles[3], angles[4], angles[5], radius, Color.GRAY.getRGB());
+
+
+        // 绘制元素图
+        // 重置界面颜色
+        if (fontRenderer != null) {
+            fontRenderer.drawString("", guiLeft, guiTop, Color.WHITE.getRGB());
+        }
+        Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(XiuXian.MODID, "textures/misc/" + element + ".png"));
+        int elementWidth = 40;
+        int elementHeight = 40;
+        int elementX = centerX - 20;
+        int elementY = centerY - 100;
+        drawModalRectWithCustomSizedTexture(elementX, elementY, 0, 0, elementWidth, elementHeight, elementWidth, elementHeight);
 
         // 功法文字类信息
         if (fontRenderer != null) {

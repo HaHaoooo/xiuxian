@@ -10,18 +10,19 @@ import com.haha.xiuxian.items.LingGenTest;
 import com.haha.xiuxian.items.crops.HuaiYang;
 import com.haha.xiuxian.items.fabao.FlameExplode;
 import com.haha.xiuxian.items.fabao.JumpFuLu;
-import com.haha.xiuxian.items.gongfa.*;
-import com.haha.xiuxian.items.gongfa.batch.water.LianHuaMiaoDian;
+import com.haha.xiuxian.items.gongfa.batch.*;
 import com.haha.xiuxian.items.lingshi.ExtremeLingShi;
 import com.haha.xiuxian.items.lingshi.HighLingShi;
 import com.haha.xiuxian.items.lingshi.LowLingShi;
 import com.haha.xiuxian.items.lingshi.MidLingShi;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -49,27 +50,97 @@ public class Registry {
         itemRegistry.add(MidLingShi.INSTANCE);
         itemRegistry.add(HighLingShi.INSTANCE);
         itemRegistry.add(ExtremeLingShi.INSTANCE);
-        ////////////////////////////////////
-        // 功法：
-        // 空属性功法
-        itemRegistry.add(EmptyGongFaBase.INSTANCE);
-        // 金属性功法
-        itemRegistry.add(MetalGongFaBase.INSTANCE);
-        // 木属性功法
-        itemRegistry.add(WoodGongFaBase.INSTANCE);
-        // 水属性功法
-        itemRegistry.add(WaterGongFaBase.INSTANCE);
-        itemRegistry.add(LianHuaMiaoDian.INHERITOR);
-        // 火属性功法
-        itemRegistry.add(FireGongFaBase.INSTANCE);
-        // 土属性功法
-        itemRegistry.add(DirtGongFaBase.INSTANCE);
 
         ////////////////////////////////////
+        // 功法注册：
+        // 空属性功法
+        for (EnumEmptyGongFa emptyGongfa : EnumEmptyGongFa.values()){
+            itemRegistry.add(emptyGongfa.getItem());
+        }
+        // 金属性功法
+        for (EnumMetalGongFa metalGongFa : EnumMetalGongFa.values()){
+            itemRegistry.add(metalGongFa.getItem());
+        }
+        // 木属性功法
+        for (EnumWoodGongFa woodGongFa : EnumWoodGongFa.values()){
+            itemRegistry.add(woodGongFa.getItem());
+        }
+        // 水属性功法
+        for (EnumWaterGongFa waterGongFa : EnumWaterGongFa.values()){
+            itemRegistry.add(waterGongFa.getItem());
+        }
+        // 火属性功法
+        for (EnumFireGongFa fireGongFa : EnumFireGongFa.values()){
+            itemRegistry.add(fireGongFa.getItem());
+        }
+        // 土属性功法
+        for (EnumDirtGongFa dirtGongFa : EnumDirtGongFa.values()){
+            itemRegistry.add(dirtGongFa.getItem());
+        }
+        ////////////////////////////////////
+
         itemRegistry.add(JumpFuLu.INSTANCE);
         itemRegistry.add(FlameExplode.INSTANCE);
         for (Item item : itemRegistry) {
             event.getRegistry().registerAll(item);
+        }
+    }
+
+    @SubscribeEvent
+    public static void registerItemModels(ModelRegistryEvent event) {
+        // 空属性功法模型注册
+        for (EnumEmptyGongFa emptyGongFa : EnumEmptyGongFa.values()) {
+            Item gongFaItem = emptyGongFa.getItem();
+            ModelLoader.setCustomModelResourceLocation(
+                    gongFaItem,
+                    0,
+                    new ModelResourceLocation(new ResourceLocation(XiuXian.MODID, "empty_gongfa"), "inventory")
+            );
+        }
+        // 金属性功法模型注册
+        for (EnumMetalGongFa metalGongFa : EnumMetalGongFa.values()){
+            Item gongFaItem = metalGongFa.getItem();
+            ModelLoader.setCustomModelResourceLocation(
+                    gongFaItem,
+                    0,
+                    new ModelResourceLocation(new ResourceLocation(XiuXian.MODID, "metal_gongfa"), "inventory")
+            );
+        }
+        // 木属性功法模型注册
+        for (EnumWoodGongFa woodGongFa : EnumWoodGongFa.values()){
+            Item gongFaItem = woodGongFa.getItem();
+            ModelLoader.setCustomModelResourceLocation(
+                    gongFaItem,
+                    0,
+                    new ModelResourceLocation(new ResourceLocation(XiuXian.MODID, "wood_gongfa"), "inventory")
+            );
+        }
+        // 水属性功法模型注册
+        for (EnumWaterGongFa waterGongFa : EnumWaterGongFa.values()){
+            Item gongFaItem = waterGongFa.getItem();
+            ModelLoader.setCustomModelResourceLocation(
+                    gongFaItem,
+                    0,
+                    new ModelResourceLocation(new ResourceLocation(XiuXian.MODID, "water_gongfa"), "inventory")
+            );
+        }
+        // 火属性功法模型注册
+        for (EnumFireGongFa fireGongFa : EnumFireGongFa.values()){
+            Item gongFaItem = fireGongFa.getItem();
+            ModelLoader.setCustomModelResourceLocation(
+                    gongFaItem,
+                    0,
+                    new ModelResourceLocation(new ResourceLocation(XiuXian.MODID, "fire_gongfa"), "inventory")
+            );
+        }
+        // 土属性功法模型注册
+        for (EnumDirtGongFa dirtGongFa : EnumDirtGongFa.values()){
+            Item gongFaItem = dirtGongFa.getItem();
+            ModelLoader.setCustomModelResourceLocation(
+                    gongFaItem,
+                    0,
+                    new ModelResourceLocation(new ResourceLocation(XiuXian.MODID, "dirt_gongfa"), "inventory")
+            );
         }
     }
 

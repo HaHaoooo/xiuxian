@@ -6,7 +6,6 @@ import com.haha.xiuxian.items.gongfa.gui.GongFaInfo;
 import com.haha.xiuxian.util.gui.inventory.PutInInventoryHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -14,21 +13,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 
-@Mod.EventBusSubscriber
 public class MetalGongFaBase extends Item {
     private final String fileName;
-    public static MetalGongFaBase INSTANCE = new MetalGongFaBase("template.json", "metal_gongfa");
 
     public MetalGongFaBase(String fileName, String registryName){
         this.setRegistryName("xiuxian:" + registryName);
@@ -38,18 +30,13 @@ public class MetalGongFaBase extends Item {
         this.fileName = fileName;
     }
 
-    @SubscribeEvent
-    public static void IModel(ModelRegistryEvent event) {
-        ModelLoader.setCustomModelResourceLocation(INSTANCE, 0, new ModelResourceLocation(Objects.requireNonNull(INSTANCE.getRegistryName()), "inventory"));
-    }
-
     @Nonnull
     @Override
     public ActionResult<ItemStack> onItemRightClick(@Nonnull World worldIn, @Nonnull EntityPlayer playerIn, @Nonnull EnumHand handIn) {
         if (GuiScreen.isShiftKeyDown()) {
             if (!worldIn.isRemote) {
                 try {
-                    Minecraft.getMinecraft().displayGuiScreen(new GongFaInfo("metal" + fileName, 30));
+                    Minecraft.getMinecraft().displayGuiScreen(new GongFaInfo("metal/" + fileName, 30));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

@@ -6,7 +6,6 @@ import com.haha.xiuxian.items.gongfa.gui.GongFaInfo;
 import com.haha.xiuxian.util.gui.inventory.PutInInventoryHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -14,22 +13,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 
-@Mod.EventBusSubscriber
 public class DirtGongFaBase extends Item {
 
     private final String fileName;
-    public static DirtGongFaBase INSTANCE = new DirtGongFaBase("template.json", "dirt_gongfa");
 
     public DirtGongFaBase(String fileName, String registryName) {
         this.setRegistryName("xiuxian:" + registryName);
@@ -37,11 +29,6 @@ public class DirtGongFaBase extends Item {
         this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_GONGFA);
         this.setMaxStackSize(1);
         this.fileName = fileName;
-    }
-
-    @SubscribeEvent
-    public static void IModel(ModelRegistryEvent event) {
-        ModelLoader.setCustomModelResourceLocation(INSTANCE, 0, new ModelResourceLocation(Objects.requireNonNull(INSTANCE.getRegistryName()), "inventory"));
     }
 
     @Nonnull
