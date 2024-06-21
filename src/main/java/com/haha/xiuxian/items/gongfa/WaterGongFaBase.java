@@ -1,30 +1,71 @@
 package com.haha.xiuxian.items.gongfa;
 
 import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
+import com.haha.xiuxian.gui.gongfashow.GongFaInventory;
+import com.haha.xiuxian.items.gongfa.gui.GongFaInfo;
+import com.haha.xiuxian.util.gui.inventory.PutInInventoryHelper;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.world.World;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
-
 
 @Mod.EventBusSubscriber
 public class WaterGongFaBase extends Item {
 
-    public static WaterGongFaBase INSTANCE = new WaterGongFaBase();
+    private final String fileName;
+    public static WaterGongFaBase INSTANCE = new WaterGongFaBase("template.json", "water_gongfa");
 
-    public WaterGongFaBase(){
-        this.setRegistryName("xiuxian:water_gongfa");
-        this.setUnlocalizedName("xiuxian.water_gongfa");
+    public WaterGongFaBase(String fileName, String registryName){
+        this.setRegistryName("xiuxian:" + registryName);
+        this.setUnlocalizedName("xiuxian." + registryName);
         this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_GONGFA);
         this.setMaxStackSize(1);
+        this.fileName = fileName;
     }
 
     @SubscribeEvent
-    public static void IModel(ModelRegistryEvent event){
+    public static void IModel(ModelRegistryEvent event) {
         ModelLoader.setCustomModelResourceLocation(INSTANCE, 0, new ModelResourceLocation(Objects.requireNonNull(INSTANCE.getRegistryName()), "inventory"));
+    }
+
+    @Nonnull
+    @Override
+    public ActionResult<ItemStack> onItemRightClick(@Nonnull World worldIn, @Nonnull EntityPlayer playerIn, @Nonnull EnumHand handIn) {
+        if (GuiScreen.isShiftKeyDown()) {
+            if (!worldIn.isRemote) {
+                try {
+                    Minecraft.getMinecraft().displayGuiScreen(new GongFaInfo("water/" + fileName, 30));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            ItemStack heldItem = playerIn.getHeldItem(handIn);
+            PutInInventoryHelper.putInInventory(worldIn, GongFaInventory.instance, heldItem, "水");
+        }
+        return super.onItemRightClick(worldIn, playerIn, handIn);
+    }
+
+    @Override
+    public void addInformation(@Nonnull ItemStack stack, @Nullable World worldIn, @Nonnull List<String> tooltip, @Nonnull ITooltipFlag flagIn) {
+        tooltip.add("右键装备功法");
+        tooltip.add("Shift+右键查看详细信息");
+        super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 }

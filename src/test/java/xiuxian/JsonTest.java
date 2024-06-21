@@ -1,3 +1,5 @@
+package xiuxian;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -9,7 +11,7 @@ import java.nio.file.Paths;
 
 public class JsonTest {
     public static void main(String[] args) throws IOException {
-        Path path = Paths.get("src/test/resources/assets/gongfa");
+        Path path = Paths.get("src","test", "resources", "assets", "gongfa");
 
         try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(path, "*.json")) {
             for (Path filePath : directoryStream) {

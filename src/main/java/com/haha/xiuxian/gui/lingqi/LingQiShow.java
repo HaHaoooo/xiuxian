@@ -85,8 +85,8 @@ public class LingQiShow extends GuiScreen {
 
         this.drawString(fontRenderer, "§lN", x + WIDTH/2, y + 5, Color.GRAY.getRGB());
         this.drawString(fontRenderer, "§lS", x + WIDTH/2, y + HEIGHT - 12, Color.GRAY.getRGB());
-        this.drawString(fontRenderer, "§lW",  x + 10, y + HEIGHT/2 - 3, Color.GRAY.getRGB());
-        this.drawString(fontRenderer, "§lE",  x + WIDTH - 12, y + HEIGHT/2 - 3, Color.GRAY.getRGB());
+        this.drawString(fontRenderer, "§lW", x + 10, y + HEIGHT/2 - 3, Color.GRAY.getRGB());
+        this.drawString(fontRenderer, "§lE", x + WIDTH - 12, y + HEIGHT/2 - 3, Color.GRAY.getRGB());
 
         this.fontRenderer.drawString("", 0, 0, Color.WHITE.getRGB());
         this.mc.getTextureManager().bindTexture(this.mc.player.getLocationSkin());

@@ -1,4 +1,4 @@
-package com.haha.xiuxian.items;
+package com.haha.xiuxian.util.gui.inventory;
 
 import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.ItemStack;

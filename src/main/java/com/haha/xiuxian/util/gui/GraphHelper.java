@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import org.lwjgl.opengl.GL11;
 
-public class Graph {
+public class GraphHelper {
 
     public static void drawSolidHexagon(double centerX, double centerY, double radius, int color) {
         Tessellator tessellator = Tessellator.getInstance();
@@ -48,13 +48,25 @@ public class Graph {
         GlStateManager.disableBlend();
     }
 
+    /** 由haha写的可变换角六边形
+     * @param centerX x坐标系
+     * @param centerY y坐标系
+     * @param angle1 第一个角离中心点的距离，100为上限，0为下限
+     * @param angle2 与angle1相同
+     * @param angle3 与angle1相同
+     * @param angle4 与angle1相同
+     * @param angle5 与angle1相同
+     * @param angle6 与angle1相同
+     * @param radius 六边形半径
+     * @param color 颜色，可用Color方法
+     */
     public static void drawPolygonalHexagon(double centerX, double centerY, double angle1, double angle2, double angle3, double angle4, double angle5, double angle6, double radius, int color) {
         Tessellator tessellator = Tessellator.getInstance();
         BufferBuilder bufferbuilder = tessellator.getBuffer();
         float r = (float) (color >> 16 & 255) / 255.0F;
         float g = (float) (color >> 8 & 255) / 255.0F;
         float b = (float) (color & 255) / 255.0F;
-        float alpha = 0.95F;
+        float alpha = 1.5F;
 
         GlStateManager.enableBlend();
         GlStateManager.disableTexture2D();

@@ -1,0 +1,26 @@
+{
+  "name": "土属性功法",
+  "description": [
+    "土属性的样例功法"
+  ],
+  "properties": {
+    "speed": 10,
+    "strength": 10,
+    "health": 10,
+    "defence": 10,
+    "comprehension": 10,
+    "spirit": 10
+  },
+  "levels": {
+    "name": [
+      "入门",
+      "小成",
+      "大成"
+    ],
+    "tips": {
+      "入门": "无任何描述",
+      "小成": "无任何描述",
+      "大成": "无任何描述"
+    }
+  }
+}

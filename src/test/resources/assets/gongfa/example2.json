@@ -1,6 +1,7 @@
 {
   "name": "莲华妙典",
-  "description": [
+  "description":
+  [
     "风梳雨洗塑冰身，骨有清香养性真。",
     "道途周遭多黑水，心澄万念自无尘。",
     "净世接引何寻处，尽在心莲一点真。"
@@ -9,7 +10,7 @@
     "speed": 20,
     "strength": 20,
     "health": 20,
-    "defence": 20,
+    "defence": 30,
     "comprehension": 20,
     "spirit": 20
   }

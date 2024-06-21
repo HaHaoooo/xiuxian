@@ -11,6 +11,7 @@ import com.haha.xiuxian.items.crops.HuaiYang;
 import com.haha.xiuxian.items.fabao.FlameExplode;
 import com.haha.xiuxian.items.fabao.JumpFuLu;
 import com.haha.xiuxian.items.gongfa.*;
+import com.haha.xiuxian.items.gongfa.batch.water.LianHuaMiaoDian;
 import com.haha.xiuxian.items.lingshi.ExtremeLingShi;
 import com.haha.xiuxian.items.lingshi.HighLingShi;
 import com.haha.xiuxian.items.lingshi.LowLingShi;
@@ -48,13 +49,23 @@ public class Registry {
         itemRegistry.add(MidLingShi.INSTANCE);
         itemRegistry.add(HighLingShi.INSTANCE);
         itemRegistry.add(ExtremeLingShi.INSTANCE);
-        itemRegistry.add(Gongfa.INSTANCE);
-        itemRegistry.add(MetalGongFaBase.INSTANCE);
-        itemRegistry.add(WoodGongFaBase.INSTANCE);
-        itemRegistry.add(WaterGongFaBase.INSTANCE);
-        itemRegistry.add(FireGongFaBase.INSTANCE);
-        itemRegistry.add(DirtGongFaBase.INSTANCE);
+        ////////////////////////////////////
+        // 功法：
+        // 空属性功法
         itemRegistry.add(EmptyGongFaBase.INSTANCE);
+        // 金属性功法
+        itemRegistry.add(MetalGongFaBase.INSTANCE);
+        // 木属性功法
+        itemRegistry.add(WoodGongFaBase.INSTANCE);
+        // 水属性功法
+        itemRegistry.add(WaterGongFaBase.INSTANCE);
+        itemRegistry.add(LianHuaMiaoDian.INHERITOR);
+        // 火属性功法
+        itemRegistry.add(FireGongFaBase.INSTANCE);
+        // 土属性功法
+        itemRegistry.add(DirtGongFaBase.INSTANCE);
+
+        ////////////////////////////////////
         itemRegistry.add(JumpFuLu.INSTANCE);
         itemRegistry.add(FlameExplode.INSTANCE);
         for (Item item : itemRegistry) {

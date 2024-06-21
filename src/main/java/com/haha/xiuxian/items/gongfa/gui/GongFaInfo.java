@@ -1,45 +1,49 @@
 package com.haha.xiuxian.items.gongfa.gui;
 
 import com.haha.xiuxian.XiuXian;
-import com.haha.xiuxian.util.gui.Graph;
+import com.haha.xiuxian.util.basic.StringHelper;
+import com.haha.xiuxian.util.gui.GraphHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.awt.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class GongFaInfo extends GuiScreen {
-    private final String intro;
-    private final int rowPerWords;
     private final String title;
+    private final JSONArray description;
+    private final JSONObject levels;
     private final int radius;
-    double angle1 = 0;
-    double angle2 = 0;
-    double angle3 = 0;
-    double angle4 = 0;
-    double angle5 = 0;
-    double angle6 = 0;
+    double[] angles = new double[]{0, 0, 0, 0, 0, 0};
+    double[] bounds = new double[6];
 
-    double bound1;
-    double bound2;
-    double bound3;
-    double bound4;
-    double bound5;
-    double bound6;
+    public GongFaInfo(String fileName, int radius) throws IOException {
+        Path path = Paths.get(System.getProperty("user.dir").replace("run", "src"), "main", "resources", "assets", "gongfa", fileName);
+        String content = new String(Files.readAllBytes(path));
+        JSONObject contentObject = new JSONObject(content);
+        String name = contentObject.getString("name");
+        JSONArray description = contentObject.getJSONArray("description");
+        JSONObject properties = contentObject.getJSONObject("properties");
+        JSONObject levels = contentObject.getJSONObject("levels");
 
-    public GongFaInfo(String intro, int rowPerWords, String title, int radius, double[] angles){
-        this.intro = intro;
-        this.rowPerWords = rowPerWords;
-        this.title = title;
+        this.title = name;
+        this.description = description;
+        this.levels = levels;
         this.radius = radius;
-        this.bound1 = angles[0];
-        this.bound2 = angles[1];
-        this.bound3 = angles[2];
-        this.bound4 = angles[3];
-        this.bound5 = angles[4];
-        this.bound6 = angles[5];
+        this.bounds[0] = properties.getDouble("speed");
+        this.bounds[1] = properties.getDouble("strength");
+        this.bounds[2] = properties.getDouble("health");
+        this.bounds[3] = properties.getDouble("defence");
+        this.bounds[4] = properties.getDouble("comprehension");
+        this.bounds[5] = properties.getDouble("spirit");
     }
 
     @Override
@@ -54,63 +58,61 @@ public class GongFaInfo extends GuiScreen {
         int centerX = guiLeft + (textureWidth / 4) + 31;
         int centerY = guiTop + (textureHeight / 4) + 20;
 
-        if (angle1 < bound1) {
-            angle1 += 1;
+        // 绘制雷达图
+        updateAngles();
+        GraphHelper.drawSolidHexagon(centerX, centerY, radius + 1, Color.GRAY.brighter().getRGB());
+        for (int i = 0; i < 6; i++) {
+            ThickInnerHexagon(centerX, centerY, i * 5);
         }
-        if (angle2 < bound2) {
-            angle2 += 1;
-        }
-        if (angle3 < bound3) {
-            angle3 += 1;
-        }
-        if (angle4 < bound4) {
-            angle4 += 1;
-        }
-        if (angle5 < bound5) {
-            angle5 += 1;
-        }
-        if (angle6 < bound6) {
-            angle6 += 1;
-        }
-        Graph.drawSolidHexagon(centerX, centerY, radius + 1, Color.GRAY.brighter().getRGB());
+        GraphHelper.drawPolygonalHexagon(centerX, centerY, angles[0], angles[1], angles[2], angles[3], angles[4], angles[5], radius, Color.GRAY.getRGB());
 
-        ThickInnerHexagon(centerX, centerY, 0);
-        ThickInnerHexagon(centerX, centerY, 5);
-        ThickInnerHexagon(centerX, centerY, 10);
-        ThickInnerHexagon(centerX, centerY, 15);
-        ThickInnerHexagon(centerX, centerY, 20);
-        ThickInnerHexagon(centerX, centerY, 25);
+        // 功法文字类信息
+        if (fontRenderer != null) {
 
-        Graph.drawPolygonalHexagon(centerX, centerY, angle1, angle2, angle3, angle4, angle5, angle6, radius, Color.GRAY.getRGB());
+            // 功法名字
+            char[] title = this.title.toCharArray();
+            int interval = (152 - title.length * 18) / 4;
+            for (int i = 0; i < title.length; i++) {
+                fontRenderer.drawString(TextFormatting.BOLD + String.valueOf(title[i]), guiLeft + 41, guiTop + 64 + i * interval, Color.BLACK.getRGB(), false);
+            }
 
-        ArrayList<String> list = SplitString(intro, rowPerWords);
-        for (int i = 0; i < list.size(); i++) {
-            fontRenderer.drawString(list.get(i), guiLeft + 90, guiTop + 20 + i * 15, Color.BLACK.getRGB(), false);
-        }
+            // 功法描述
+            for (int i = 0; i < description.length(); i++) {
+                fontRenderer.drawString(description.getString(i), guiLeft + 90, guiTop + 20 + i * 15, Color.BLACK.getRGB(), false);
+            }
 
-        ArrayList<String> title = SplitString(this.title, 1);
-        int interval = (152 - title.size() * 18) / 4;
-        for (int i = 0; i < title.size(); i++) {
-            fontRenderer.drawString(TextFormatting.BOLD + title.get(i), guiLeft + 41, guiTop + 64 + i * interval, Color.BLACK.getRGB(), false);
+            // 功法等级以及其描述
+            JSONArray levelName = levels.getJSONArray("name");
+            JSONObject levelTips = levels.getJSONObject("tips");
+            for (int i = 0; i < levelName.length(); i++) {
+                String key = levelName.getString(i);
+                ArrayList<String> value = StringHelper.splitString(levelTips.getString(key), 8, TextFormatting.BOLD, TextFormatting.AQUA);
+
+                int space = 10;
+                int x = (i % 2 == 0) ? guiLeft + 281 - space : guiLeft + 281 + space;
+                int y = guiTop + 50 + i * 25;
+                fontRenderer.drawString(key, x, y, Color.BLACK.getRGB(), false);
+                if (mouseX >= x && mouseX <= x + fontRenderer.getStringWidth(key) && mouseY >= y && mouseY <= y + 7) {
+                    this.drawHoveringText(value, mouseX, mouseY);
+                }
+            }
         }
 
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 
     private void ThickInnerHexagon(int centerX, int centerY, int dif) {
-        Graph.drawHollowHexagon(centerX, centerY, radius - dif, Color.WHITE.getRGB());
-        Graph.drawHollowHexagon(centerX, centerY, radius - 0.2 - dif, Color.WHITE.getRGB());
-        Graph.drawHollowHexagon(centerX, centerY, radius - 0.4 - dif, Color.WHITE.getRGB());
-        Graph.drawHollowHexagon(centerX, centerY, radius - 0.4 - dif, Color.WHITE.getRGB());
+        GraphHelper.drawHollowHexagon(centerX, centerY, radius - dif, Color.WHITE.getRGB());
+        GraphHelper.drawHollowHexagon(centerX, centerY, radius - 0.2 - dif, Color.WHITE.getRGB());
+        GraphHelper.drawHollowHexagon(centerX, centerY, radius - 0.4 - dif, Color.WHITE.getRGB());
+        GraphHelper.drawHollowHexagon(centerX, centerY, radius - 0.4 - dif, Color.WHITE.getRGB());
     }
 
-    private ArrayList<String> SplitString(String args, int lineLength) {
-        ArrayList<String> list = new ArrayList<>();
-        int length = args.length();
-        for (int i = 0; i < length; i += lineLength) {
-            int end = Math.min(length, i + lineLength);
-            list.add(args.substring(i, end));
+    private void updateAngles() {
+        for (int i = 0; i < 6; i++) {
+            if (angles[i] < bounds[i]) {
+                angles[i] += 1;
+            }
         }
-        return list;
     }
 }

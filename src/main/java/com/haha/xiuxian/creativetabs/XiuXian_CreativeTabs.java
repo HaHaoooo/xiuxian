@@ -3,7 +3,7 @@ package com.haha.xiuxian.creativetabs;
 import com.haha.xiuxian.blocks.lingshi.Low.LowLingShiMainBlock;
 import com.haha.xiuxian.blocks.zhenfa.ZhenYan;
 import com.haha.xiuxian.items.LingGenTest;
-import com.haha.xiuxian.items.gongfa.Gongfa;
+import com.haha.xiuxian.items.gongfa.EmptyGongFaBase;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -31,7 +31,7 @@ public class XiuXian_CreativeTabs {
         @Nonnull
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(Gongfa.INSTANCE);
+            return new ItemStack(EmptyGongFaBase.INSTANCE);
         }
     };
 
