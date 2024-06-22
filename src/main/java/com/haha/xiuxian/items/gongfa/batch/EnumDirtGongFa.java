@@ -4,11 +4,11 @@ import com.haha.xiuxian.items.gongfa.DirtGongFaBase;
 import net.minecraft.item.Item;
 
 public enum EnumDirtGongFa {
-    TEMPLATE("template.json", "dirt_gongfa");
+    TEMPLATE("dirt_gongfa");
 
     private final Item item;
-    EnumDirtGongFa(String fileName, String registryName){
-        this.item = new DirtGongFaBase(fileName, registryName);
+    EnumDirtGongFa(String registryName){
+        this.item = new DirtGongFaBase(registryName);
     }
 
     public Item getItem() {

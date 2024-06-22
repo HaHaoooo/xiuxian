@@ -1,8 +1,9 @@
 {
-  "name": "水属性功法",
+  "name": "火属性功法",
   "description": [
-    "水属性的样例功法"
+    "火属性的样例功法"
   ],
+  "rank": "黄阶",
   "properties": {
     "speed": 10,
     "strength": 10,

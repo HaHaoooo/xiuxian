@@ -23,12 +23,12 @@ public class DirtGongFaBase extends Item {
 
     private final String fileName;
 
-    public DirtGongFaBase(String fileName, String registryName) {
+    public DirtGongFaBase(String registryName) {
         this.setRegistryName("xiuxian:" + registryName);
         this.setUnlocalizedName("xiuxian." + registryName);
         this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_GONGFA);
         this.setMaxStackSize(1);
-        this.fileName = fileName;
+        this.fileName = registryName + ".json";
     }
 
     @Nonnull

@@ -16,11 +16,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class GongFaInfo extends GuiScreen {
     private final String title;
     private final JSONArray description;
     private final JSONObject levels;
+    private final String rank;
     private final int radius;
     double[] angles = new double[]{0, 0, 0, 0, 0, 0};
     double[] bounds = new double[6];
@@ -34,10 +36,12 @@ public class GongFaInfo extends GuiScreen {
         JSONArray description = contentObject.getJSONArray("description");
         JSONObject properties = contentObject.getJSONObject("properties");
         JSONObject levels = contentObject.getJSONObject("levels");
+        String rank = contentObject.getString("rank");
 
         this.title = name;
         this.description = description;
         this.levels = levels;
+        this.rank = rank;
         this.radius = radius;
         this.bounds[0] = properties.getDouble("speed");
         this.bounds[1] = properties.getDouble("strength");
@@ -69,11 +73,12 @@ public class GongFaInfo extends GuiScreen {
         GraphHelper.drawPolygonalHexagon(centerX, centerY, angles[0], angles[1], angles[2], angles[3], angles[4], angles[5], radius, Color.GRAY.getRGB());
 
 
-        // 绘制元素图
         // 重置界面颜色
         if (fontRenderer != null) {
             fontRenderer.drawString("", guiLeft, guiTop, Color.WHITE.getRGB());
         }
+
+        // 绘制元素图
         Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(XiuXian.MODID, "textures/misc/" + element + ".png"));
         int elementWidth = 40;
         int elementHeight = 40;
@@ -96,7 +101,7 @@ public class GongFaInfo extends GuiScreen {
                 fontRenderer.drawString(description.getString(i), guiLeft + 90, guiTop + 20 + i * 15, Color.BLACK.getRGB(), false);
             }
 
-            // 功法等级以及其描述
+            // 功法层数以及其描述
             JSONArray levelName = levels.getJSONArray("name");
             JSONObject levelTips = levels.getJSONObject("tips");
             for (int i = 0; i < levelName.length(); i++) {
@@ -111,6 +116,21 @@ public class GongFaInfo extends GuiScreen {
                     this.drawHoveringText(value, mouseX, mouseY);
                 }
             }
+
+            // 功法品级
+            double angleSum = Arrays.stream(angles).sum();
+            String rankShow =  calRank(rank, angleSum);
+            int rankColor;
+            if (angleSum <= 150){
+                rankColor = Color.YELLOW.darker().getRGB();
+            } else if(angleSum <= 300){
+                rankColor = Color.ORANGE.darker().getRGB();
+            } else if (angleSum <= 500){
+                rankColor = Color.RED.darker().getRGB();
+            } else {
+                rankColor = Color.PINK.darker().getRGB();
+            }
+            fontRenderer.drawSplitString("§l" + rankShow, elementX - 15, elementY + 5, 15, rankColor);
         }
 
         super.drawScreen(mouseX, mouseY, partialTicks);
@@ -129,5 +149,19 @@ public class GongFaInfo extends GuiScreen {
                 angles[i] += 1;
             }
         }
+    }
+
+    public static String calRank(String rank, double propertiesSum) {
+        String rankShow;
+        if (propertiesSum <= 150) {
+            rankShow = rank + "下品";
+        } else if (propertiesSum <= 300) {
+            rankShow = rank + "中品";
+        } else if (propertiesSum <= 500) {
+            rankShow = rank + "上品";
+        } else {
+            rankShow = rank + "极品";
+        }
+        return rankShow;
     }
 }

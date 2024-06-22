@@ -22,12 +22,12 @@ import java.util.List;
 public class EmptyGongFaBase extends Item {
     private final String fileName;
 
-    public EmptyGongFaBase(String fileName, String registryName){
+    public EmptyGongFaBase(String registryName){
         this.setRegistryName("xiuxian:" + registryName);
         this.setUnlocalizedName("xiuxian." + registryName);
         this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_GONGFA);
         this.setMaxStackSize(1);
-        this.fileName = fileName;
+        this.fileName = registryName + ".json";
     }
 
     @Nonnull

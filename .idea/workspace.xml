@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a367ce09-4d0e-4f75-a7e3-00f43ff8e984" name="更改" comment="6/21">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumDirtGongFa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumEmptyGongFa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumFireGongFa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumMetalGongFa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumWaterGongFa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumWoodGongFa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/textures/misc/dirt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/textures/misc/empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/textures/misc/fire.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/textures/misc/metal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/textures/misc/water.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/textures/misc/wood.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/gongfa/empty/empty_gongfa.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/gui/main/gongfa.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/splash.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/config/worldedit/worldedit.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/worldedit/worldedit.properties" afterDir="false" />
@@ -31,19 +21,32 @@
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/data/villages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/level.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/region/r.1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/region/r.1.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/session.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usernamecache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usernamecache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/Registry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/Registry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/creativetabs/XiuXian_CreativeTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/creativetabs/XiuXian_CreativeTabs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/gui/gongfashow/GongFaContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/gui/gongfashow/GongFaContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/gui/gongfashow/GongFaGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/gui/gongfashow/GongFaGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/DirtGongFaBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/DirtGongFaBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/EmptyGongFaBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/EmptyGongFaBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/FireGongFaBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/FireGongFaBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/MetalGongFaBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/MetalGongFaBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/WaterGongFaBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/WaterGongFaBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/WoodGongFaBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/WoodGongFaBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/water/LianHuaMiaoDian.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumDirtGongFa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumDirtGongFa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumEmptyGongFa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumEmptyGongFa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumFireGongFa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumFireGongFa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumMetalGongFa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumMetalGongFa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumWaterGongFa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumWaterGongFa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumWoodGongFa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/batch/EnumWoodGongFa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/gui/GongFaInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/gui/GongFaInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/gongfa/dirt/template.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/gongfa/dirt/dirt_gongfa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/gongfa/empty/template.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/gongfa/fire/template.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/gongfa/fire/fire_gongfa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/gongfa/metal/template.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/gongfa/metal/metal_gongfa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/gongfa/water/lian_hua_miao_dian.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/gongfa/water/lian_hua_miao_dian.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/gongfa/water/template.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/gongfa/water/water_gongfa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/gongfa/wood/template.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/gongfa/wood/wood_gongfa.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,8 +100,8 @@
       <list>
         <option value="package.json" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -158,11 +161,11 @@
       <recent name="$PROJECT_DIR$/src/main/resources/assets/xiuxian/textures/blocks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/xiuxian/gui/main" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/xiuxian/textures/misc" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/gongfa/water" />
       <recent name="$PROJECT_DIR$/src/test/resources/assets" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/xiuxian/gui/gongfa" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/entity/models" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.haha.xiuxian.Nbt" />
@@ -305,7 +308,8 @@
       <workItem from="1717033517734" duration="18388000" />
       <workItem from="1718117686121" duration="59522000" />
       <workItem from="1718956928418" duration="1313000" />
-      <workItem from="1718958426557" duration="7814000" />
+      <workItem from="1718958426557" duration="10662000" />
+      <workItem from="1719038786074" duration="9436000" />
     </task>
     <task id="LOCAL-00001" summary="6/20">
       <created>1718898511129</created>
@@ -328,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718965204430</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="6/21">
+      <created>1718981641577</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718981641577</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

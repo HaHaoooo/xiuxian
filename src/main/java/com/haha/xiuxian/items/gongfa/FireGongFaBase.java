@@ -22,14 +22,13 @@ import java.util.List;
 public class FireGongFaBase extends Item {
 
     private final String fileName;
-    public static FireGongFaBase INSTANCE = new FireGongFaBase("template.json", "fire_gongfa");
 
-    public FireGongFaBase(String fileName, String registryName) {
+    public FireGongFaBase(String registryName) {
         this.setRegistryName("xiuxian:" + registryName);
         this.setUnlocalizedName("xiuxian." + registryName);
         this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_GONGFA);
         this.setMaxStackSize(1);
-        this.fileName = fileName;
+        this.fileName = registryName + ".json";
     }
 
     @Nonnull
