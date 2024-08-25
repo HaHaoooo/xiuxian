@@ -10,86 +10,77 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber
 public class ToolTipHelper extends GuiScreen {
-    private static boolean metal = false;
-    private static boolean wood = false;
-    private static boolean water = false;
-    private static boolean fire = false;
-    private static boolean dirt = false;
-    private static boolean empty = false;
+    public enum TooltipType {
+        METAL,
+        WOOD,
+        WATER,
+        FIRE,
+        DIRT,
+        EMPTY
+    }
+
+    private static TooltipType currentTooltipType = null;
+
     @SubscribeEvent
     public static void ToolTipAddPics(RenderTooltipEvent.PostText event) {
-        int toolTipY = event.getY();
-        int toolTipX = event.getX();
-
-        Minecraft mc = Minecraft.getMinecraft();
-
-        if (metal && isShiftKeyDown()) {
-            mc.getTextureManager().bindTexture(new ResourceLocation(XiuXian.MODID, "tooltip/metal.png"));
+        if (currentTooltipType != null && isShiftKeyDown()) {
+            int toolTipY = event.getY();
+            int toolTipX = event.getX();
+            Minecraft mc = Minecraft.getMinecraft();
+            mc.getTextureManager().bindTexture(new ResourceLocation(XiuXian.MODID, "tooltip/" + currentTooltipType.name().toLowerCase() + ".png"));
             drawModalRectWithCustomSizedTexture(toolTipX, toolTipY + 42, 0, 0, 33, 38, 33, 38);
-        } else if (!isShiftKeyDown()){
-            BackUp();
-        }
-
-        if (wood && isShiftKeyDown()) {
-            mc.getTextureManager().bindTexture(new ResourceLocation(XiuXian.MODID, "tooltip/wood.png"));
-            drawModalRectWithCustomSizedTexture(toolTipX, toolTipY + 42, 0, 0, 33, 38, 33, 38);
-        } else if (!isShiftKeyDown()){
-            BackUp();
-        }
-
-        if (water && isShiftKeyDown()) {
-            mc.getTextureManager().bindTexture(new ResourceLocation(XiuXian.MODID, "tooltip/water.png"));
-            drawModalRectWithCustomSizedTexture(toolTipX, toolTipY + 42, 0, 0, 33, 38, 33, 38);
-        } else if (!isShiftKeyDown()){
-            BackUp();
-        }
-
-        if (fire && isShiftKeyDown()) {
-            mc.getTextureManager().bindTexture(new ResourceLocation(XiuXian.MODID, "tooltip/fire.png"));
-            drawModalRectWithCustomSizedTexture(toolTipX, toolTipY + 42, 0, 0, 33, 38, 33, 38);
-        } else if (!isShiftKeyDown()){
-            BackUp();
-        }
-
-        if (dirt && isShiftKeyDown()) {
-            mc.getTextureManager().bindTexture(new ResourceLocation(XiuXian.MODID, "tooltip/dirt.png"));
-            drawModalRectWithCustomSizedTexture(toolTipX, toolTipY + 42, 0, 0, 33, 38, 33, 38);
-        } else if (!isShiftKeyDown()){
-            BackUp();
-        }
-
-        if (empty && isShiftKeyDown()) {
-            mc.getTextureManager().bindTexture(new ResourceLocation(XiuXian.MODID, "tooltip/empty.png"));
-            drawModalRectWithCustomSizedTexture(toolTipX, toolTipY + 42, 0, 0, 33, 38, 33, 38);
-        } else if (!isShiftKeyDown()){
-            BackUp();
+        } else {
+            ResetTooltipType();
         }
     }
 
-    public static void ChangeMetal(){
-        metal = true;
+    public static void ChangeTooltipType(TooltipType type) {
+        currentTooltipType = type;
+        ResetOtherTooltipTypes(type);
     }
-    public static void ChangeWood(){
-        wood = true;
+
+    private static void ResetOtherTooltipTypes(TooltipType exclude) {
+        for (TooltipType type : TooltipType.values()) {
+            if (type != exclude) {
+                switch (type) {
+                    case METAL:
+                    case WOOD:
+                    case WATER:
+                    case FIRE:
+                    case DIRT:
+                    case EMPTY:
+                    default:
+                        break;
+                }
+            }
+        }
     }
-    public static void ChangeWater(){
-        water = true;
+
+    private static void ResetTooltipType() {
+        currentTooltipType = null;
     }
-    public static void ChangeFire(){
-        fire = true;
+
+    public static void ChangeMetal() {
+        ChangeTooltipType(TooltipType.METAL);
     }
-    public static void ChangeDirt(){
-        dirt = true;
+
+    public static void ChangeWood() {
+        ChangeTooltipType(TooltipType.WOOD);
     }
-    public static void ChangeEmpty(){
-        empty = true;
+
+    public static void ChangeWater() {
+        ChangeTooltipType(TooltipType.WATER);
     }
-    private static void BackUp(){
-        metal = false;
-        wood = false;
-        water = false;
-        fire = false;
-        dirt = false;
-        empty = false;
+
+    public static void ChangeFire() {
+        ChangeTooltipType(TooltipType.FIRE);
+    }
+
+    public static void ChangeDirt() {
+        ChangeTooltipType(TooltipType.DIRT);
+    }
+
+    public static void ChangeEmpty() {
+        ChangeTooltipType(TooltipType.EMPTY);
     }
 }

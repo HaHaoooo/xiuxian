@@ -46,8 +46,8 @@ public class LingQiShow extends GuiScreen {
 
                 EntityPlayer player = this.mc.player;
                 World world = this.mc.world;
-                BlockPos pos = new BlockPos(player.posX + 16 * (i - Math.floor((double) NUM_BLOCKS_X/2)), player.posY, player.posZ + 16 * (j- Math.floor((double) NUM_BLOCKS_Y/2)));
-                if (i - Math.floor((double) NUM_BLOCKS_X/2) == 0 && j - Math.floor((double) NUM_BLOCKS_Y/2) == 0){
+                BlockPos pos = new BlockPos(player.posX + 16 * (i - Math.floor((double) NUM_BLOCKS_X / 2)), player.posY, player.posZ + 16 * (j - Math.floor((double) NUM_BLOCKS_Y / 2)));
+                if (i - Math.floor((double) NUM_BLOCKS_X / 2) == 0 && j - Math.floor((double) NUM_BLOCKS_Y / 2) == 0) {
                     this.playerX = blockX;
                     this.playerY = blockY;
                 }
@@ -83,39 +83,25 @@ public class LingQiShow extends GuiScreen {
             }
         }
 
-        this.drawString(fontRenderer, "§lN", x + WIDTH/2, y + 5, Color.GRAY.getRGB());
-        this.drawString(fontRenderer, "§lS", x + WIDTH/2, y + HEIGHT - 12, Color.GRAY.getRGB());
-        this.drawString(fontRenderer, "§lW", x + 10, y + HEIGHT/2 - 3, Color.GRAY.getRGB());
-        this.drawString(fontRenderer, "§lE", x + WIDTH - 12, y + HEIGHT/2 - 3, Color.GRAY.getRGB());
+        this.drawString(fontRenderer, "§lN", x + WIDTH / 2, y + 5, Color.GRAY.getRGB());
+        this.drawString(fontRenderer, "§lS", x + WIDTH / 2, y + HEIGHT - 12, Color.GRAY.getRGB());
+        this.drawString(fontRenderer, "§lW", x + 10, y + HEIGHT / 2 - 3, Color.GRAY.getRGB());
+        this.drawString(fontRenderer, "§lE", x + WIDTH - 12, y + HEIGHT / 2 - 3, Color.GRAY.getRGB());
 
         this.fontRenderer.drawString("", 0, 0, Color.WHITE.getRGB());
         this.mc.getTextureManager().bindTexture(this.mc.player.getLocationSkin());
-        drawModalRectWithCustomSizedTexture(this.playerX + (BLOCK_WIDTH - 16)/2, this.playerY + (BLOCK_HEIGHT - 16)/2, 16, 16, 16, 16,128, 128);
+        drawModalRectWithCustomSizedTexture(this.playerX + (BLOCK_WIDTH - 16) / 2, this.playerY + (BLOCK_HEIGHT - 16) / 2, 16, 16, 16, 16, 128, 128);
     }
 
-    private int getRGBFromLingQi(int lingqi){
-        double rgbSum = lingqi*3;
-        int r = 0;
-        int g = 0;
-        int b;
-        if (rgbSum > 255){
-            b = 255;
-            rgbSum -= 255;
-            if (rgbSum > 255){
-                g = 255;
-                rgbSum -= 255;
-                if (rgbSum > 255){
-                    r = 255;
-                }
-            } else {
-                g = (int) rgbSum;
-            }
-        } else {
-            b = (int) rgbSum;
-        }
-        if (lingqi == 0){
+    private int getRGBFromLingQi(int lingqi) {
+        if (lingqi == 0) {
             return Color.WHITE.getRGB();
         }
+        int rgbSum = lingqi * 3;
+        int b = rgbSum & 0xFF;
+        int g = (rgbSum >> 8) & 0xFF;
+        int r = (rgbSum >> 16) & 0xFF;
+
         return new Color(r, g, b).getRGB();
     }
 

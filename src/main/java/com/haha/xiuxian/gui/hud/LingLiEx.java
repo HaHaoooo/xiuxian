@@ -50,58 +50,33 @@ public class LingLiEx extends Gui {
 
             if (MainConfig.Metal) {
                 double MetalWidth = (container.getMetal() / container.getMetalMax()) * 74;
-                GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                Minecraft.getMinecraft().renderEngine.bindTexture(MetalLocation);
-                drawModalRectWithCustomSizedTexture(x, MetalY, 0, 0, 100, 26, 100, 26);
-                GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                Minecraft.getMinecraft().renderEngine.bindTexture(LingLiEx);
-                drawModalRectWithCustomSizedTexture(x + 26, MetalY, 0, 0, (int) MetalWidth, 26, 74, 26);
+                setRenderer((int) MetalWidth, MetalLocation, MetalY);
             }
 
             if (MainConfig.Wood) {
                 double WoodWidth = (container.getWood() / container.getWoodMax()) * 74;
-                GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                Minecraft.getMinecraft().renderEngine.bindTexture(WoodLocation);
-                drawModalRectWithCustomSizedTexture(x, WoodY, 0, 0, 100, 26, 100, 26);
-                GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                Minecraft.getMinecraft().renderEngine.bindTexture(LingLiEx);
-                drawModalRectWithCustomSizedTexture(x + 26, WoodY, 0, 0, (int) WoodWidth, 26, 74, 26);
+                setRenderer((int) WoodWidth, WoodLocation, WoodY);
             } else {
                 WoodY = MetalY;
             }
 
             if (MainConfig.Water) {
                 double WaterWidth = (container.getWater() / container.getWaterMax()) * 74;
-                GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                Minecraft.getMinecraft().renderEngine.bindTexture(WaterLocation);
-                drawModalRectWithCustomSizedTexture(x, WaterY, 0, 0, 100, 26, 100, 26);
-                GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                Minecraft.getMinecraft().renderEngine.bindTexture(LingLiEx);
-                drawModalRectWithCustomSizedTexture(x + 26, WaterY, 0, 0, (int) WaterWidth, 26, 74, 26);
+                setRenderer((int) WaterWidth, WaterLocation, WaterY);
             } else {
                 WaterY = WoodY;
             }
 
             if (MainConfig.Fire) {
                 double FireWidth = (container.getFire() / container.getFireMax()) * 74;
-                GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                Minecraft.getMinecraft().renderEngine.bindTexture(FireLocation);
-                drawModalRectWithCustomSizedTexture(x, FireY, 0, 0, 100, 26, 100, 26);
-                GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                Minecraft.getMinecraft().renderEngine.bindTexture(LingLiEx);
-                drawModalRectWithCustomSizedTexture(x + 26, FireY, 0, 0, (int) FireWidth, 26, 74, 26);
+                setRenderer((int) FireWidth, FireLocation, FireY);
             } else {
                 FireY = WaterY;
             }
 
             if (MainConfig.Dirt) {
                 double DirtWidth = (container.getDirt() / container.getDirtMax()) * 74;
-                GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                Minecraft.getMinecraft().renderEngine.bindTexture(DirtLocation);
-                drawModalRectWithCustomSizedTexture(x, DirtY, 0, 0, 100, 26, 100, 26);
-                GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                Minecraft.getMinecraft().renderEngine.bindTexture(LingLiEx);
-                drawModalRectWithCustomSizedTexture(x + 26, DirtY, 0, 0, (int) DirtWidth, 26, 74, 26);
+                setRenderer((int) DirtWidth, DirtLocation, DirtY);
             }
 
 
@@ -109,5 +84,14 @@ public class LingLiEx extends Gui {
             GlStateManager.enableDepth();
             GlStateManager.disableBlend();
         }
+    }
+
+    private static void setRenderer(int width, ResourceLocation location, int y) {
+        GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+        Minecraft.getMinecraft().renderEngine.bindTexture(location);
+        drawModalRectWithCustomSizedTexture(x, y, 0, 0, 100, 26, 100, 26);
+        GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+        Minecraft.getMinecraft().renderEngine.bindTexture(LingLiEx);
+        drawModalRectWithCustomSizedTexture(x + 26, y, 0, 0, width, 26, 74, 26);
     }
 }

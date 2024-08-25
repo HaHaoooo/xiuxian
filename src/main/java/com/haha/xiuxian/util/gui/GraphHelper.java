@@ -8,6 +8,10 @@ import org.lwjgl.opengl.GL11;
 
 public class GraphHelper {
 
+    public static double[] pointX;
+
+    public static double[] pointY;
+
     public static void drawSolidHexagon(double centerX, double centerY, double radius, int color) {
         Tessellator tessellator = Tessellator.getInstance();
         BufferBuilder bufferbuilder = tessellator.getBuffer();
@@ -88,6 +92,21 @@ public class GraphHelper {
 
         GlStateManager.enableTexture2D();
         GlStateManager.disableBlend();
+
+        pointX = new double[6];
+        pointY = new double[6];
+        pointX[0] = centerX - ScaledAngle(angle1, radius) / 2;
+        pointY[0] = centerY - ScaledAngle(angle1, radius);
+        pointX[1] = centerX + ScaledAngle(angle2, radius) / 2;
+        pointY[1] = centerY - ScaledAngle(angle2, radius);
+        pointX[2] = centerX + ScaledAngle(angle3, radius) * (xAxisRadius / radius);
+        pointY[2] = centerY;
+        pointX[3] = centerX + ScaledAngle(angle4, radius) / 2;
+        pointY[3] = centerY + ScaledAngle(angle4, radius);
+        pointX[4] = centerX - ScaledAngle(angle5, radius) / 2;
+        pointY[4] = centerY + ScaledAngle(angle5, radius);
+        pointX[5] = centerX - ScaledAngle(angle6, radius) * (xAxisRadius / radius);
+        pointY[5] = centerY;
     }
 
     private static double ScaledAngle(double angle, double radius){

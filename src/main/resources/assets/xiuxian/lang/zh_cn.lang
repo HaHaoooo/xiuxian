@@ -12,8 +12,11 @@ item.xiuxian.lian_hua_miao_dian.name=莲华妙典
 item.xiuxian.fire_gongfa.name=火属性功法（未知）
 item.xiuxian.dirt_gongfa.name=土属性功法（未知）
 item.xiuxian.empty_gongfa.name=空属性功法（未知）
-item.xiuxian.double_jump_fu_lu.name=腾空挪移符箓
-item.xiuxian.flame_explode_fu_lu.name=赤焰天星爆符箓
+
+# 符箓
+item.xiuxian.empty_fu_1.name=腾空挪移符箓
+item.xiuxian.fire_fu_1.name=赤焰天星爆符箓
+item.xiuxian.metal_fu_1.name=初阶敛财符箓
 
 # Block
 tile.xiuxian.low_ling_shi_main_block.name=§a下品灵石母岩

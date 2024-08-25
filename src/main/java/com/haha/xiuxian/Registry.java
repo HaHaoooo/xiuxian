@@ -8,8 +8,9 @@ import com.haha.xiuxian.entity.ZhenFaEntity1;
 import com.haha.xiuxian.entity.renderer.ZhenFaEntity1Renderer;
 import com.haha.xiuxian.items.LingGenTest;
 import com.haha.xiuxian.items.crops.HuaiYang;
-import com.haha.xiuxian.items.fabao.FlameExplode;
-import com.haha.xiuxian.items.fabao.JumpFuLu;
+import com.haha.xiuxian.items.fabao.empty.EmptyFu1;
+import com.haha.xiuxian.items.fabao.fire.FireFu1;
+import com.haha.xiuxian.items.fabao.metal.MetalFu1;
 import com.haha.xiuxian.items.gongfa.batch.*;
 import com.haha.xiuxian.items.lingshi.ExtremeLingShi;
 import com.haha.xiuxian.items.lingshi.HighLingShi;
@@ -79,8 +80,9 @@ public class Registry {
         }
         ////////////////////////////////////
 
-        itemRegistry.add(JumpFuLu.INSTANCE);
-        itemRegistry.add(FlameExplode.INSTANCE);
+        itemRegistry.add(EmptyFu1.INSTANCE);
+        itemRegistry.add(FireFu1.INSTANCE);
+        itemRegistry.add(MetalFu1.INSTANCE);
         for (Item item : itemRegistry) {
             event.getRegistry().registerAll(item);
         }

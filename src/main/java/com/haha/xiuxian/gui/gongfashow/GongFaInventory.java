@@ -1,21 +1,23 @@
 package com.haha.xiuxian.gui.gongfashow;
 
+
+import com.haha.xiuxian.nbt.GongFaWorldData;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryBasic;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
+import org.json.JSONObject;
 
 import javax.annotation.Nonnull;
+import java.util.Objects;
 
-public class GongFaInventory extends InventoryBasic implements INBTSerializable<NBTTagCompound> {
+public class GongFaInventory extends InventoryBasic {
 
     private final NonNullList<ItemStack> inventory = NonNullList.withSize(5, ItemStack.EMPTY);
 
@@ -88,10 +90,12 @@ public class GongFaInventory extends InventoryBasic implements INBTSerializable<
     }
 
     @Override
-    public void openInventory(@Nonnull EntityPlayer player) {}
+    public void openInventory(@Nonnull EntityPlayer player) {
+    }
 
     @Override
-    public void closeInventory(@Nonnull EntityPlayer player) {}
+    public void closeInventory(@Nonnull EntityPlayer player) {
+    }
 
     @Override
     public boolean isItemValidForSlot(int index, @Nonnull ItemStack stack) {
@@ -104,7 +108,8 @@ public class GongFaInventory extends InventoryBasic implements INBTSerializable<
     }
 
     @Override
-    public void setField(int id, int value) {}
+    public void setField(int id, int value) {
+    }
 
     @Override
     public int getFieldCount() {
@@ -127,49 +132,21 @@ public class GongFaInventory extends InventoryBasic implements INBTSerializable<
         return false;
     }
 
-    //Nbt部分，用于储存功法
-
-    @Override
-    public NBTTagCompound serializeNBT() {
-        NBTTagList list = new NBTTagList();
-        for (int i = 0; i < getSizeInventory(); i++) {
-            ItemStack stack = getStackInSlot(i);
-            if (!stack.isEmpty()) {
-                NBTTagCompound itemTag = new NBTTagCompound();
-                itemTag.setByte("Slot", (byte) i);
-                stack.writeToNBT(itemTag);
-                list.appendTag(itemTag);
-            }
-        }
-        NBTTagCompound compound = new NBTTagCompound();
-        compound.setTag("items", list);
-        return compound;
-    }
-
-    @Override
-    public void deserializeNBT(NBTTagCompound compound) {
-        NBTTagList list = compound.getTagList("items", 10);
-        for (int i = 0; i < list.tagCount(); i++) {
-            NBTTagCompound itemTag = list.getCompoundTagAt(i);
-            int slot = itemTag.getByte("Slot") & 255;
-            if (slot < getSizeInventory()) {
-                setInventorySlotContents(slot, new ItemStack(itemTag));
-            }
-        }
-    }
-
-
+    // 使用 Forge 的事件监听来加载功法数据
     @Mod.EventBusSubscriber
     static class NbtSerialized {
 
         @SubscribeEvent
-        public static void loadItems(PlayerEvent.PlayerLoggedInEvent event){
-            instance.deserializeNBT(event.player.getEntityData().getCompoundTag("gongfaNbt"));
-        }
-
-        @SubscribeEvent
-        public static void saveItems(PlayerEvent.PlayerLoggedOutEvent event){
-            event.player.getEntityData().setTag("gongfaNbt", instance.serializeNBT());
+        public static void loadItems(PlayerEvent.PlayerLoggedInEvent event) {
+            JSONObject data = GongFaWorldData.get(event.player.world);
+            for (int i = 0; i < instance.inventory.size(); i++) {
+                if (data != null) {
+                    JSONObject content = data.getJSONObject("slot_" + i);
+                    String registryName = content.getString("name");
+                    instance.setInventorySlotContents(i, new ItemStack(Objects.requireNonNull(Item.getByNameOrId(registryName))));
+                    break;
+                }
+            }
         }
     }
 }

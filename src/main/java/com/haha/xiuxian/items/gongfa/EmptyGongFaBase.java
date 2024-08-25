@@ -3,7 +3,7 @@ package com.haha.xiuxian.items.gongfa;
 import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
 import com.haha.xiuxian.gui.gongfashow.GongFaInventory;
 import com.haha.xiuxian.items.gongfa.gui.GongFaInfo;
-import com.haha.xiuxian.util.gui.inventory.PutInInventoryHelper;
+import com.haha.xiuxian.util.gui.inventory.GongFaInventoryHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.util.ITooltipFlag;
@@ -43,7 +43,7 @@ public class EmptyGongFaBase extends Item {
             }
         } else {
             ItemStack heldItem = playerIn.getHeldItem(handIn);
-            PutInInventoryHelper.putInInventory(worldIn, GongFaInventory.instance, heldItem, "空");
+            GongFaInventoryHelper.putInInventory(worldIn, GongFaInventory.instance, heldItem, "空");
         }
         return super.onItemRightClick(worldIn, playerIn, handIn);
     }
