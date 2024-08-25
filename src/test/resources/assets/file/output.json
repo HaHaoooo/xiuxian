@@ -1,0 +1,67 @@
+{
+    "itemName_4": {
+        "currentLevel": "入门",
+        "currentId": 0,
+        "exp": 40,
+        "levels": [
+            "入门",
+            "小成",
+            "大成",
+            "圆满",
+            "超脱",
+            "终焉"
+        ]
+    },
+    "itemName_3": {
+        "currentLevel": "小成",
+        "currentId": 1,
+        "exp": 30,
+        "levels": [
+            "入门",
+            "小成",
+            "大成",
+            "圆满",
+            "超脱",
+            "终焉"
+        ]
+    },
+    "itemName_2": {
+        "currentLevel": "终焉",
+        "currentId": 5,
+        "exp": 20,
+        "levels": [
+            "入门",
+            "小成",
+            "大成",
+            "圆满",
+            "超脱",
+            "终焉"
+        ]
+    },
+    "itemName_1": {
+        "currentLevel": "圆满",
+        "currentId": 3,
+        "exp": 10,
+        "levels": [
+            "入门",
+            "小成",
+            "大成",
+            "圆满",
+            "超脱",
+            "终焉"
+        ]
+    },
+    "itemName_0": {
+        "currentLevel": "超脱",
+        "currentId": 4,
+        "exp": 0,
+        "levels": [
+            "入门",
+            "小成",
+            "大成",
+            "圆满",
+            "超脱",
+            "终焉"
+        ]
+    }
+}

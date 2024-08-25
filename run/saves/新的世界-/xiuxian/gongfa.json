@@ -1,0 +1,12 @@
+{
+    "slot_1": {
+        "name": "xiuxian:metal_gongfa",
+        "attribute": "金",
+        "exp": 0
+    },
+    "slot_0": {
+        "name": "xiuxian:lian_hua_miao_dian",
+        "attribute": "水",
+        "exp": 0
+    }
+}
