@@ -1,4 +1,9 @@
 {
+    "slot_2": {
+        "name": "xiuxian:metal_gongfa",
+        "attribute": "金",
+        "exp": 0
+    },
     "slot_1": {
         "name": "xiuxian:metal_gongfa",
         "attribute": "金",

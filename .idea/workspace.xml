@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a367ce09-4d0e-4f75-a7e3-00f43ff8e984" name="更改" comment="8/24">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/splash.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/worldedit/worldedit.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/worldedit/worldedit.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/level.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/session.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/usernamecache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usernamecache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/nbt/GongFaWorldData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/nbt/GongFaWorldData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/basic/world/WorldUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/basic/world/WorldUtil.java" afterDir="false" />
-    </list>
+    <list default="true" id="a367ce09-4d0e-4f75-a7e3-00f43ff8e984" name="更改" comment="8/24" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -278,7 +267,7 @@
       <workItem from="1722150513545" duration="5393000" />
       <workItem from="1722155928749" duration="1739000" />
       <workItem from="1724545376181" duration="7782000" />
-      <workItem from="1724553192248" duration="3910000" />
+      <workItem from="1724553192248" duration="4254000" />
     </task>
     <task id="LOCAL-00001" summary="6/20">
       <created>1718898511129</created>
@@ -322,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724557410144</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="8/24">
+      <created>1724558827232</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724558827232</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +344,7 @@
     <MESSAGE value="8/24" />
     <option name="LAST_COMMIT_MESSAGE" value="8/24" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -17,8 +17,7 @@ public class GongFaWorldData {
 
     // 功法nbt记录
     public static void write(JSONObject newObject, World world) {
-        String worldName = WorldUtil.getWorldName(world);
-        Path directoryPath = Paths.get(System.getProperty("user.dir"), "saves", worldName, "xiuxian");
+        Path directoryPath = Paths.get(WorldUtil.getWorldDirectory(world), "xiuxian");
         Path filePath = directoryPath.resolve(FILE_NAME + ".json");
         File directory = new File(directoryPath.toUri());
         if (!directory.exists()) {
@@ -58,8 +57,7 @@ public class GongFaWorldData {
 
     // 获取功法nbt
     public static JSONObject get(World world) {
-        String worldName = WorldUtil.getWorldName(world);
-        Path path = Paths.get(System.getProperty("user.dir"), "saves", worldName, "xiuxian", FILE_NAME + ".json");
+        Path path = Paths.get(WorldUtil.getWorldDirectory(world), "xiuxian", FILE_NAME + ".json");
         try {
             return new JSONObject(new String(Files.readAllBytes(path)));
         } catch (IOException e) {
