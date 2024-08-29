@@ -139,12 +139,11 @@ public class GongFaInventory extends InventoryBasic {
         @SubscribeEvent
         public static void loadItems(PlayerEvent.PlayerLoggedInEvent event) {
             JSONObject data = GongFaWorldData.get(event.player.world);
-            for (int i = 0; i < instance.inventory.size(); i++) {
-                if (data != null) {
+            if (data != null) {
+                for (int i = 0; i < data.length(); i++) {
                     JSONObject content = data.getJSONObject("slot_" + i);
                     String registryName = content.getString("name");
                     instance.setInventorySlotContents(i, new ItemStack(Objects.requireNonNull(Item.getByNameOrId(registryName))));
-                    break;
                 }
             }
         }

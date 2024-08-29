@@ -9,7 +9,7 @@ import java.io.File;
 import java.nio.file.Paths;
 
 public class WorldUtil {
-    public static String getWorldDirectory(World world) {
+    public static String getWorldDirectoryName(World world) {
         // 确保这是服务器世界
         if (world instanceof WorldServer) {
             WorldServer serverWorld = (WorldServer) world;
