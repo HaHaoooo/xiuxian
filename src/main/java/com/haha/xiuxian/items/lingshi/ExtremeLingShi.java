@@ -2,6 +2,7 @@ package com.haha.xiuxian.items.lingshi;
 
 import com.haha.xiuxian.XiuXian;
 import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
+import com.haha.xiuxian.util.unique.AddLingLi;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
@@ -77,30 +78,30 @@ public class ExtremeLingShi extends Item {
         } else {
             boolean hasLingGen = false;
             if (Metal && nbt.getString("name").equals(attrs[0])){
-                addLingLi.addMetal(nbt.getDouble("lingli"), playerIn, worldIn, heldItem);
+                AddLingLi.addMetal(nbt.getDouble("lingli"), playerIn, worldIn, heldItem);
                 hasLingGen = true;
             }
             if (Wood && nbt.getString("name").equals(attrs[1])){
-                addLingLi.addWood(nbt.getDouble("lingli"), playerIn, worldIn, heldItem);
+                AddLingLi.addWood(nbt.getDouble("lingli"), playerIn, worldIn, heldItem);
                 hasLingGen = true;
             }
             if (Water && nbt.getString("name").equals(attrs[2])){
-                addLingLi.addWater(nbt.getDouble("lingli"), playerIn, worldIn, heldItem);
+                AddLingLi.addWater(nbt.getDouble("lingli"), playerIn, worldIn, heldItem);
                 hasLingGen = true;
             }
 
             if (Fire && nbt.getString("name").equals(attrs[3])){
-                addLingLi.addFire(nbt.getDouble("lingli"), playerIn, worldIn, heldItem);
+                AddLingLi.addFire(nbt.getDouble("lingli"), playerIn, worldIn, heldItem);
                 hasLingGen = true;
             }
 
             if (Dirt && nbt.getString("name").equals(attrs[4])){
-                addLingLi.addDirt(nbt.getDouble("lingli"), playerIn, worldIn, heldItem);
+                AddLingLi.addDirt(nbt.getDouble("lingli"), playerIn, worldIn, heldItem);
                 hasLingGen = true;
             }
 
             if (!hasLingGen){
-                addLingLi.sendPlayerMessage(playerIn, "没有此灵根，无法吸收", worldIn);
+                AddLingLi.sendPlayerMessage(playerIn, "没有此灵根，无法吸收", worldIn);
             }
         }
         return super.onItemRightClick(worldIn, playerIn, handIn);

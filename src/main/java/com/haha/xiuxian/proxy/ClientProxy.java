@@ -12,7 +12,6 @@ import net.minecraftforge.fml.common.Mod;
 
 import static com.haha.xiuxian.key.KeyBindProperties.registerKey1;
 import static com.haha.xiuxian.key.LingLiExShrink.registerKey2;
-import static com.haha.xiuxian.key.LingqiCheck.registerKey3;
 
 
 @Mod.EventBusSubscriber
@@ -24,12 +23,12 @@ public class ClientProxy extends CommonProxy{
 
         registerKey1();
         registerKey2();
-        registerKey3();
         MinecraftForge.EVENT_BUS.register(new PlayerData());
         MinecraftForge.EVENT_BUS.register(new DataHandler());
         DataInject.register();
         CapabilityManager.INSTANCE.register(DataContainer.class, new DataStorage(), () -> DataContainerImpl.dataContainer);
         System.out.println("capability register successfully");
+
     }
 
     @Override

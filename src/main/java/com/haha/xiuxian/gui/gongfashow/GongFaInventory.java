@@ -1,7 +1,7 @@
 package com.haha.xiuxian.gui.gongfashow;
 
 
-import com.haha.xiuxian.nbt.GongFaWorldData;
+import com.haha.xiuxian.nbt.XiuXianWorldData;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.Item;
@@ -138,7 +138,8 @@ public class GongFaInventory extends InventoryBasic {
 
         @SubscribeEvent
         public static void loadItems(PlayerEvent.PlayerLoggedInEvent event) {
-            JSONObject data = GongFaWorldData.get(event.player.world);
+            XiuXianWorldData worldData = new XiuXianWorldData("gongfa");
+            JSONObject data = worldData.get(event.player.world);
             if (data != null) {
                 for (int i = 0; i < data.length(); i++) {
                     JSONObject content = data.getJSONObject("slot_" + i);

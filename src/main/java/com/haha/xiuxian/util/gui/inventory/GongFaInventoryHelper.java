@@ -1,6 +1,6 @@
 package com.haha.xiuxian.util.gui.inventory;
 
-import com.haha.xiuxian.nbt.GongFaWorldData;
+import com.haha.xiuxian.nbt.XiuXianWorldData;
 import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -27,7 +27,8 @@ public class GongFaInventoryHelper {
                 // 使用槽位编号作为 key 的一部分，确保每个槽位的数据独立
                 String slotKey = "slot_" + i;
                 data.put(slotKey, base);
-                GongFaWorldData.write(data, world);
+                XiuXianWorldData worldData = new XiuXianWorldData("gongfa");
+                worldData.write(data, world);
 
                 heldItem.shrink(1);
                 break;

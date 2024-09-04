@@ -58,7 +58,7 @@ public class GetLingGen {
         if (player.getHeldItemMainhand().isItemEqual(LingGenTest)) {
             String linggen = "";
             if (isEmpty()) {
-                linggen += "§f§l空灵根";
+                linggen = "§f§l空灵根";
             }
             if (Metal) {
                 linggen += "§6金";

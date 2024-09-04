@@ -1,4 +1,4 @@
-package com.haha.xiuxian.items.lingshi;
+package com.haha.xiuxian.util.unique;
 
 import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
 import com.haha.xiuxian.capabilities.playerdata.storage.DataContainer;
@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
-public class addLingLi {
+public class AddLingLi {
     private final static DataContainer dataContainer = DataInject.DataContainer;
     public static void addMetal(double value, EntityPlayer player, World world, ItemStack itemStack) {
         if (!world.isRemote) {

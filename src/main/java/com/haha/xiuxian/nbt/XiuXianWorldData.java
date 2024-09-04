@@ -12,13 +12,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class GongFaWorldData {
-    public static final String FILE_NAME = "gongfa";
+public class XiuXianWorldData {
 
-    // 功法nbt记录
-    public static void write(JSONObject newObject, World world) {
+    private final String filename;
+
+    public XiuXianWorldData(String name){
+        this.filename = name;
+    }
+
+    // nbt记录
+    public void write(JSONObject newObject, World world) {
         Path directoryPath = Paths.get(WorldUtil.getWorldDirectoryName(world), "xiuxian");
-        Path filePath = directoryPath.resolve(FILE_NAME + ".json");
+        Path filePath = directoryPath.resolve(filename + ".json");
         File directory = new File(directoryPath.toUri());
         if (!directory.exists()) {
             if (directory.mkdirs()) {
@@ -55,9 +60,9 @@ public class GongFaWorldData {
         }
     }
 
-    // 获取功法nbt
-    public static JSONObject get(World world) {
-        Path path = Paths.get(WorldUtil.getWorldDirectoryName(world), "xiuxian", FILE_NAME + ".json");
+    // 获取nbt
+    public JSONObject get(World world) {
+        Path path = Paths.get(WorldUtil.getWorldDirectoryName(world), "xiuxian", filename + ".json");
         try {
             return new JSONObject(new String(Files.readAllBytes(path)));
         } catch (IOException e) {

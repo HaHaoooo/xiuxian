@@ -4,33 +4,60 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a367ce09-4d0e-4f75-a7e3-00f43ff8e984" name="更改" comment="8/24">
+    <list default="true" id="a367ce09-4d0e-4f75-a7e3-00f43ff8e984" name="更改" comment="8/28">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/gui/hud/LingqiMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/gui/main/lingqi_check.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/splash.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/config/worldedit/worldedit.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/worldedit/worldedit.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/advancements/26d3a8a7-c365-3f1b-98bd-1e86d16aa724.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/advancements/26d3a8a7-c365-3f1b-98bd-1e86d16aa724.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/advancements/63415afc-3fc6-3204-b29f-d3e2c160b7a4.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/advancements/63415afc-3fc6-3204-b29f-d3e2c160b7a4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/advancements/681f539b-8bb8-3f85-85e5-a2945f6c6539.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/advancements/681f539b-8bb8-3f85-85e5-a2945f6c6539.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/advancements/7daaf105-640b-34bc-83e6-6c045d1c9591.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/advancements/7daaf105-640b-34bc-83e6-6c045d1c9591.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/advancements/d566deca-6b21-32cb-af90-4edf09eeac2e.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/advancements/d566deca-6b21-32cb-af90-4edf09eeac2e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/advancements/ead290bb-bad9-36fc-b265-db734c4eb7d4.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/advancements/ead290bb-bad9-36fc-b265-db734c4eb7d4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/data/Village.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/data/Village.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/data/villages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/level.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/26d3a8a7-c365-3f1b-98bd-1e86d16aa724.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/26d3a8a7-c365-3f1b-98bd-1e86d16aa724.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/63415afc-3fc6-3204-b29f-d3e2c160b7a4.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/63415afc-3fc6-3204-b29f-d3e2c160b7a4.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/681f539b-8bb8-3f85-85e5-a2945f6c6539.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/681f539b-8bb8-3f85-85e5-a2945f6c6539.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/7daaf105-640b-34bc-83e6-6c045d1c9591.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/7daaf105-640b-34bc-83e6-6c045d1c9591.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/d566deca-6b21-32cb-af90-4edf09eeac2e.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/d566deca-6b21-32cb-af90-4edf09eeac2e.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/ead290bb-bad9-36fc-b265-db734c4eb7d4.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/ead290bb-bad9-36fc-b265-db734c4eb7d4.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.-2.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-2.-1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-2.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-2.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/session.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/新的世界/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界/data/villages.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/新的世界/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界/level.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/新的世界/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/新的世界/region/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界/region/r.-2.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/新的世界/region/r.-3.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界/region/r.-3.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/新的世界/region/r.-3.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界/region/r.-3.-2.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/新的世界/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/stats/26d3a8a7-c365-3f1b-98bd-1e86d16aa724.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/stats/26d3a8a7-c365-3f1b-98bd-1e86d16aa724.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/stats/63415afc-3fc6-3204-b29f-d3e2c160b7a4.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/stats/63415afc-3fc6-3204-b29f-d3e2c160b7a4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/stats/681f539b-8bb8-3f85-85e5-a2945f6c6539.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/stats/681f539b-8bb8-3f85-85e5-a2945f6c6539.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/stats/7daaf105-640b-34bc-83e6-6c045d1c9591.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/stats/7daaf105-640b-34bc-83e6-6c045d1c9591.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/stats/d566deca-6b21-32cb-af90-4edf09eeac2e.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/stats/d566deca-6b21-32cb-af90-4edf09eeac2e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/stats/ead290bb-bad9-36fc-b265-db734c4eb7d4.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/stats/ead290bb-bad9-36fc-b265-db734c4eb7d4.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usernamecache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usernamecache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/events/GetLingGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/events/GetLingGen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/gui/gongfashow/GongFaInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/gui/gongfashow/GongFaInventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/gui/propertyshow/PropertyGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/gui/propertyshow/PropertyGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/nbt/GongFaWorldData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/nbt/GongFaWorldData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/basic/world/WorldUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/basic/world/WorldUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mcmod.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mcmod.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/gui/lingqi/LingQiShow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/lingshi/ExtremeLingShi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/lingshi/ExtremeLingShi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/lingshi/HighLingShi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/lingshi/HighLingShi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/lingshi/LowLingShi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/lingshi/LowLingShi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/lingshi/MidLingShi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/lingshi/MidLingShi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/lingshi/addLingLi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/unique/AddLingLi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/key/LingqiCheck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/nbt/GongFaWorldData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/nbt/XiuXianWorldData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/proxy/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/proxy/ClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/gui/GraphHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/gui/GraphHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/gui/inventory/GongFaInventoryHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/gui/inventory/GongFaInventoryHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/lang/en_us.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/lang/en_us.lang" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/lang/zh_cn.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/xiuxian/lang/zh_cn.lang" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +116,19 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="modified" />
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="haha &lt;xyx20180325@gmail.com&gt;" />
       </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -129,9 +164,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.last.edited" value="项目" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.reader.mode" />
@@ -145,11 +180,11 @@
       <recent name="$PROJECT_DIR$/src/main/resources/assets/xiuxian/textures/items" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/assets/xiuxian/textures/misc" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/xiuxian/gui/main" />
+      <recent name="$PROJECT_DIR$/run/saves" />
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/xiuxian/textures/misc" />
       <recent name="$PROJECT_DIR$/src/main/resources/assets/gongfa/water" />
       <recent name="$PROJECT_DIR$/src/test/resources/assets" />
-      <recent name="$PROJECT_DIR$/src/main/resources/assets/xiuxian/gui/gongfa" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.haha.xiuxian.Nbt" />
@@ -192,7 +227,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="xiuxian [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="xiuxian [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -203,7 +238,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="jar" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -237,10 +272,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.xiuxian [runClient]" />
+        <item itemvalue="Gradle.xiuxian [build]" />
         <item itemvalue="应用程序.JsonWriter" />
         <item itemvalue="应用程序.JsonTest" />
         <item itemvalue="应用程序.ProgressBarTest" />
-        <item itemvalue="Gradle.xiuxian [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +330,24 @@
       <workItem from="1722155928749" duration="1739000" />
       <workItem from="1724545376181" duration="7782000" />
       <workItem from="1724553192248" duration="7377000" />
-      <workItem from="1724904748276" duration="864000" />
+      <workItem from="1724904748276" duration="1991000" />
+      <workItem from="1724944790446" duration="34000" />
+      <workItem from="1724987419983" duration="130000" />
+      <workItem from="1724992730940" duration="179000" />
+      <workItem from="1724993871841" duration="146000" />
+      <workItem from="1724994036553" duration="3711000" />
+      <workItem from="1725082786791" duration="17222000" />
+      <workItem from="1725178037781" duration="2000" />
+      <workItem from="1725240520686" duration="7332000" />
+      <workItem from="1725319987669" duration="665000" />
+      <workItem from="1725383845311" duration="66000" />
+      <workItem from="1725384007130" duration="14000" />
+      <workItem from="1725384040497" duration="19000" />
+      <workItem from="1725384086394" duration="268000" />
+      <workItem from="1725384396095" duration="628000" />
+      <workItem from="1725385059301" duration="1000" />
+      <workItem from="1725391832008" duration="2249000" />
+      <workItem from="1725407579831" duration="7835000" />
     </task>
     <task id="LOCAL-00001" summary="6/20">
       <created>1718898511129</created>
@@ -353,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724559109766</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="8/28">
+      <created>1724905901982</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724905901982</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +436,8 @@
     <MESSAGE value="6/20" />
     <MESSAGE value="6/21" />
     <MESSAGE value="8/24" />
-    <option name="LAST_COMMIT_MESSAGE" value="8/24" />
+    <MESSAGE value="8/28" />
+    <option name="LAST_COMMIT_MESSAGE" value="8/28" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
