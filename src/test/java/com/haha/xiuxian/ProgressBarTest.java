@@ -1,4 +1,4 @@
-package xiuxian;
+package com.haha.xiuxian;
 
 import java.text.DecimalFormat;
 

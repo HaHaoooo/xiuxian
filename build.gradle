@@ -51,7 +51,7 @@ jar {
     manifest {
         attributes(
             "Manifest-Version": "1.0",
-            "Specification-Title": 'xiuxian',
+            "Specification-Title": '灵仙',
             "Specification-Vendor": 'examplemodsareus',
             "Specification-Version": '1',
             "Implementation-Title": project.name,
@@ -82,6 +82,12 @@ sourceSets {
     main {
         resources {
             srcDir 'src/main/resources'
+        }
+        output.resourcesDir = output.classesDir
+    }
+    test {
+        resources {
+            srcDir 'src/test/resources'
         }
         output.resourcesDir = output.classesDir
     }
