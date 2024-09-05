@@ -15,10 +15,11 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.awt.*;
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 public class GongFaInfo extends GuiScreen {
@@ -33,8 +34,18 @@ public class GongFaInfo extends GuiScreen {
     private final Item item;
 
     public GongFaInfo(String fileName, int radius) throws IOException {
-        Path path = Paths.get(System.getProperty("user.dir").replace("run", "src"), "main", "resources", "assets", "gongfa", fileName);
-        String content = new String(Files.readAllBytes(path));
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("assets/gongfa/" + fileName);
+        if (inputStream == null) {
+            throw new IOException("Resource file not found: " + fileName);
+        }
+        StringBuilder contentBuilder = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                contentBuilder.append(line);
+            }
+        }
+        String content = contentBuilder.toString();
         JSONObject contentObject = new JSONObject(content);
         String name = contentObject.getString("name");
         JSONArray description = contentObject.getJSONArray("description");

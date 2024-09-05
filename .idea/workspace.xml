@@ -4,10 +4,30 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a367ce09-4d0e-4f75-a7e3-00f43ff8e984" name="更改" comment="9/3, 更新小地图以及XiuXianWorldData">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+    <list default="true" id="a367ce09-4d0e-4f75-a7e3-00f43ff8e984" name="更改" comment="9/4，小更新，添加灵力算法优化">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/com.haha.xiuxian.xiuxian.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/com.haha.xiuxian.xiuxian.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.yourname.modid.xiuxian.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.yourname.modid.xiuxian.test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/unique/AddLingLi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/unique/AddLingLi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/splash.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/config/worldedit/worldedit.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/worldedit/worldedit.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/data/Village.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/data/Village.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/data/villages.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/5b0c46c0-894b-30a6-bd31-bf02da63882f.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/playerdata/5b0c46c0-894b-30a6-bd31-bf02da63882f.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-2.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-2.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/region/r.-2.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/新的世界-/stats/5b0c46c0-894b-30a6-bd31-bf02da63882f.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/新的世界-/stats/5b0c46c0-894b-30a6-bd31-bf02da63882f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/XiuXian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/XiuXian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/gui/GongFaInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/gui/GongFaInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/gui/inventory/GongFaInventoryHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/gui/inventory/GongFaInventoryHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +62,6 @@
                 <item name="xiuxian" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="xiuxian" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="fg_runs" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -111,13 +125,14 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="项目" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.reader.mode" />
   </component>
@@ -143,39 +158,27 @@
       <recent name="com.haha.xiuxian" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.xiuxian [runClient]">
-    <configuration name="JsonTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="xiuxian.JsonTest" />
-      <module name="com.yourname.modid.xiuxian.test" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JsonWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="xiuxian.JsonWriter" />
-      <module name="com.yourname.modid.xiuxian.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="xiuxian.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProgressBarTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="xiuxian.ProgressBarTest" />
-      <module name="com.yourname.modid.xiuxian.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="xiuxian.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.xiuxian [build]">
+    <configuration name="xiuxian [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="xiuxian [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -189,6 +192,27 @@
         <option name="taskNames">
           <list>
             <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="xiuxian [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -219,13 +243,17 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="xiuxian-1.0.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/build/libs/xiuxian-1.0.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.xiuxian [runClient]" />
         <item itemvalue="Gradle.xiuxian [build]" />
-        <item itemvalue="应用程序.JsonWriter" />
-        <item itemvalue="应用程序.JsonTest" />
-        <item itemvalue="应用程序.ProgressBarTest" />
+        <item itemvalue="Gradle.xiuxian [clean]" />
+        <item itemvalue="JAR 应用程序.xiuxian-1.0.jar" />
+        <item itemvalue="Gradle.xiuxian [runClient]" />
+        <item itemvalue="Gradle.xiuxian [buildDependents]" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +328,10 @@
       <workItem from="1725407579831" duration="8020000" />
       <workItem from="1725431748319" duration="63000" />
       <workItem from="1725463263871" duration="39000" />
-      <workItem from="1725504906982" duration="340000" />
+      <workItem from="1725504906982" duration="365000" />
+      <workItem from="1725505280484" duration="733000" />
+      <workItem from="1725506369592" duration="4330000" />
+      <workItem from="1725510814037" duration="248000" />
     </task>
     <task id="LOCAL-00001" summary="6/20">
       <created>1718898511129</created>
@@ -372,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725416911325</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="9/4，小更新，添加灵力算法优化">
+      <created>1725505271218</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725505271218</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +436,8 @@
     <MESSAGE value="8/24" />
     <MESSAGE value="8/28" />
     <MESSAGE value="9/3, 更新小地图以及XiuXianWorldData" />
-    <option name="LAST_COMMIT_MESSAGE" value="9/3, 更新小地图以及XiuXianWorldData" />
+    <MESSAGE value="9/4，小更新，添加灵力算法优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="9/4，小更新，添加灵力算法优化" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
