@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a367ce09-4d0e-4f75-a7e3-00f43ff8e984" name="更改" comment="9/4，更新了功法信息json文件获取位置，重新修改了gradle，以放便使用任何依赖">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/util/files/FileHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="a367ce09-4d0e-4f75-a7e3-00f43ff8e984" name="更改" comment="9/5，独立了文件帮助包，修改test路径">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/splash.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/worldedit/worldedit.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/worldedit/worldedit.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/gui/GongFaInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haha/xiuxian/items/gongfa/gui/GongFaInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/xiuxian/JsonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/haha/xiuxian/JsonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/xiuxian/JsonWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/haha/xiuxian/JsonWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/xiuxian/ProgressBarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/haha/xiuxian/ProgressBarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +78,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="haha" />
         <option value="haha &lt;xyx20180325@gmail.com&gt;" />
       </list>
     </option>
@@ -351,7 +345,7 @@
       <workItem from="1725506369592" duration="4330000" />
       <workItem from="1725510814037" duration="905000" />
       <workItem from="1725511726211" duration="607000" />
-      <workItem from="1725549013417" duration="345000" />
+      <workItem from="1725549013417" duration="1209000" />
     </task>
     <task id="LOCAL-00001" summary="6/20">
       <created>1718898511129</created>
@@ -437,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725511265860</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="9/5，独立了文件帮助包，修改test路径">
+      <created>1725549409016</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1725549409016</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +466,8 @@
     <MESSAGE value="9/3, 更新小地图以及XiuXianWorldData" />
     <MESSAGE value="9/4，小更新，添加灵力算法优化" />
     <MESSAGE value="9/4，更新了功法信息json文件获取位置，重新修改了gradle，以放便使用任何依赖" />
-    <option name="LAST_COMMIT_MESSAGE" value="9/4，更新了功法信息json文件获取位置，重新修改了gradle，以放便使用任何依赖" />
+    <MESSAGE value="9/5，独立了文件帮助包，修改test路径" />
+    <option name="LAST_COMMIT_MESSAGE" value="9/5，独立了文件帮助包，修改test路径" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
