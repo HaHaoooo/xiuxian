@@ -17,7 +17,7 @@ apply plugin: 'com.github.johnrengelman.shadow'
 
 version = '1.0'
 group = 'com.haha.xiuxian'
-archivesBaseName = 'xiuxian'
+archivesBaseName = '灵仙'
 
 sourceCompatibility = targetCompatibility = '1.8'
 
@@ -52,11 +52,11 @@ jar {
         attributes(
             "Manifest-Version": "1.0",
             "Specification-Title": '灵仙',
-            "Specification-Vendor": 'examplemodsareus',
+            "Specification-Vendor": 'haha',
             "Specification-Version": '1',
             "Implementation-Title": project.name,
             "Implementation-Version": version,
-            "Implementation-Vendor": 'examplemodsareus',
+            "Implementation-Vendor": 'haha',
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         )
     }
