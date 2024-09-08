@@ -91,4 +91,11 @@ sourceSets {
         }
         output.resourcesDir = output.classesDir
     }
+<<<<<<< HEAD
+=======
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+>>>>>>> d6d3e82 (初始化)
 }
