@@ -7,7 +7,8 @@ public enum EnumWoodGongFa {
     TEMPLATE("wood_gongfa");
 
     private final Item item;
-    EnumWoodGongFa(String registryName){
+
+    EnumWoodGongFa(String registryName) {
         this.item = new WoodGongFaBase(registryName);
     }
 

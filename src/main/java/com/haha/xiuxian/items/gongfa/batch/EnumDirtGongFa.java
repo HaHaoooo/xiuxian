@@ -7,7 +7,8 @@ public enum EnumDirtGongFa {
     TEMPLATE("dirt_gongfa");
 
     private final Item item;
-    EnumDirtGongFa(String registryName){
+
+    EnumDirtGongFa(String registryName) {
         this.item = new DirtGongFaBase(registryName);
     }
 

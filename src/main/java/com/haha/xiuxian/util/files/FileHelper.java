@@ -8,6 +8,13 @@ import java.nio.charset.StandardCharsets;
 
 public class FileHelper {
 
+
+    /**
+     * @author haha
+     * @param assets 输入resources/assets文件夹下的文件
+     * @return 返回读取文件的信息
+     * @throws IOException 抛出错误
+     */
     public static String getResourceLocation(String assets) throws IOException {
         InputStream inputStream = FileHelper.class.getClassLoader().getResourceAsStream("assets/" + assets);
         if (inputStream == null) {

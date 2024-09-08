@@ -1,4 +1,4 @@
-package com.haha.xiuxian.gui.gongfashow;
+package com.haha.xiuxian.gui.gongfa;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;

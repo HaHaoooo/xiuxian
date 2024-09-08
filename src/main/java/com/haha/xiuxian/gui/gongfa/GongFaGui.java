@@ -1,9 +1,9 @@
-package com.haha.xiuxian.gui.gongfashow;
+package com.haha.xiuxian.gui.gongfa;
 
 import com.haha.xiuxian.XiuXian;
-import com.haha.xiuxian.gui.buttons.LeftButton;
-import com.haha.xiuxian.gui.buttons.Pages;
-import com.haha.xiuxian.gui.buttons.RightButton;
+import com.haha.xiuxian.gui.buttons.main.LeftButton;
+import com.haha.xiuxian.gui.buttons.main.Pages;
+import com.haha.xiuxian.gui.buttons.main.RightButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.inventory.Slot;
 import net.minecraft.util.ResourceLocation;

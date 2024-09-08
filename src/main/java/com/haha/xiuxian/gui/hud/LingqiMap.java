@@ -15,15 +15,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.awt.*;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.IntStream;
 
-@Mod.EventBusSubscriber
+@Deprecated
 public class LingqiMap extends GuiScreen {
 
     public static final LingqiMap instance = new LingqiMap();
@@ -35,7 +33,6 @@ public class LingqiMap extends GuiScreen {
     private final Map<ChunkPos, int[]> cachedSurfaceColors = new ConcurrentHashMap<>();
     private final Minecraft mc = Minecraft.getMinecraft();
 
-    @SubscribeEvent
     public static void renderer(RenderGameOverlayEvent.Post event) {
         if (event.getType() == RenderGameOverlayEvent.ElementType.ALL) {
             instance.render();

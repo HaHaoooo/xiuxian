@@ -16,7 +16,7 @@ public class LingLiExShrink {
 
     public static boolean isShrinked = false;
 
-    public static void registerKey2(){
+    public static void registerKey2() {
         KEY2 = new KeyBinding("key.xiuxian.key_2", KeyConflictContext.IN_GAME, Keyboard.KEY_M, "key.categories.xiuxian");
         ClientRegistry.registerKeyBinding(KEY2);
     }
@@ -26,60 +26,38 @@ public class LingLiExShrink {
         isShrinked = KEY2.isPressed();
     }
 
-
-    public static void expandGui(){
-        int speed = 2;
-        if (WoodY < MetalY + 30){
-            WoodY += speed;
-            if (WoodY >= MetalY + 30){
-                WoodY = MetalY + 30;
-            }
-        }
-        if (WaterY < WoodY + 30){
-            WaterY += speed;
-            if (WaterY >= WoodY + 30){
-                WaterY = WoodY + 30;
-            }
-        }
-        if (FireY < WaterY + 30){
-            FireY += speed;
-            if (FireY >= WaterY + 30){
-                FireY = WaterY + 30;
-            }
-        }
-        if (DirtY < FireY + 30){
-            DirtY += speed;
-            if (DirtY >= FireY + 30){
-                DirtY = FireY + 30;
-            }
-        }
+    public static void expandGui() {
+        adjustGui(true);
     }
 
-    public static void shrinkGui(){
-        int speed = 2;
-        if (WoodY > MetalY){
-            WoodY -= speed;
-            if (WoodY <= MetalY + 4){
-                WoodY = MetalY + 4;
+    public static void shrinkGui() {
+        adjustGui(false);
+    }
+
+    private static void adjustGui(boolean expanding) {
+        int[] elements = {WoodY, WaterY, FireY, DirtY};
+        int[] base = {MetalY, WoodY, WaterY, FireY};
+
+        boolean hasUpdates = false;
+
+        for (int i = 0; i < elements.length; i++) {
+            int targetY = base[i] + (expanding ? 30 : 4);
+
+            if ((expanding && elements[i] < targetY) || (!expanding && elements[i] > targetY)) {
+                elements[i] += expanding ? 2 : -2;
+
+                if ((expanding && elements[i] > targetY) || (!expanding && elements[i] < targetY)) {
+                    elements[i] = targetY;
+                }
+                hasUpdates = true;
             }
         }
-        if (WaterY > WoodY){
-            WaterY -= speed;
-            if (WaterY <= WoodY + 4){
-                WaterY = WoodY + 4;
-            }
-        }
-        if (FireY > WaterY){
-            FireY -= speed;
-            if (FireY <= WaterY + 4){
-                FireY = WaterY + 4;
-            }
-        }
-        if (DirtY > FireY){
-            DirtY -= speed;
-            if (DirtY <= FireY + 4){
-                DirtY = FireY + 4;
-            }
+
+        if (hasUpdates) {
+            WoodY = elements[0];
+            WaterY = elements[1];
+            FireY = elements[2];
+            DirtY = elements[3];
         }
     }
 }

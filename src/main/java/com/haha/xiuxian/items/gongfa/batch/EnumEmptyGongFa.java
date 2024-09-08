@@ -7,7 +7,8 @@ public enum EnumEmptyGongFa {
     TEMPLATE("empty_gongfa");
 
     private final Item item;
-    EnumEmptyGongFa(String registryName){
+
+    EnumEmptyGongFa(String registryName) {
         this.item = new EmptyGongFaBase(registryName);
     }
 
