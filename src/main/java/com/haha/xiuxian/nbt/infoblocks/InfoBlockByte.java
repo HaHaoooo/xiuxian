@@ -1,20 +1,10 @@
-package com.haha.xiuxian.nbt.infoblock;
+package com.haha.xiuxian.nbt.infoblocks;
 
 public class InfoBlockByte implements InfoBlockBase<Byte> {
     private byte value;
 
     public InfoBlockByte(byte value){
         this.value = value;
-    }
-
-    @Override
-    public Byte toJson() {
-        return value;
-    }
-
-    @Override
-    public void fromJson(Byte jsonData) {
-        this.value = jsonData;
     }
 
     @Override

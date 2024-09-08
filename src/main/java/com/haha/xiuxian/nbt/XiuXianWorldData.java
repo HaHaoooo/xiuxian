@@ -1,6 +1,6 @@
 package com.haha.xiuxian.nbt;
 
-import com.haha.xiuxian.nbt.infoblock.InfoBlockCompound;
+import com.haha.xiuxian.nbt.infoblocks.InfoBlockCompound;
 import com.haha.xiuxian.util.basic.world.WorldUtil;
 import net.minecraft.world.World;
 import org.json.JSONObject;
@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 
 public class XiuXianWorldData {
 
@@ -47,7 +48,7 @@ public class XiuXianWorldData {
         }
 
         // 合并
-        JSONObject newDataJson = new JSONObject(newData.toJson());
+        JSONObject newDataJson = new JSONObject(newData.getValue());
         for (String key : newDataJson.keySet()) {
             existingData.put(key, newDataJson.get(key));
         }
@@ -76,7 +77,7 @@ public class XiuXianWorldData {
             String fileContent = new String(Files.readAllBytes(filePath));
             JSONObject jsonObject = new JSONObject(fileContent);
             InfoBlockCompound infoBlockCompound = new InfoBlockCompound();
-            infoBlockCompound.fromJson(jsonObject.toMap());
+            infoBlockCompound.setValue((HashMap<String, Object>) jsonObject.toMap());
             return infoBlockCompound;
         } catch (IOException e) {
             System.err.println("读取文件失败: " + filePath);

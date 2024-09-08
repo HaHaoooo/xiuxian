@@ -2,8 +2,8 @@ package com.haha.xiuxian.gui.gongfa;
 
 import com.haha.xiuxian.items.gongfa.GongFaBase;
 import com.haha.xiuxian.nbt.XiuXianWorldData;
-import com.haha.xiuxian.nbt.infoblock.InfoBlockCompound;
-import com.haha.xiuxian.nbt.infoblock.InfoBlockString;
+import com.haha.xiuxian.nbt.infoblocks.InfoBlockCompound;
+import com.haha.xiuxian.nbt.infoblocks.InfoBlockString;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.Item;
@@ -149,8 +149,8 @@ public class GongFaInventory extends InventoryBasic {
         private static void loadInventoryFromJson(InfoBlockCompound data) {
             for (int i = 0; i < instance.getSizeInventory(); i++) {
                 if (data.hasKey("slot_" + i)) {
-                    InfoBlockCompound content = data.getCompound("slot_" + i);
-                    InfoBlockString registryNameBlock = content.getString("name");
+                    InfoBlockCompound content = data.get("slot_" + i, InfoBlockCompound.class);
+                    InfoBlockString registryNameBlock = content.get("name", InfoBlockString.class);
                     String registryName = registryNameBlock.getValue();
                     Item item = Item.getByNameOrId(registryName);
                     if (item != null) {

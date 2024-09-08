@@ -2,9 +2,9 @@ package com.haha.xiuxian.util.gui;
 
 import com.haha.xiuxian.gui.gongfa.GongFaInventory;
 import com.haha.xiuxian.nbt.XiuXianWorldData;
-import com.haha.xiuxian.nbt.infoblock.InfoBlockCompound;
-import com.haha.xiuxian.nbt.infoblock.InfoBlockInt;
-import com.haha.xiuxian.nbt.infoblock.InfoBlockString;
+import com.haha.xiuxian.nbt.infoblocks.InfoBlockCompound;
+import com.haha.xiuxian.nbt.infoblocks.InfoBlockInt;
+import com.haha.xiuxian.nbt.infoblocks.InfoBlockString;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;

@@ -1,20 +1,12 @@
-package com.haha.xiuxian.nbt.infoblock;
+package com.haha.xiuxian.nbt.infoblocks;
+
+import java.awt.*;
 
 public class InfoBlockString implements InfoBlockBase<String> {
     private String value;
 
     public InfoBlockString(String value) {
         this.value = value;
-    }
-
-    @Override
-    public String toJson() {
-        return value;  // 直接返回实际值
-    }
-
-    @Override
-    public void fromJson(String jsonData) {
-        this.value = jsonData;
     }
 
     @Override
@@ -25,5 +17,13 @@ public class InfoBlockString implements InfoBlockBase<String> {
     @Override
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public InfoBlockColor toColor() {
+        try {
+            return new InfoBlockColor(Color.decode(value));
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Invalid color format: " + value);
+        }
     }
 }

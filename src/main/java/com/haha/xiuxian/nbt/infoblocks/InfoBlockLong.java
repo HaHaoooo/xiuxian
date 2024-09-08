@@ -1,20 +1,10 @@
-package com.haha.xiuxian.nbt.infoblock;
+package com.haha.xiuxian.nbt.infoblocks;
 
 public class InfoBlockLong implements InfoBlockBase<Long> {
     private long value;
 
     public InfoBlockLong(long value) {
         this.value = value;
-    }
-
-    @Override
-    public Long toJson() {
-        return value;  // 返回实际值
-    }
-
-    @Override
-    public void fromJson(Long jsonData) {
-        this.value = jsonData;
     }
 
     @Override

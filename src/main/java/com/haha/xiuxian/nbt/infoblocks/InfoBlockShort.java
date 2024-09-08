@@ -1,20 +1,10 @@
-package com.haha.xiuxian.nbt.infoblock;
+package com.haha.xiuxian.nbt.infoblocks;
 
 public class InfoBlockShort implements InfoBlockBase<Short> {
     private short value;
 
     public InfoBlockShort(short value) {
         this.value = value;
-    }
-
-    @Override
-    public Short toJson() {
-        return value;
-    }
-
-    @Override
-    public void fromJson(Short jsonData) {
-        this.value = jsonData;
     }
 
     @Override
