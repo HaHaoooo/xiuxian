@@ -8,7 +8,8 @@ public enum EnumWaterGongFa {
     LIAN_HUA_MIAO_DIAN("lian_hua_miao_dian");
 
     private final Item item;
-    EnumWaterGongFa(String registryName){
+
+    EnumWaterGongFa(String registryName) {
         this.item = new WaterGongFaBase(registryName);
     }
 

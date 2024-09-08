@@ -1,7 +1,7 @@
-package com.haha.xiuxian.gui.buttons;
+package com.haha.xiuxian.gui.buttons.main;
 
 import com.haha.xiuxian.XiuXian;
-import com.haha.xiuxian.gui.gongfashow.GongFaGui;
+import com.haha.xiuxian.gui.gongfa.GongFaGui;
 import com.haha.xiuxian.gui.propertyshow.PropertyGui;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;

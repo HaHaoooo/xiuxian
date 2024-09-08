@@ -1,11 +1,13 @@
 package com.haha.xiuxian;
 
+import com.haha.xiuxian.gui.GuiHandler;
 import com.haha.xiuxian.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONException;
@@ -27,10 +29,13 @@ public class XiuXian {
     public static CommonProxy proxy;
 
     private static final Logger logger = LogManager.getLogger(XiuXian.class.getName());
+    @Mod.Instance
+    public static XiuXian INSTANCE;
 
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        NetworkRegistry.INSTANCE.registerGuiHandler(INSTANCE, new GuiHandler());
         proxy.PreInit();
     }
 

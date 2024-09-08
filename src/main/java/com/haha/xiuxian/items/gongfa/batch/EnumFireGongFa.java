@@ -7,7 +7,8 @@ public enum EnumFireGongFa {
     TEMPLATE("fire_gongfa");
 
     private final Item item;
-    EnumFireGongFa(String registryName){
+
+    EnumFireGongFa(String registryName) {
         this.item = new FireGongFaBase(registryName);
     }
 

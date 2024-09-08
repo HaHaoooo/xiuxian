@@ -1,7 +1,9 @@
-package com.haha.xiuxian.gui.gongfashow;
+package com.haha.xiuxian.gui.gongfa;
 
-
+import com.haha.xiuxian.items.gongfa.GongFaBase;
 import com.haha.xiuxian.nbt.XiuXianWorldData;
+import com.haha.xiuxian.nbt.infoblock.InfoBlockCompound;
+import com.haha.xiuxian.nbt.infoblock.InfoBlockString;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.Item;
@@ -12,7 +14,6 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
-import org.json.JSONObject;
 
 import javax.annotation.Nonnull;
 import java.util.Objects;
@@ -20,7 +21,6 @@ import java.util.Objects;
 public class GongFaInventory extends InventoryBasic {
 
     private final NonNullList<ItemStack> inventory = NonNullList.withSize(5, ItemStack.EMPTY);
-
     public static GongFaInventory instance = new GongFaInventory("gongfa", false, 5);
 
     public GongFaInventory(String title, boolean customName, int slotCount) {
@@ -83,10 +83,9 @@ public class GongFaInventory extends InventoryBasic {
         return 64;
     }
 
-
     @Override
     public boolean isUsableByPlayer(@Nonnull EntityPlayer player) {
-        return false;
+        return true; // 如果将来要开放对玩家的访问，这里可以改为 true
     }
 
     @Override
@@ -99,7 +98,8 @@ public class GongFaInventory extends InventoryBasic {
 
     @Override
     public boolean isItemValidForSlot(int index, @Nonnull ItemStack stack) {
-        return true;
+        // 假设功法槽只接受某些特定类型的物品
+        return stack.getItem() instanceof GongFaBase;
     }
 
     @Override
@@ -132,19 +132,30 @@ public class GongFaInventory extends InventoryBasic {
         return false;
     }
 
-    // 使用 Forge 的事件监听来加载功法数据
+    // 使用自定义配置json来加载功法数据
     @Mod.EventBusSubscriber
     static class NbtSerialized {
 
         @SubscribeEvent
         public static void loadItems(PlayerEvent.PlayerLoggedInEvent event) {
-            XiuXianWorldData worldData = new XiuXianWorldData("gongfa");
-            JSONObject data = worldData.get(event.player.world);
+            if (event.player.world.isRemote) return; // 只在服务端加载数据
+            XiuXianWorldData worldData = new XiuXianWorldData("gongfa", event.player.world);
+            InfoBlockCompound data = worldData.get();
             if (data != null) {
-                for (int i = 0; i < data.length(); i++) {
-                    JSONObject content = data.getJSONObject("slot_" + i);
-                    String registryName = content.getString("name");
-                    instance.setInventorySlotContents(i, new ItemStack(Objects.requireNonNull(Item.getByNameOrId(registryName))));
+                loadInventoryFromJson(data);
+            }
+        }
+
+        private static void loadInventoryFromJson(InfoBlockCompound data) {
+            for (int i = 0; i < instance.getSizeInventory(); i++) {
+                if (data.hasKey("slot_" + i)) {
+                    InfoBlockCompound content = data.getCompound("slot_" + i);
+                    InfoBlockString registryNameBlock = content.getString("name");
+                    String registryName = registryNameBlock.getValue();
+                    Item item = Item.getByNameOrId(registryName);
+                    if (item != null) {
+                        instance.setInventorySlotContents(i, new ItemStack(Objects.requireNonNull(item)));
+                    }
                 }
             }
         }

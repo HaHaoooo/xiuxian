@@ -1,5 +1,6 @@
 package com.haha.xiuxian;
 
+import com.haha.xiuxian.blocks.gongfa.GongFaTable;
 import com.haha.xiuxian.blocks.lingshi.Low.*;
 import com.haha.xiuxian.blocks.lingshi.Mid.MidLingShiMainBlock;
 import com.haha.xiuxian.blocks.lingshi.Mid.MidLingShiOre1;
@@ -157,6 +158,7 @@ public class Registry {
         blockRegsitry.add(MidLingShiOre1.INSTANCE);
         blockRegsitry.add(ZhenYan.INSTANCE);
         blockRegsitry.add(HuaiYang.INSTANCE);
+        blockRegsitry.add(GongFaTable.INSTANCE);
         for (Block block : blockRegsitry){
             event.getRegistry().registerAll(block);
         }
@@ -164,15 +166,16 @@ public class Registry {
 
     @SubscribeEvent
     public static void registerBlockItems(RegistryEvent.Register<Item> event) {
-        itemBlockRegistry.add(new ItemBlock(LowLingShiMainBlock.INSTANCE).setRegistryName("xiuxian:low_ling_shi_main_block"));
-        itemBlockRegistry.add(new ItemBlock(LowLingShiOre1.INSTANCE).setRegistryName("xiuxian:low_ling_shi_ore_1"));
-        itemBlockRegistry.add(new ItemBlock(LowLingShiOre2.INSTANCE).setRegistryName("xiuxian:low_ling_shi_ore_2"));
-        itemBlockRegistry.add(new ItemBlock(LowLingShiOre3.INSTANCE).setRegistryName("xiuxian:low_ling_shi_ore_3"));
-        itemBlockRegistry.add(new ItemBlock(LowLingShiOre4.INSTANCE).setRegistryName("xiuxian:low_ling_shi_ore_4"));
-        itemBlockRegistry.add(new ItemBlock(MidLingShiMainBlock.INSTANCE).setRegistryName("xiuxian:mid_ling_shi_main_block"));
-        itemBlockRegistry.add(new ItemBlock(MidLingShiOre1.INSTANCE).setRegistryName("xiuxian:mid_ling_shi_ore_1"));
-        itemBlockRegistry.add(new ItemBlock(ZhenYan.INSTANCE).setRegistryName("xiuxian:zhen_yan"));
-        itemBlockRegistry.add(new ItemBlock(HuaiYang.INSTANCE).setRegistryName("xiuxian:huai_yang_cao"));
+        itemBlockRegistry.add(new ItemBlock(LowLingShiMainBlock.INSTANCE).setRegistryName(XiuXian.MODID,"low_ling_shi_main_block"));
+        itemBlockRegistry.add(new ItemBlock(LowLingShiOre1.INSTANCE).setRegistryName(XiuXian.MODID,"low_ling_shi_ore_1"));
+        itemBlockRegistry.add(new ItemBlock(LowLingShiOre2.INSTANCE).setRegistryName(XiuXian.MODID,"low_ling_shi_ore_2"));
+        itemBlockRegistry.add(new ItemBlock(LowLingShiOre3.INSTANCE).setRegistryName(XiuXian.MODID,"low_ling_shi_ore_3"));
+        itemBlockRegistry.add(new ItemBlock(LowLingShiOre4.INSTANCE).setRegistryName(XiuXian.MODID,"low_ling_shi_ore_4"));
+        itemBlockRegistry.add(new ItemBlock(MidLingShiMainBlock.INSTANCE).setRegistryName(XiuXian.MODID,"mid_ling_shi_main_block"));
+        itemBlockRegistry.add(new ItemBlock(MidLingShiOre1.INSTANCE).setRegistryName(XiuXian.MODID,"mid_ling_shi_ore_1"));
+        itemBlockRegistry.add(new ItemBlock(ZhenYan.INSTANCE).setRegistryName(XiuXian.MODID,"zhen_yan"));
+        itemBlockRegistry.add(new ItemBlock(HuaiYang.INSTANCE).setRegistryName(XiuXian.MODID,"huai_yang_cao"));
+        itemBlockRegistry.add(new ItemBlock(GongFaTable.INSTANCE).setRegistryName(XiuXian.MODID,"gongfa_table"));
         for (Item itemBlocks : itemBlockRegistry) {
             event.getRegistry().registerAll(itemBlocks);
         }

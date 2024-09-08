@@ -1,4 +1,4 @@
-package com.haha.xiuxian.gui.buttons;
+package com.haha.xiuxian.gui.buttons.main;
 
 public class Pages {
     public static int currentPage = 1;

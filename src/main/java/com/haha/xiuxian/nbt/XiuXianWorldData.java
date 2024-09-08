@@ -1,11 +1,11 @@
 package com.haha.xiuxian.nbt;
 
+import com.haha.xiuxian.nbt.infoblock.InfoBlockCompound;
 import com.haha.xiuxian.util.basic.world.WorldUtil;
 import net.minecraft.world.World;
 import org.json.JSONObject;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -15,59 +15,74 @@ import java.nio.file.Paths;
 public class XiuXianWorldData {
 
     private final String filename;
+    private final World world;
 
-    public XiuXianWorldData(String name){
+    public XiuXianWorldData(String name, World world) {
         this.filename = name;
+        this.world = world;
     }
 
-    // nbt记录
-    public void write(JSONObject newObject, World world) {
+    // 写入 InfoBlock 数据到文件
+    public void write(InfoBlockCompound newData) {
         Path directoryPath = Paths.get(WorldUtil.getWorldDirectoryName(world), "xiuxian");
         Path filePath = directoryPath.resolve(filename + ".json");
-        File directory = new File(directoryPath.toUri());
-        if (!directory.exists()) {
-            if (directory.mkdirs()) {
-                System.out.println("成功创建文件夹: " + directoryPath);
-            } else {
-                System.out.println("创建文件夹: " + directoryPath + "失败");
-                return;
-            }
-        } else {
-            System.out.println("文件夹已创建");
+        try {
+            Files.createDirectories(directoryPath);
+        } catch (IOException e) {
+            System.err.println("无法创建文件夹: " + directoryPath);
+            e.printStackTrace();
+            return;
         }
 
-        // 读取现有数据
-        JSONObject existingObject = new JSONObject();
+        // 读取
+        JSONObject existingData = new JSONObject();
         if (Files.exists(filePath)) {
             try {
-                existingObject = new JSONObject(new String(Files.readAllBytes(filePath)));
+                String fileContent = new String(Files.readAllBytes(filePath));
+                existingData = new JSONObject(fileContent);
             } catch (IOException e) {
+                System.err.println("读取现有文件失败: " + filePath);
                 e.printStackTrace();
             }
         }
 
-        for (String key : newObject.keySet()) {
-            existingObject.put(key, newObject.get(key));
+        // 合并
+        JSONObject newDataJson = new JSONObject(newData.toJson());
+        for (String key : newDataJson.keySet()) {
+            existingData.put(key, newDataJson.get(key));
         }
 
         // 更新
-        try (BufferedWriter file = new BufferedWriter(new FileWriter(filePath.toFile()))) {
-            file.write(existingObject.toString(4));
-            file.flush();
-            System.out.println("已写入json: " + filePath);
+        try (BufferedWriter fileWriter = new BufferedWriter(new FileWriter(filePath.toFile()))) {
+            fileWriter.write(existingData.toString(4));  // 格式化 JSON 输出
+            fileWriter.flush();
+            System.out.println("已成功写入文件: " + filePath);
         } catch (IOException e) {
+            System.err.println("写入文件失败: " + filePath);
             e.printStackTrace();
         }
     }
 
-    // 获取nbt
-    public JSONObject get(World world) {
-        Path path = Paths.get(WorldUtil.getWorldDirectoryName(world), "xiuxian", filename + ".json");
+    // 读取 InfoBlock 数据
+    public InfoBlockCompound get() {
+        Path filePath = Paths.get(WorldUtil.getWorldDirectoryName(world), "xiuxian", filename + ".json");
+        if (!Files.exists(filePath)) {
+            System.err.println("文件不存在: " + filePath);
+            return new InfoBlockCompound();
+        }
+
         try {
-            return new JSONObject(new String(Files.readAllBytes(path)));
+            // 转换值Json
+            String fileContent = new String(Files.readAllBytes(filePath));
+            JSONObject jsonObject = new JSONObject(fileContent);
+            InfoBlockCompound infoBlockCompound = new InfoBlockCompound();
+            infoBlockCompound.fromJson(jsonObject.toMap());
+            return infoBlockCompound;
         } catch (IOException e) {
+            System.err.println("读取文件失败: " + filePath);
             e.printStackTrace();
         }
-        return null;
+
+        return new InfoBlockCompound();  // 异常时返回空的 InfoBlockCompound
     }
 }

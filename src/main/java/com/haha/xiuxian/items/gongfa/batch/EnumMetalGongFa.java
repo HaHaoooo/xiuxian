@@ -7,7 +7,8 @@ public enum EnumMetalGongFa {
     TEMPLATE("metal_gongfa");
 
     private final Item item;
-    EnumMetalGongFa(String registryName){
+
+    EnumMetalGongFa(String registryName) {
         this.item = new MetalGongFaBase(registryName);
     }
 
