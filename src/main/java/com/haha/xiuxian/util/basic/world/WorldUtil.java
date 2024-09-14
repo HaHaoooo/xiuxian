@@ -7,6 +7,7 @@ import net.minecraft.world.storage.ISaveHandler;
 
 import java.io.File;
 import java.nio.file.Paths;
+import java.util.Objects;
 
 public class WorldUtil {
     public static String getWorldDirectoryName(World world) {
@@ -17,8 +18,9 @@ public class WorldUtil {
             File worldDir = saveHandler.getWorldDirectory();
             return worldDir.getAbsolutePath();
         } else {
-            // 客户端世界或其他情况，返回客户端世界目录的合适路径
-            return Paths.get(Minecraft.getMinecraft().mcDataDir.getAbsolutePath(), "saves", world.getWorldInfo().getWorldName()).toString();
+            // 客户端世界，使用 IntegratedServer 获取实际的文件夹名称
+            String folderName = Objects.requireNonNull(Minecraft.getMinecraft().getIntegratedServer()).getFolderName();
+            return Paths.get(Minecraft.getMinecraft().mcDataDir.getAbsolutePath(), "saves", folderName).toString();
         }
     }
 }

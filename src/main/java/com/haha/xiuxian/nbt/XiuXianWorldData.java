@@ -15,18 +15,16 @@ import java.util.HashMap;
 
 public class XiuXianWorldData {
 
-    private final String filename;
-    private final World world;
+    private final Path directoryPath;
+    private final Path filePath;
 
     public XiuXianWorldData(String name, World world) {
-        this.filename = name;
-        this.world = world;
+        this.directoryPath = Paths.get(WorldUtil.getWorldDirectoryName(world), "xiuxian");
+        this.filePath = directoryPath.resolve(name + ".json");
     }
 
     // 写入 InfoBlock 数据到文件
     public void write(InfoBlockCompound newData) {
-        Path directoryPath = Paths.get(WorldUtil.getWorldDirectoryName(world), "xiuxian");
-        Path filePath = directoryPath.resolve(filename + ".json");
         try {
             Files.createDirectories(directoryPath);
         } catch (IOException e) {
@@ -66,12 +64,10 @@ public class XiuXianWorldData {
 
     // 读取 InfoBlock 数据
     public InfoBlockCompound get() {
-        Path filePath = Paths.get(WorldUtil.getWorldDirectoryName(world), "xiuxian", filename + ".json");
         if (!Files.exists(filePath)) {
             System.err.println("文件不存在: " + filePath);
             return new InfoBlockCompound();
         }
-
         try {
             // 转换值Json
             String fileContent = new String(Files.readAllBytes(filePath));
@@ -83,7 +79,6 @@ public class XiuXianWorldData {
             System.err.println("读取文件失败: " + filePath);
             e.printStackTrace();
         }
-
         return new InfoBlockCompound();  // 异常时返回空的 InfoBlockCompound
     }
 }

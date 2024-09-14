@@ -1,13 +1,15 @@
 package com.haha.xiuxian.gui.gongfa.table;
 
+import com.haha.xiuxian.XiuXian;
+import com.haha.xiuxian.gui.gongfa.GongFaInfo;
 import com.haha.xiuxian.items.gongfa.*;
-import com.haha.xiuxian.items.gongfa.gui.GongFaInfo;
-import com.haha.xiuxian.util.gui.GuiUtils;
+import com.haha.xiuxian.packets.XiuXianEventPacket;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.client.config.GuiButtonExt;
@@ -22,7 +24,7 @@ public class GongFaTableGui extends GuiContainer {
     private static final ResourceLocation TEXTURES = new ResourceLocation("xiuxian", "gui/gongfa/gongfa_table.png");
     private final short WIDTH = 176;
     private final short HEIGHT = 133;
-    private static final Map<Class<? extends GongFaBase>, GongFaData> GONGFA_DATA_MAP = new HashMap<>();
+    public static final Map<Class<? extends GongFaBase>, GongFaData> GONGFA_DATA_MAP = new HashMap<>();
 
     static {
         GONGFA_DATA_MAP.put(EmptyGongFaBase.class, new GongFaData("empty/", "空"));
@@ -72,11 +74,12 @@ public class GongFaTableGui extends GuiContainer {
             mc.displayGuiScreen(new GongFaInfo(data.prefix + filename, 30));
         }
 
-        // TODO
+        // 向服务器发布自定义包
         if (button.id == 1) {
-            mc.player.sendChatMessage("成功装备功法[" + stack.getDisplayName() + "]");
-            GuiUtils.putInGongFaInventory(mc.world, stack, data.attr);
-            stack.shrink(1);
+            NBTTagCompound compound = new NBTTagCompound();
+            compound.setInteger("slotIndex", 0);
+            XiuXianEventPacket packet = new XiuXianEventPacket("equip_gongfa", compound);
+            XiuXian.NETWORK.sendToServer(packet);
         }
     }
 
@@ -88,9 +91,9 @@ public class GongFaTableGui extends GuiContainer {
         drawModalRectWithCustomSizedTexture(x, y, 0, 0, WIDTH, HEIGHT, WIDTH, HEIGHT);
     }
 
-    private static class GongFaData {
-        String prefix;
-        String attr;
+    public static class GongFaData {
+        public String prefix;
+        public String attr;
 
         GongFaData(String prefix, String attr) {
             this.prefix = prefix;

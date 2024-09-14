@@ -39,6 +39,7 @@ minecraft {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
     implementation 'org.json:json:20210307'
+    implementation 'org.reflections:reflections:0.10.2'
 }
 
 shadowJar {

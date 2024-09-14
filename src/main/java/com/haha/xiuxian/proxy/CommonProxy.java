@@ -6,14 +6,14 @@ import static com.haha.xiuxian.worldgen.InitialHouse.initialHouse;
 
 public class CommonProxy {
 
-    public void PreInit(){
+    public void preInit(){
         GameRegistry.registerWorldGenerator(initialHouse, 0);
     }
-    public void Init() {
+    public void init() {
 
     }
 
-    public void PostInit(){
+    public void postInit(){
 
     }
 }

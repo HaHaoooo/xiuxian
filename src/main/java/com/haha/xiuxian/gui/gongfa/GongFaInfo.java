@@ -1,4 +1,4 @@
-package com.haha.xiuxian.items.gongfa.gui;
+package com.haha.xiuxian.gui.gongfa;
 
 import com.haha.xiuxian.XiuXian;
 import com.haha.xiuxian.util.files.FileHelper;
@@ -31,7 +31,7 @@ public class GongFaInfo extends GuiScreen {
     private final Item item;
 
     public GongFaInfo(String fileName, int radius) throws IOException {
-        String content = FileHelper.getResourceLocation("gongfa/" + fileName);
+        String content = FileHelper.getFileAllString("gongfa/" + fileName);
         JSONObject contentObject = new JSONObject(content);
         String name = contentObject.getString("name");
         JSONArray description = contentObject.getJSONArray("description");

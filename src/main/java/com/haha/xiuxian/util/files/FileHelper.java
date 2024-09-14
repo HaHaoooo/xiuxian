@@ -15,7 +15,7 @@ public class FileHelper {
      * @return 返回读取文件的信息
      * @throws IOException 抛出错误
      */
-    public static String getResourceLocation(String assets) throws IOException {
+    public static String getFileAllString(String assets) throws IOException {
         InputStream inputStream = FileHelper.class.getClassLoader().getResourceAsStream("assets/" + assets);
         if (inputStream == null) {
             throw new IOException("Resource file not found: " + assets);

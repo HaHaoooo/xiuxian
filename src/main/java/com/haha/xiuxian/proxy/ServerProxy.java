@@ -5,17 +5,17 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber
 public class ServerProxy extends CommonProxy{
     @Override
-    public void PreInit() {
-        super.PreInit();
+    public void preInit() {
+        super.preInit();
     }
 
     @Override
-    public void Init() {
-        super.Init();
+    public void init() {
+        super.init();
     }
 
     @Override
-    public void PostInit() {
-        super.PostInit();
+    public void postInit() {
+        super.postInit();
     }
 }

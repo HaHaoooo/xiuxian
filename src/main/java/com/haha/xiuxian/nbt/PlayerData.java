@@ -3,6 +3,8 @@ package com.haha.xiuxian.nbt;
 import com.haha.xiuxian.XiuXian;
 import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
 import com.haha.xiuxian.capabilities.playerdata.storage.DataContainer;
+import com.haha.xiuxian.nbt.infoblocks.InfoBlockBoolean;
+import com.haha.xiuxian.nbt.infoblocks.InfoBlockCompound;
 import com.haha.xiuxian.worldgen.InitialHouse;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -22,6 +24,7 @@ import static com.haha.xiuxian.config.MainConfig.*;
 public class PlayerData {
 
     private static final DataContainer container = DataInject.DataContainer;
+
     @SubscribeEvent
     public void Limit(TickEvent.PlayerTickEvent event) {
         if (container != null) {
@@ -49,7 +52,8 @@ public class PlayerData {
 
     @SubscribeEvent
     public void LoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-        NBTTagCompound persistence = event.player.getEntityData();
+        XiuXianWorldData worldData = new XiuXianWorldData("persistence", event.player.world);
+        InfoBlockCompound persistence = worldData.get();
         if (!persistence.hasKey("initialized")) {
             int count = 0;
             Item guideBook = Objects.requireNonNull(Item.getByNameOrId("patchouli:guide_book"));
@@ -92,14 +96,17 @@ public class PlayerData {
                 container.showGui(false);
                 container.setLevel("凡人");
             }
-            persistence.setBoolean("initialized", true);
+            InfoBlockBoolean initialized = new InfoBlockBoolean(true);
+            persistence.put("initialized", initialized);
+            worldData.write(persistence);
         }
     }
 
 
     @SubscribeEvent
     public void EntityRespawn(PlayerEvent.PlayerRespawnEvent event) {
-        NBTTagCompound persistence = event.player.getEntityData();
+        XiuXianWorldData worldData = new XiuXianWorldData("persistence", event.player.world);
+        InfoBlockCompound persistence = worldData.get();
         int count = 0;
         if (container != null) {
             if (Metal) {
@@ -130,6 +137,7 @@ public class PlayerData {
             container.setLingLi(0);
             container.setLingLiMax(100 * count);
         }
-        persistence.setBoolean("initialized", true);
+        InfoBlockBoolean initialized = new InfoBlockBoolean(true);
+        persistence.put("initialized", initialized);
     }
 }

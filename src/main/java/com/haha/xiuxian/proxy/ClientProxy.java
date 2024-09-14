@@ -18,8 +18,8 @@ import static com.haha.xiuxian.key.LingLiExShrink.registerKey2;
 public class ClientProxy extends CommonProxy{
 
     @Override
-    public void PreInit() {
-        super.PreInit();
+    public void preInit() {
+        super.preInit();
 
         registerKey1();
         registerKey2();
@@ -32,12 +32,12 @@ public class ClientProxy extends CommonProxy{
     }
 
     @Override
-    public void Init() {
-        super.Init();
+    public void init() {
+        super.init();
     }
 
     @Override
-    public void PostInit() {
-        super.PostInit();
+    public void postInit() {
+        super.postInit();
     }
 }
