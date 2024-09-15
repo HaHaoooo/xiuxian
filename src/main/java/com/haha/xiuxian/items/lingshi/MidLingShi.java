@@ -1,7 +1,7 @@
 package com.haha.xiuxian.items.lingshi;
 
 import com.haha.xiuxian.XiuXian;
-import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
+import com.haha.xiuxian.creativetabs.XiuXianCreativeTabs;
 import com.haha.xiuxian.util.unique.AddLingLi;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
@@ -33,7 +33,7 @@ public class MidLingShi extends Item {
     public static String[] attrs = {"§6金", "§3木", "§1水", "§c火", "§e土"};
 
     public MidLingShi(){
-        setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_ITEM);
+        setCreativeTab(XiuXianCreativeTabs.XIUXIAN_ITEM);
         setUnlocalizedName("xiuxian.mid_ling_shi");
         setRegistryName("xiuxian:mid_ling_shi");
         setHasSubtypes(true);

@@ -1,6 +1,6 @@
 package com.haha.xiuxian.blocks.zhenfa;
 
-import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
+import com.haha.xiuxian.creativetabs.XiuXianCreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -32,7 +32,7 @@ public class ZhenYan extends Block {
         this.setUnlocalizedName("xiuxian.zhen_yan");
         this.setHarvestLevel("pickaxe", 1);
         this.setSoundType(SoundType.STONE);
-        this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_ZHENFA);
+        this.setCreativeTab(XiuXianCreativeTabs.XIUXIAN_ZHENFA);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         MinecraftForge.EVENT_BUS.register(this);
     }

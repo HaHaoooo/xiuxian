@@ -1,7 +1,6 @@
 package com.haha.xiuxian.blocks.lingshi.base;
 
 import com.haha.xiuxian.blocks.lingshi.LingShiOre;
-import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
 import com.haha.xiuxian.items.lingshi.ExtremeLingShi;
 import com.haha.xiuxian.items.lingshi.HighLingShi;
 import com.haha.xiuxian.items.lingshi.LowLingShi;
@@ -33,7 +32,6 @@ public class LingShiOreBase extends Block {
         this.setSoundType(SoundType.GLASS);
         this.setHardness(3.5F);
         this.setHarvestLevel("pickaxe", 2);
-        this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_BLOCK);
         this.setRegistryName("xiuxian:" + level + "_ling_shi_ore_" + grade);
         this.setUnlocalizedName("xiuxian." + level + "_ling_shi_ore_" + grade);
         this.setLightLevel(0.3F);

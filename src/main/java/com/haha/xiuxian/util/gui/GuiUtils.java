@@ -2,13 +2,11 @@ package com.haha.xiuxian.util.gui;
 
 import com.haha.xiuxian.gui.gongfa.GongFaInventory;
 import com.haha.xiuxian.nbt.XiuXianWorldData;
-import com.haha.xiuxian.nbt.infoblocks.InfoBlockCompound;
-import com.haha.xiuxian.nbt.infoblocks.InfoBlockInt;
-import com.haha.xiuxian.nbt.infoblocks.InfoBlockString;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
@@ -171,12 +169,12 @@ public class GuiUtils {
             if (inventory.getStackInSlot(i).isEmpty()) {
                 inventory.setInventorySlotContents(i, gongfa.copy());
                 String itemKey = Objects.requireNonNull(gongfa.getItem().getRegistryName()).toString();
-                InfoBlockCompound data = new InfoBlockCompound();
-                InfoBlockCompound base = new InfoBlockCompound();
-                base.put("name", new InfoBlockString(itemKey));
-                base.put("attribute", new InfoBlockString(attribute));
-                base.put("exp", new InfoBlockInt(0));  // 初始经验为 0
-                data.put("slot_" + i, base);
+                NBTTagCompound data = new NBTTagCompound();
+                NBTTagCompound base = new NBTTagCompound();
+                base.setString("name", itemKey);
+                base.setString("attribute", attribute);
+                base.setInteger("exp", 0);
+                data.setTag("slot_" + i, base);
                 XiuXianWorldData worldData = new XiuXianWorldData("gongfa", world);
                 worldData.write(data);
                 inventory.markDirty();

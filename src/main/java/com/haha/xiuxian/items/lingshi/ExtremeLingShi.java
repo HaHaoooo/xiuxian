@@ -1,7 +1,7 @@
 package com.haha.xiuxian.items.lingshi;
 
 import com.haha.xiuxian.XiuXian;
-import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
+import com.haha.xiuxian.creativetabs.XiuXianCreativeTabs;
 import com.haha.xiuxian.util.unique.AddLingLi;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
@@ -35,7 +35,7 @@ public class ExtremeLingShi extends Item {
     public ExtremeLingShi(){
         setUnlocalizedName("xiuxian.extreme_ling_shi");
         setRegistryName("xiuxian:extreme_ling_shi");
-        setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_ITEM);
+        setCreativeTab(XiuXianCreativeTabs.XIUXIAN_ITEM);
         setHasSubtypes(true);
         setMaxDamage(0);
         setNoRepair();

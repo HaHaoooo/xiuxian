@@ -2,12 +2,11 @@ package com.haha.xiuxian.gui.gongfa;
 
 import com.haha.xiuxian.items.gongfa.GongFaBase;
 import com.haha.xiuxian.nbt.XiuXianWorldData;
-import com.haha.xiuxian.nbt.infoblocks.InfoBlockCompound;
-import com.haha.xiuxian.nbt.infoblocks.InfoBlockString;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
@@ -140,18 +139,11 @@ public class GongFaInventory extends InventoryBasic {
         public static void loadItems(PlayerEvent.PlayerLoggedInEvent event) {
             if (event.player.world.isRemote) return; // 只在服务端加载数据
             XiuXianWorldData worldData = new XiuXianWorldData("gongfa", event.player.world);
-            InfoBlockCompound data = worldData.get();
-            if (data != null) {
-                loadInventoryFromJson(data);
-            }
-        }
-
-        private static void loadInventoryFromJson(InfoBlockCompound data) {
+            NBTTagCompound data = worldData.get();
             for (int i = 0; i < instance.getSizeInventory(); i++) {
                 if (data.hasKey("slot_" + i)) {
-                    InfoBlockCompound content = data.get("slot_" + i, InfoBlockCompound.class);
-                    InfoBlockString registryNameBlock = content.get("name", InfoBlockString.class);
-                    String registryName = registryNameBlock.getValue();
+                    NBTTagCompound content = data.getCompoundTag("slot_" + i);
+                    String registryName = content.getString("name");
                     Item item = Item.getByNameOrId(registryName);
                     if (item != null) {
                         instance.setInventorySlotContents(i, new ItemStack(Objects.requireNonNull(item)));

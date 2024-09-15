@@ -1,6 +1,5 @@
 package com.haha.xiuxian.blocks.lingshi.base;
 
-import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -15,7 +14,6 @@ public class LingShiMainBlockBase extends Block {
         this.setSoundType(SoundType.STONE);
         this.setHardness(2.5F);
         this.setHarvestLevel("pickaxe", 2);
-        this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_BLOCK);
         this.setRegistryName("xiuxian:" + level + "_ling_shi_main_block");
         this.setUnlocalizedName("xiuxian." + level + "_ling_shi_main_block");
     }

@@ -1,7 +1,7 @@
 package com.haha.xiuxian.blocks.gongfa;
 
 import com.haha.xiuxian.XiuXian;
-import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
+import com.haha.xiuxian.creativetabs.XiuXianCreativeTabs;
 import com.haha.xiuxian.gui.GuiHandler;
 import com.haha.xiuxian.gui.gongfa.table.GongFaTableTileEntity;
 import net.minecraft.block.Block;
@@ -28,7 +28,7 @@ public class GongFaTable extends Block {
         super(Material.ANVIL, MapColor.AIR);
         this.setRegistryName(XiuXian.MODID, "gongfa_table");
         this.setUnlocalizedName(XiuXian.MODID + ".gongfa_table");
-        this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_BLOCK);
+        this.setCreativeTab(XiuXianCreativeTabs.XIUXIAN_BLOCK);
         this.setHarvestLevel("pickaxe", 1);
         GameRegistry.registerTileEntity(GongFaTableTileEntity.class, new ResourceLocation(XiuXian.MODID, "gongfa_table"));
     }

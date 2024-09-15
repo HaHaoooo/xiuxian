@@ -2,7 +2,7 @@ package com.haha.xiuxian.items.fabao.fulu.base;
 
 import com.haha.xiuxian.Attributes;
 import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
-import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
+import com.haha.xiuxian.creativetabs.XiuXianCreativeTabs;
 import com.haha.xiuxian.util.gui.ToolTipHelper;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.util.ITooltipFlag;
@@ -30,7 +30,7 @@ public abstract class FuLuBase extends Item {
     public FuLuBase(String name, int lingLiCost, Attributes element, FuLuInfo info) {
         this.setRegistryName("xiuxian:" + name);
         this.setUnlocalizedName("xiuxian." + name);
-        this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_FABAO);
+        this.setCreativeTab(XiuXianCreativeTabs.XIUXIAN_FABAO);
         this.setMaxStackSize(1);
         this.lingLiCost = lingLiCost;
         this.element = element;

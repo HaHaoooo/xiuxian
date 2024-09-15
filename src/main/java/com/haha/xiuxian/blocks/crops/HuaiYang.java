@@ -1,6 +1,6 @@
 package com.haha.xiuxian.blocks.crops;
 
-import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
+import com.haha.xiuxian.creativetabs.XiuXianCreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFlower;
 import net.minecraft.block.BlockStone;
@@ -21,7 +21,7 @@ public class HuaiYang extends BlockFlower {
 
     public HuaiYang() {
         this.setSoundType(SoundType.PLANT);
-        this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_ITEM);
+        this.setCreativeTab(XiuXianCreativeTabs.XIUXIAN_BLOCK);
         this.setRegistryName("xiuxian:huai_yang_cao");
         this.setUnlocalizedName("xiuxian.huai_yang_cao");
         this.setHardness(0F);

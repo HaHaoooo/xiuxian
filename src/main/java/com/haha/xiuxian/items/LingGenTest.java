@@ -2,7 +2,7 @@ package com.haha.xiuxian.items;
 
 
 import com.haha.xiuxian.XiuXian;
-import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
+import com.haha.xiuxian.creativetabs.XiuXianCreativeTabs;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -19,7 +19,7 @@ public class LingGenTest extends Item {
     public LingGenTest(){
         setRegistryName("xiuxian:ling_gen_test");
         setUnlocalizedName("xiuxian.ling_gen_test");
-        setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_ITEM);
+        setCreativeTab(XiuXianCreativeTabs.XIUXIAN_ITEM);
         setMaxStackSize(1);
     }
 

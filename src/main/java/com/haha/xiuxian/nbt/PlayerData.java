@@ -2,8 +2,6 @@ package com.haha.xiuxian.nbt;
 
 import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
 import com.haha.xiuxian.capabilities.playerdata.storage.DataContainer;
-import com.haha.xiuxian.nbt.infoblocks.InfoBlockBoolean;
-import com.haha.xiuxian.nbt.infoblocks.InfoBlockCompound;
 import com.haha.xiuxian.worldgen.InitialHouse;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -46,7 +44,7 @@ public class PlayerData {
     @SubscribeEvent
     public static void LoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
         XiuXianWorldData worldData = new XiuXianWorldData("persistence", event.player.world);
-        InfoBlockCompound persistence = worldData.get();
+        NBTTagCompound persistence = worldData.get();
         if (!persistence.hasKey("initialized")) {
             int count = 0;
             Item guideBook = Objects.requireNonNull(Item.getByNameOrId("patchouli:guide_book"));
@@ -63,8 +61,7 @@ public class PlayerData {
                 container.showGui(false);
                 container.setLevel("凡人");
             }
-            InfoBlockBoolean initialized = new InfoBlockBoolean(true);
-            persistence.put("initialized", initialized);
+            persistence.setBoolean("initialized", true);
             worldData.write(persistence);
         }
     }
@@ -72,13 +69,12 @@ public class PlayerData {
     @SubscribeEvent
     public static void EntityRespawn(PlayerEvent.PlayerRespawnEvent event) {
         XiuXianWorldData worldData = new XiuXianWorldData("persistence", event.player.world);
-        InfoBlockCompound persistence = worldData.get();
+        NBTTagCompound persistence = worldData.get();
         int count = 0;
         if (container != null) {
             containerInitialized(count);
         }
-        InfoBlockBoolean initialized = new InfoBlockBoolean(true);
-        persistence.put("initialized", initialized);
+        persistence.setBoolean("initialized", true);
     }
 
     private static void containerInitialized(int count) {
