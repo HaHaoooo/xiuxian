@@ -1,9 +1,9 @@
 package com.haha.xiuxian.gui.hud;
 
+import com.haha.xiuxian.Attributes;
 import com.haha.xiuxian.XiuXian;
 import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
 import com.haha.xiuxian.capabilities.playerdata.storage.DataContainer;
-import com.haha.xiuxian.config.MainConfig;
 import com.haha.xiuxian.key.LingLiExShrink;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -31,8 +31,6 @@ public class LingLiEx extends Gui {
     public static int FireY = WaterY + 30;
     public static int DirtY = FireY + 30;
 
-
-
     @SubscribeEvent
     public static void draw(RenderGameOverlayEvent event) {
 
@@ -42,39 +40,35 @@ public class LingLiEx extends Gui {
             GlStateManager.enableBlend();
             GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 
-            if (LingLiExShrink.isShrinked){
-                LingLiExShrink.expandGui();
-            } else {
-                LingLiExShrink.shrinkGui();
-            }
+            LingLiExShrink.adjustGui(LingLiExShrink.isShrink);
 
-            if (MainConfig.Metal) {
+            if (Attributes.METAL.getConfigValue()) {
                 double MetalWidth = (container.getMetal() / container.getMetalMax()) * 74;
                 setRenderer((int) MetalWidth, MetalLocation, MetalY);
             }
 
-            if (MainConfig.Wood) {
+            if (Attributes.WOOD.getConfigValue()) {
                 double WoodWidth = (container.getWood() / container.getWoodMax()) * 74;
                 setRenderer((int) WoodWidth, WoodLocation, WoodY);
             } else {
                 WoodY = MetalY;
             }
 
-            if (MainConfig.Water) {
+            if (Attributes.WATER.getConfigValue()) {
                 double WaterWidth = (container.getWater() / container.getWaterMax()) * 74;
                 setRenderer((int) WaterWidth, WaterLocation, WaterY);
             } else {
                 WaterY = WoodY;
             }
 
-            if (MainConfig.Fire) {
+            if (Attributes.FIRE.getConfigValue()) {
                 double FireWidth = (container.getFire() / container.getFireMax()) * 74;
                 setRenderer((int) FireWidth, FireLocation, FireY);
             } else {
                 FireY = WaterY;
             }
 
-            if (MainConfig.Dirt) {
+            if (Attributes.DIRT.getConfigValue()) {
                 double DirtWidth = (container.getDirt() / container.getDirtMax()) * 74;
                 setRenderer((int) DirtWidth, DirtLocation, DirtY);
             }

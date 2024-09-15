@@ -1,6 +1,6 @@
 package com.haha.xiuxian.creativetabs;
 
-import com.haha.xiuxian.blocks.lingshi.Low.LowLingShiMainBlock;
+import com.haha.xiuxian.blocks.lingshi.LingShiOre;
 import com.haha.xiuxian.blocks.zhenfa.ZhenYan;
 import com.haha.xiuxian.items.LingGenTest;
 import com.haha.xiuxian.items.gongfa.batch.EnumEmptyGongFa;
@@ -11,11 +11,12 @@ import net.minecraft.item.ItemStack;
 import javax.annotation.Nonnull;
 
 public class XiuXian_CreativeTabs {
+
     public static final CreativeTabs XIUXIAN_BLOCK = new CreativeTabs("xiuxian.block") {
         @Nonnull
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(LowLingShiMainBlock.INSTANCE);
+            return new ItemStack(LingShiOre.Low.MainBlock);
         }
     };
 

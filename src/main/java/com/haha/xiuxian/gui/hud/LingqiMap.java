@@ -2,7 +2,7 @@ package com.haha.xiuxian.gui.hud;
 
 import com.haha.xiuxian.capabilities.chunk.DataAttach;
 import com.haha.xiuxian.capabilities.chunk.DataContainer;
-import com.haha.xiuxian.util.gui.GraphHelper;
+import com.haha.xiuxian.util.gui.GLHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.client.Minecraft;
@@ -88,7 +88,7 @@ public class LingqiMap extends GuiScreen {
         IntStream.range(0, NUM_BLOCKS).forEach(i -> IntStream.range(0, NUM_BLOCKS).forEach(j -> {
             int blockX = startX + i * BLOCK_SIZE;
             int blockY = startY + j * BLOCK_SIZE;
-            GraphHelper.drawTransparentRect(blockX, blockY, blockX + BLOCK_SIZE, blockY + BLOCK_SIZE, chunkColors[i][j], 100);
+            GLHelper.drawTransparentRect(blockX, blockY, blockX + BLOCK_SIZE, blockY + BLOCK_SIZE, chunkColors[i][j], 100);
         }));
 
         drawPlayerIcon(startX, startY, playerYaw);

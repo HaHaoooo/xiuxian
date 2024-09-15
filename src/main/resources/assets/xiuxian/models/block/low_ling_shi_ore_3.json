@@ -99,7 +99,7 @@
 		},
 		"gui": {
 			"rotation": [30, 225, 0],
-			"translation": [0.25, 3.5, 0]
+			"translation": [0, 2, 0]
 		},
 		"head": {
 			"translation": [0, 14.25, 0]

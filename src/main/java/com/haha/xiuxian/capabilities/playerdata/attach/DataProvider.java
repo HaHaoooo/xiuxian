@@ -27,16 +27,19 @@ public class DataProvider implements ICapabilitySerializable<NBTBase> {
     @Nullable
     @Override
     public <T> T getCapability(@Nonnull Capability<T> capability, @Nullable EnumFacing facing) {
+        assert false;
         return XIUXIAN_CAP.cast(DataInject.DataContainer);
     }
 
     @Override
     public NBTBase serializeNBT() {
+        assert false;
         return XIUXIAN_CAP.getStorage().writeNBT(XIUXIAN_CAP, DataInject.DataContainer, capaSide);
     }
 
     @Override
     public void deserializeNBT(NBTBase nbt) {
+        assert false;
         XIUXIAN_CAP.getStorage().readNBT(XIUXIAN_CAP, DataInject.DataContainer, capaSide, nbt);
     }
 }

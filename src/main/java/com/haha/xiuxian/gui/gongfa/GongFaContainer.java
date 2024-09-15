@@ -8,7 +8,6 @@ import javax.annotation.Nonnull;
 
 public class GongFaContainer extends Container{
 
-    public static String fileName;
     public static GongFaContainer INSTANCE = new GongFaContainer(GongFaInventory.instance);
     public GongFaContainer(IInventory inventory) {
         for (int i = 0; i < inventory.getSizeInventory(); i++) {

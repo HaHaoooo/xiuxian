@@ -1,6 +1,6 @@
 package com.haha.xiuxian.capabilities.playerdata.storage;
 
-public class DataContainerImpl implements DataContainer{
+public class DataContainerImpl implements DataContainer {
     private double lingli = 0;
     private double linglimax = 0;
     private double metal = 0;
@@ -15,6 +15,7 @@ public class DataContainerImpl implements DataContainer{
     private double dirtMax = 0;
     private boolean showGui = false;
     private String level = "凡人";
+
     @Override
     public void setLingLi(double lingli) {
         this.lingli = lingli;

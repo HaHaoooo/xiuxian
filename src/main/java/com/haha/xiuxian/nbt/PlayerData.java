@@ -1,6 +1,5 @@
 package com.haha.xiuxian.nbt;
 
-import com.haha.xiuxian.XiuXian;
 import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
 import com.haha.xiuxian.capabilities.playerdata.storage.DataContainer;
 import com.haha.xiuxian.nbt.infoblocks.InfoBlockBoolean;
@@ -17,41 +16,35 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.util.Objects;
 import java.util.Random;
+import java.util.function.DoubleConsumer;
 
 import static com.haha.xiuxian.config.MainConfig.*;
 
-@Mod.EventBusSubscriber(modid = XiuXian.MODID)
+@Mod.EventBusSubscriber
 public class PlayerData {
 
     private static final DataContainer container = DataInject.DataContainer;
 
-    @SubscribeEvent
-    public void Limit(TickEvent.PlayerTickEvent event) {
-        if (container != null) {
-            if (container.getLingLi() >= container.getLingLiMax()) {
-                container.setLingLi(container.getLingLiMax());
-            }
-            if (container.getMetal() >= container.getMetalMax()) {
-                container.setMetal(container.getMetalMax());
-            }
-            if (container.getWood() >= container.getWoodMax()) {
-                container.setWood(container.getWoodMax());
-            }
-            if (container.getWater() >= container.getWaterMax()) {
-                container.setWater(container.getWaterMax());
-            }
-            if (container.getFire() >= container.getFireMax()) {
-                container.setFire(container.getFireMax());
-            }
-            if (container.getDirt() >= container.getDirtMax()) {
-                container.setDirt(container.getDirtMax());
-            }
+    private static void checkAndLimit(double current, double max, DoubleConsumer setResource) {
+        if (current >= max) {
+            setResource.accept(max);
         }
     }
 
+    @SubscribeEvent
+    public static void Limit(TickEvent.PlayerTickEvent event) {
+        if (container != null) {
+            checkAndLimit(container.getLingLi(), container.getLingLiMax(), container::setLingLi);
+            checkAndLimit(container.getMetal(), container.getMetalMax(), container::setMetal);
+            checkAndLimit(container.getWood(), container.getWoodMax(), container::setWood);
+            checkAndLimit(container.getWater(), container.getWaterMax(), container::setWater);
+            checkAndLimit(container.getFire(), container.getFireMax(), container::setFire);
+            checkAndLimit(container.getDirt(), container.getDirtMax(), container::setDirt);
+        }
+    }
 
     @SubscribeEvent
-    public void LoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+    public static void LoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
         XiuXianWorldData worldData = new XiuXianWorldData("persistence", event.player.world);
         InfoBlockCompound persistence = worldData.get();
         if (!persistence.hasKey("initialized")) {
@@ -66,33 +59,7 @@ public class PlayerData {
             InitialHouse.initialHouse.generate(event.player.world, new Random(), new BlockPos(event.player.posX, event.player.posY, event.player.posZ));
 
             if (container != null) {
-                if (Metal) {
-                    count++;
-                    container.setMetal(0);
-                    container.setMetalMax(100);
-                }
-                if (Wood) {
-                    count++;
-                    container.setWood(0);
-                    container.setWoodMax(100);
-                }
-                if (Water) {
-                    count++;
-                    container.setWater(0);
-                    container.setWaterMax(100);
-                }
-                if (Fire) {
-                    count++;
-                    container.setFire(0);
-                    container.setFireMax(100);
-                }
-                if (Dirt) {
-                    count++;
-                    container.setDirt(0);
-                    container.setDirtMax(100);
-                }
-                container.setLingLi(0);
-                container.setLingLiMax(100 * count);
+                containerInitialized(count);
                 container.showGui(false);
                 container.setLevel("凡人");
             }
@@ -102,42 +69,45 @@ public class PlayerData {
         }
     }
 
-
     @SubscribeEvent
-    public void EntityRespawn(PlayerEvent.PlayerRespawnEvent event) {
+    public static void EntityRespawn(PlayerEvent.PlayerRespawnEvent event) {
         XiuXianWorldData worldData = new XiuXianWorldData("persistence", event.player.world);
         InfoBlockCompound persistence = worldData.get();
         int count = 0;
         if (container != null) {
-            if (Metal) {
-                count++;
-                container.setMetal(0);
-                container.setMetalMax(100);
-            }
-            if (Wood) {
-                count++;
-                container.setWood(0);
-                container.setWoodMax(100);
-            }
-            if (Water) {
-                count++;
-                container.setWater(0);
-                container.setWaterMax(100);
-            }
-            if (Fire) {
-                count++;
-                container.setFire(0);
-                container.setFireMax(100);
-            }
-            if (Dirt) {
-                count++;
-                container.setDirt(0);
-                container.setDirtMax(100);
-            }
-            container.setLingLi(0);
-            container.setLingLiMax(100 * count);
+            containerInitialized(count);
         }
         InfoBlockBoolean initialized = new InfoBlockBoolean(true);
         persistence.put("initialized", initialized);
+    }
+
+    private static void containerInitialized(int count) {
+        if (Metal) {
+            count++;
+            container.setMetal(0);
+            container.setMetalMax(100);
+        }
+        if (Wood) {
+            count++;
+            container.setWood(0);
+            container.setWoodMax(100);
+        }
+        if (Water) {
+            count++;
+            container.setWater(0);
+            container.setWaterMax(100);
+        }
+        if (Fire) {
+            count++;
+            container.setFire(0);
+            container.setFireMax(100);
+        }
+        if (Dirt) {
+            count++;
+            container.setDirt(0);
+            container.setDirtMax(100);
+        }
+        container.setLingLi(0);
+        container.setLingLiMax(100 * count);
     }
 }

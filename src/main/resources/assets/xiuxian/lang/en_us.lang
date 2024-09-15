@@ -23,9 +23,23 @@ tile.xiuxian.low_ling_shi_main_block.name=§a下品灵石母岩
 tile.xiuxian.low_ling_shi_ore_1.name=§a下品灵石矿簇（发芽）
 tile.xiuxian.low_ling_shi_ore_2.name=§a下品灵石矿簇（生长阶段1）
 tile.xiuxian.low_ling_shi_ore_3.name=§a下品灵石矿簇（生长阶段2）
-tile.xiuxian.low_ling_shi_ore_4.name=§a下品灵石矿簇（成熟
+tile.xiuxian.low_ling_shi_ore_4.name=§a下品灵石矿簇（成熟）
 tile.xiuxian.mid_ling_shi_main_block.name=§b中品灵石母岩
 tile.xiuxian.mid_ling_shi_ore_1.name=§b中品灵石矿簇（发芽）
+tile.xiuxian.mid_ling_shi_ore_2.name=§b中品灵石矿簇（生长阶段1）
+tile.xiuxian.mid_ling_shi_ore_3.name=§b中品灵石矿簇（生长阶段2）
+tile.xiuxian.mid_ling_shi_ore_4.name=§b中品灵石矿簇（成熟）
+tile.xiuxian.high_ling_shi_main_block.name=§c上品灵石母岩
+tile.xiuxian.high_ling_shi_ore_1.name=§c上品灵石矿簇（发芽）
+tile.xiuxian.high_ling_shi_ore_2.name=§c上品灵石矿簇（生长阶段1）
+tile.xiuxian.high_ling_shi_ore_3.name=§c上品灵石矿簇（生长阶段2）
+tile.xiuxian.high_ling_shi_ore_4.name=§c上品灵石矿簇（成熟）
+tile.xiuxian.extreme_ling_shi_main_block.name=§6极品灵石母岩
+tile.xiuxian.extreme_ling_shi_ore_1.name=§6极品灵石矿簇（发芽）
+tile.xiuxian.extreme_ling_shi_ore_2.name=§6极品灵石矿簇（生长阶段1）
+tile.xiuxian.extreme_ling_shi_ore_3.name=§6极品灵石矿簇（生长阶段2）
+tile.xiuxian.extreme_ling_shi_ore_4.name=§6极品灵石矿簇（成熟）
+
 tile.xiuxian.huai_yang_cao.name=怀阳草
 
 tile.xiuxian.zhen_yan.name=阵盘

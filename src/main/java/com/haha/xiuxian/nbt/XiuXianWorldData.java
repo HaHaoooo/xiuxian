@@ -1,7 +1,7 @@
 package com.haha.xiuxian.nbt;
 
 import com.haha.xiuxian.nbt.infoblocks.InfoBlockCompound;
-import com.haha.xiuxian.util.basic.world.WorldUtil;
+import com.haha.xiuxian.util.world.WorldUtil;
 import net.minecraft.world.World;
 import org.json.JSONObject;
 

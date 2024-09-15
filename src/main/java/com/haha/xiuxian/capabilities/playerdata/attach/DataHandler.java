@@ -14,8 +14,7 @@ public class DataHandler {
     public static final ResourceLocation resourceLocation = new ResourceLocation(XiuXian.MODID, "data");
 
     @SubscribeEvent
-    public void attachCapability(AttachCapabilitiesEvent<Entity> event)
-    {
+    public static void attachCapability(AttachCapabilitiesEvent<Entity> event) {
         if(!(event.getObject() instanceof EntityPlayer)) return;
         event.addCapability(resourceLocation, new DataProvider());
     }

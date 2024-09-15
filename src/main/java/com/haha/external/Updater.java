@@ -11,7 +11,7 @@ public class Updater extends JFrame {
 
     public Updater() {
         setTitle("灵仙Updater");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setSize(WIDTH, HEIGHT);
         setLayout(new BorderLayout());
         progressBar = new CustomProgressBar(0, 100);
@@ -23,7 +23,7 @@ public class Updater extends JFrame {
 
     public void progressing(int current, int total) {
         SwingUtilities.invokeLater(() -> {
-            int progress = (int) ((current / (double) total) * 100);
+            int progress = (int) (( current / (double) total) * 100);
             progressBar.setValue(progress);
             if (progress == 100) {
                 new Thread(() -> {
@@ -32,8 +32,7 @@ public class Updater extends JFrame {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    dispose();
-                    System.exit(DISPOSE_ON_CLOSE);
+                    SwingUtilities.invokeLater(this::dispose);
                 }).start();
             }
         });

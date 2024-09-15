@@ -1,5 +1,6 @@
 package com.haha.xiuxian.items.gongfa;
 
+import com.haha.xiuxian.Attributes;
 import com.haha.xiuxian.creativetabs.XiuXian_CreativeTabs;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;
@@ -11,8 +12,8 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class GongFaBase extends Item {
-    private final GongFaAttribute attribute;
-    public GongFaBase(String registryName, GongFaAttribute attribute){
+    private final Attributes attribute;
+    public GongFaBase(String registryName, Attributes attribute){
         this.setRegistryName("xiuxian:" + registryName);
         this.setUnlocalizedName("xiuxian." + registryName);
         this.setCreativeTab(XiuXian_CreativeTabs.XIUXIAN_GONGFA);

@@ -1,6 +1,5 @@
 package com.haha.xiuxian.events;
 
-import com.haha.xiuxian.XiuXian;
 import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -12,7 +11,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import static com.haha.xiuxian.config.MainConfig.*;
 
-@Mod.EventBusSubscriber(modid = XiuXian.MODID)
+@Mod.EventBusSubscriber
 public class GetLingGen {
 
     private static boolean isParticleShowing = false;
