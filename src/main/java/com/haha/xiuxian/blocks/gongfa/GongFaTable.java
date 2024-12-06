@@ -2,8 +2,8 @@ package com.haha.xiuxian.blocks.gongfa;
 
 import com.haha.xiuxian.XiuXian;
 import com.haha.xiuxian.creativetabs.XiuXianCreativeTabs;
+import com.haha.xiuxian.entity.tileentities.GongFaTableTileEntity;
 import com.haha.xiuxian.gui.GuiHandler;
-import com.haha.xiuxian.gui.gongfa.table.GongFaTableTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -21,7 +21,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import javax.annotation.Nonnull;
 
 @Mod.EventBusSubscriber
-public class GongFaTable extends Block {
+public class GongFaTable extends Block{
+
     public static GongFaTable INSTANCE = new GongFaTable();
 
     public GongFaTable() {

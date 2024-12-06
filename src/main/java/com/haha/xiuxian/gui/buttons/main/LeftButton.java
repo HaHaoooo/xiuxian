@@ -2,6 +2,7 @@ package com.haha.xiuxian.gui.buttons.main;
 
 import com.haha.xiuxian.XiuXian;
 import com.haha.xiuxian.gui.gongfa.GongFaGui;
+import com.haha.xiuxian.gui.propertyshow.PropertyContainer;
 import com.haha.xiuxian.gui.propertyshow.PropertyGui;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
@@ -48,10 +49,10 @@ public class LeftButton extends GuiButton {
     @Override
     public void mouseReleased(int mouseX, int mouseY) {
         if (this.id == 0){
-            Minecraft.getMinecraft().displayGuiScreen(PropertyGui.propertyGui);
+            Minecraft.getMinecraft().displayGuiScreen(new PropertyGui(new PropertyContainer()));
         }
         if (this.id == 1){
-            Minecraft.getMinecraft().displayGuiScreen(GongFaGui.gongFaGui);
+            Minecraft.getMinecraft().displayGuiScreen(new GongFaGui());
         }
         isPressed = false;
         super.mouseReleased(mouseX, mouseY);

@@ -2,7 +2,7 @@ package com.haha.xiuxian.capabilities.chunk;
 
 import java.util.Random;
 
-public class DataContainerImpl implements DataContainer{
+public class DataContainerImpl implements IDataContainer {
 
     public static DataContainerImpl dataContainer = new DataContainerImpl();
 

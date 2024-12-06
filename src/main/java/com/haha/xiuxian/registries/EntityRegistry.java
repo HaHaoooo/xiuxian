@@ -25,19 +25,16 @@ public class EntityRegistry {
    public static final Map<Class<? extends Entity>, IRenderFactory<? extends Entity>> ENTITY_RENDERERS = new HashMap<>();
 
     public static void init() {
-        ENTITY_ENTRIES.add(
-                EntityEntryBuilder.create()
-                        .entity(ZhenFaEntity1.class)
-                        .id(new ResourceLocation(XiuXian.MODID, "zhen_fa_entity_1"), 1000)
-                        .name("xiuxian.zhen_fa_entity_1")
-                        .tracker(64, 10, true)
-                        .build()
-        );
-        ENTITY_RENDERERS.put(ZhenFaEntity1.class, new ZhenFaEntity1Renderer.Factory());
+        registerEntity(ZhenFaEntity1.class, new ZhenFaEntity1Renderer.Factory(), "zhen_fa_entity_1", 1000);
     }
 
     @SubscribeEvent
     public static void registerEntities(RegistryEvent.Register<EntityEntry> event) {
         event.getRegistry().registerAll(ENTITY_ENTRIES.toArray(new EntityEntry[0]));
+    }
+
+    private static void registerEntity(Class<? extends Entity> clazz, IRenderFactory<? extends Entity> factory, String name, int id){
+        ENTITY_ENTRIES.add(EntityEntryBuilder.create().entity(clazz).id(new ResourceLocation(XiuXian.MODID, name), id).name("xiuxian." + name).tracker(64, 10, true).build());
+        ENTITY_RENDERERS.put(clazz, factory);
     }
 }

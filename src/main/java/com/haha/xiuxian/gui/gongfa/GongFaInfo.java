@@ -2,7 +2,7 @@ package com.haha.xiuxian.gui.gongfa;
 
 import com.haha.xiuxian.XiuXian;
 import com.haha.xiuxian.util.files.FileHelper;
-import com.haha.xiuxian.util.gui.GLHelper;
+import com.haha.xiuxian.util.gui.GraphUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.GlStateManager;
@@ -69,16 +69,16 @@ public class GongFaInfo extends GuiScreen {
 
             // 绘制雷达图
             updateAngles();
-            GLHelper.drawSolidHexagon(centerX, centerY, radius + 1, Color.GRAY.brighter().getRGB());
+            GraphUtils.drawSolidHexagon(centerX, centerY, radius + 1, Color.GRAY.brighter().getRGB());
             for (int i = 0; i < 6; i++) {
                 ThickInnerHexagon(centerX, centerY, i * 5);
             }
-            GLHelper.drawPolygonalHexagon(centerX, centerY, angles[0], angles[1], angles[2], angles[3], angles[4], angles[5], radius, Color.GRAY.getRGB());
+            GraphUtils.drawPolygonalHexagon(centerX, centerY, angles[0], angles[1], angles[2], angles[3], angles[4], angles[5], radius, Color.GRAY.getRGB());
 
             String[] prefix = new String[]{"速度", "力量", "生命", "防御", "悟性", "神识"};
             for (int i = 0; i < 6; i++) {
-                double x = GLHelper.pointX[i];
-                double y = GLHelper.pointY[i];
+                double x = GraphUtils.pointX[i];
+                double y = GraphUtils.pointY[i];
                 if (mouseX >= x - 2 && mouseX <= x + 2 && mouseY >= y - 2 && mouseY <= y + 2) {
                     this.drawHoveringText(prefix[i] + ": " + bounds[i] + "/100", (int) x, (int) y);
                     this.drawGradientRect((int) (x - 1), (int) (y - 1), (int) (x + 1), (int) (y + 1), Color.lightGray.getRGB(), Color.DARK_GRAY.getRGB());
@@ -157,10 +157,10 @@ public class GongFaInfo extends GuiScreen {
     }
 
     private void ThickInnerHexagon(int centerX, int centerY, int dif) {
-        GLHelper.drawHollowHexagon(centerX, centerY, radius - dif, Color.WHITE.getRGB());
-        GLHelper.drawHollowHexagon(centerX, centerY, radius - 0.2 - dif, Color.WHITE.getRGB());
-        GLHelper.drawHollowHexagon(centerX, centerY, radius - 0.4 - dif, Color.WHITE.getRGB());
-        GLHelper.drawHollowHexagon(centerX, centerY, radius - 0.4 - dif, Color.WHITE.getRGB());
+        GraphUtils.drawHollowHexagon(centerX, centerY, radius - dif, Color.WHITE.getRGB());
+        GraphUtils.drawHollowHexagon(centerX, centerY, radius - 0.2 - dif, Color.WHITE.getRGB());
+        GraphUtils.drawHollowHexagon(centerX, centerY, radius - 0.4 - dif, Color.WHITE.getRGB());
+        GraphUtils.drawHollowHexagon(centerX, centerY, radius - 0.4 - dif, Color.WHITE.getRGB());
     }
 
     private void updateAngles() {

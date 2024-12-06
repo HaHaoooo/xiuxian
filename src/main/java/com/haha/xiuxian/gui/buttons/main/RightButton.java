@@ -2,6 +2,7 @@ package com.haha.xiuxian.gui.buttons.main;
 
 import com.haha.xiuxian.XiuXian;
 import com.haha.xiuxian.gui.gongfa.GongFaGui;
+import com.haha.xiuxian.gui.propertyshow.PropertyContainer;
 import com.haha.xiuxian.gui.propertyshow.PropertyGui;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
@@ -38,7 +39,7 @@ public class RightButton extends GuiButton {
     public boolean mousePressed(@Nonnull Minecraft mc, int mouseX, int mouseY) {
         if (mouseY >= this.y && mouseY <= this.y + WIDTH && mouseX >= this.x && mouseX <= this.x + HEIGHT) {
             isPressed = true;
-            this.id = (this.id >= Pages.PageSum - 1) ? Pages.PageSum - 1 : this.id + 1;
+            this.id = (this.id >= Pages.pageSum - 1) ? Pages.pageSum - 1 : this.id + 1;
             Pages.currentPage = this.id + 1;
             return true;
         }
@@ -48,10 +49,10 @@ public class RightButton extends GuiButton {
     @Override
     public void mouseReleased(int mouseX, int mouseY) {
         if (this.id == 0){
-            Minecraft.getMinecraft().displayGuiScreen(PropertyGui.propertyGui);
+            Minecraft.getMinecraft().displayGuiScreen(new PropertyGui(new PropertyContainer()));
         }
         if (this.id == 1){
-            Minecraft.getMinecraft().displayGuiScreen(GongFaGui.gongFaGui);
+            Minecraft.getMinecraft().displayGuiScreen(new GongFaGui());
         }
         isPressed = false;
         super.mouseReleased(mouseX, mouseY);

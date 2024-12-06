@@ -84,7 +84,7 @@ public class GongFaInventory extends InventoryBasic {
 
     @Override
     public boolean isUsableByPlayer(@Nonnull EntityPlayer player) {
-        return true; // 如果将来要开放对玩家的访问，这里可以改为 true
+        return true;
     }
 
     @Override
@@ -97,7 +97,6 @@ public class GongFaInventory extends InventoryBasic {
 
     @Override
     public boolean isItemValidForSlot(int index, @Nonnull ItemStack stack) {
-        // 假设功法槽只接受某些特定类型的物品
         return stack.getItem() instanceof GongFaBase;
     }
 
@@ -131,13 +130,13 @@ public class GongFaInventory extends InventoryBasic {
         return false;
     }
 
-    // 使用自定义配置json来加载功法数据
+    // 使用自定义配置 JSON 来加载功法数据
     @Mod.EventBusSubscriber
     static class NbtSerialized {
 
         @SubscribeEvent
         public static void loadItems(PlayerEvent.PlayerLoggedInEvent event) {
-            if (event.player.world.isRemote) return; // 只在服务端加载数据
+            if (event.player.world.isRemote) return;
             XiuXianWorldData worldData = new XiuXianWorldData("gongfa", event.player.world);
             NBTTagCompound data = worldData.get();
             for (int i = 0; i < instance.getSizeInventory(); i++) {

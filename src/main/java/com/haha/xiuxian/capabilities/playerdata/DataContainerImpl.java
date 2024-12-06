@@ -1,6 +1,6 @@
-package com.haha.xiuxian.capabilities.playerdata.storage;
+package com.haha.xiuxian.capabilities.playerdata;
 
-public class DataContainerImpl implements DataContainer {
+public class DataContainerImpl implements IDataContainer {
     private double lingli = 0;
     private double linglimax = 0;
     private double metal = 0;
@@ -13,7 +13,6 @@ public class DataContainerImpl implements DataContainer {
     private double fireMax = 0;
     private double dirt = 0;
     private double dirtMax = 0;
-    private boolean showGui = false;
     private String level = "凡人";
 
     @Override
@@ -134,16 +133,6 @@ public class DataContainerImpl implements DataContainer {
     @Override
     public double getDirtMax() {
         return this.dirtMax;
-    }
-
-    @Override
-    public void showGui(boolean showGui) {
-        this.showGui = showGui;
-    }
-
-    @Override
-    public boolean getBooleanOfGui() {
-        return this.showGui;
     }
 
     @Override

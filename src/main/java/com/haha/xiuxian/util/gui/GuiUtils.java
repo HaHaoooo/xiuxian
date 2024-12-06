@@ -174,6 +174,7 @@ public class GuiUtils {
                 base.setString("name", itemKey);
                 base.setString("attribute", attribute);
                 base.setInteger("exp", 0);
+                base.setInteger("currentLevel", 0);
                 data.setTag("slot_" + i, base);
                 XiuXianWorldData worldData = new XiuXianWorldData("gongfa", world);
                 worldData.write(data);

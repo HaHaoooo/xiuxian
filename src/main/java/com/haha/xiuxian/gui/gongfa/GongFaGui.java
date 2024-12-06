@@ -17,9 +17,7 @@ public class GongFaGui extends GuiContainer {
     private static final int WIDTH = 512;
     private static final int HEIGHT = 524;
     private static final ResourceLocation resourceLocation = new ResourceLocation(XiuXian.MODID, "gui/main/general.png");
-    public static GongFaContainer container = GongFaContainer.INSTANCE;
-    public static GongFaGui gongFaGui = new GongFaGui();
-
+    public static GongFaContainer container = GongFaContainer.instance;
 
     public GongFaGui() {
         super(container);
@@ -34,7 +32,7 @@ public class GongFaGui extends GuiContainer {
         drawModalRectWithCustomSizedTexture(guiLeft, guiTop, 0, 0, WIDTH / 2, HEIGHT / 2, (float) WIDTH / 2, (float) HEIGHT / 2);
 
         // 页数
-        String pageShow = "页数: " + Pages.currentPage + "/" + Pages.PageSum;
+        String pageShow = "页数: " + Pages.currentPage + "/" + Pages.pageSum;
         this.drawCenteredString(this.fontRenderer, pageShow, this.width / 2, guiTop - 10, Color.WHITE.getRGB());
 
         // 画slots的边框

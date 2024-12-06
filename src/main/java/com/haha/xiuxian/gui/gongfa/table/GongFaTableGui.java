@@ -1,6 +1,8 @@
 package com.haha.xiuxian.gui.gongfa.table;
 
+import com.haha.xiuxian.Attributes;
 import com.haha.xiuxian.XiuXian;
+import com.haha.xiuxian.entity.tileentities.GongFaTableTileEntity;
 import com.haha.xiuxian.gui.gongfa.GongFaInfo;
 import com.haha.xiuxian.items.gongfa.*;
 import com.haha.xiuxian.packets.XiuXianEventPacket;
@@ -25,14 +27,15 @@ public class GongFaTableGui extends GuiContainer {
     private final short WIDTH = 176;
     private final short HEIGHT = 133;
     public static final Map<Class<? extends GongFaBase>, GongFaData> GONGFA_DATA_MAP = new HashMap<>();
+    public static GongFaData data;
 
     static {
-        GONGFA_DATA_MAP.put(EmptyGongFaBase.class, new GongFaData("empty/", "空"));
-        GONGFA_DATA_MAP.put(MetalGongFaBase.class, new GongFaData("metal/", "金"));
-        GONGFA_DATA_MAP.put(WoodGongFaBase.class, new GongFaData("wood/", "木"));
-        GONGFA_DATA_MAP.put(WaterGongFaBase.class, new GongFaData("water/", "水"));
-        GONGFA_DATA_MAP.put(FireGongFaBase.class, new GongFaData("fire/", "火"));
-        GONGFA_DATA_MAP.put(DirtGongFaBase.class, new GongFaData("dirt/", "土"));
+        GONGFA_DATA_MAP.put(EmptyGongFaBase.class, new GongFaData(Attributes.EMPTY.getEnglish() + "/", Attributes.EMPTY.getChinese()));
+        GONGFA_DATA_MAP.put(MetalGongFaBase.class, new GongFaData(Attributes.METAL.getEnglish() + "/", Attributes.METAL.getChinese()));
+        GONGFA_DATA_MAP.put(WoodGongFaBase.class, new GongFaData(Attributes.WOOD.getEnglish() + "/", Attributes.WOOD.getChinese()));
+        GONGFA_DATA_MAP.put(WaterGongFaBase.class, new GongFaData(Attributes.WATER.getEnglish() + "/", Attributes.WATER.getChinese()));
+        GONGFA_DATA_MAP.put(FireGongFaBase.class, new GongFaData(Attributes.FIRE.getEnglish() + "/", Attributes.FIRE.getChinese()));
+        GONGFA_DATA_MAP.put(DirtGongFaBase.class, new GongFaData(Attributes.DIRT.getEnglish() + "/", Attributes.DIRT.getChinese()));
     }
 
     public GongFaTableGui(InventoryPlayer player, GongFaTableTileEntity tileEntity) {
@@ -60,7 +63,6 @@ public class GongFaTableGui extends GuiContainer {
         Item gongfa = stack.getItem();
         String filename = Objects.requireNonNull(gongfa.getRegistryName()).getResourcePath() + ".json";
         World world = mc.world;
-        GongFaData data = null;
         for (Map.Entry<Class<? extends GongFaBase>, GongFaData> entry : GONGFA_DATA_MAP.entrySet()) {
             if (entry.getKey().isInstance(gongfa)) {
                 data = entry.getValue();
@@ -95,7 +97,7 @@ public class GongFaTableGui extends GuiContainer {
         public String prefix;
         public String attr;
 
-        GongFaData(String prefix, String attr) {
+        public GongFaData(String prefix, String attr) {
             this.prefix = prefix;
             this.attr = attr;
         }

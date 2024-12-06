@@ -10,7 +10,7 @@ import org.lwjgl.input.Keyboard;
 import static com.haha.xiuxian.gui.hud.LingLiEx.*;
 
 @Mod.EventBusSubscriber
-public class LingLiExShrink {
+public class KeyBindExGui {
     public static KeyBinding KEY2 = new KeyBinding("key.xiuxian.key_2", KeyConflictContext.IN_GAME, Keyboard.KEY_M, "key.categories.xiuxian");
     public static boolean isShrink = false;
 

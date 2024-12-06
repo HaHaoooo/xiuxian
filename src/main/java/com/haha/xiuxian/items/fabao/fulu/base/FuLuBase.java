@@ -1,7 +1,7 @@
 package com.haha.xiuxian.items.fabao.fulu.base;
 
 import com.haha.xiuxian.Attributes;
-import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
+import com.haha.xiuxian.capabilities.playerdata.DataInject;
 import com.haha.xiuxian.creativetabs.XiuXianCreativeTabs;
 import com.haha.xiuxian.util.gui.ToolTipHelper;
 import net.minecraft.client.gui.GuiScreen;

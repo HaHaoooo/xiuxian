@@ -1,6 +1,6 @@
-package com.haha.xiuxian.capabilities.playerdata.storage;
+package com.haha.xiuxian.capabilities.playerdata;
 
-public interface DataContainer {
+public interface IDataContainer {
     void setLingLi(double lingli);
 
     double getLingLi();
@@ -48,10 +48,6 @@ public interface DataContainer {
     void setDirtMax(double dirtMax);
 
     double getDirtMax();
-
-    void showGui(boolean showGui);
-
-    boolean getBooleanOfGui();
 
     void setLevel(String level);
 

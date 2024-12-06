@@ -33,7 +33,7 @@ public class XiuXianWorldData {
             return;
         }
 
-        // 读取现有数据
+        // 读取
         JSONObject existingData = new JSONObject();
         if (Files.exists(filePath)) {
             try {
@@ -48,7 +48,7 @@ public class XiuXianWorldData {
         // 将 NBTTagCompound 转换为 JSON
         JSONObject newDataJson = NBTJsonConverter.nbtToJson(newData);
 
-        // 合并新数据到现有数据
+        // 合并
         for (String key : newDataJson.keySet()) {
             existingData.put(key, newDataJson.get(key));
         }
@@ -72,7 +72,7 @@ public class XiuXianWorldData {
         }
 
         try {
-            // 从文件中读取 JSON 字符串
+            // 读取
             String fileContent = new String(Files.readAllBytes(filePath));
             JSONObject jsonObject = new JSONObject(fileContent);
 
@@ -83,6 +83,6 @@ public class XiuXianWorldData {
             e.printStackTrace();
         }
 
-        return new NBTTagCompound();  // 读取失败时返回空的 NBTTagCompound
+        return new NBTTagCompound();
     }
 }

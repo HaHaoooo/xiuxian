@@ -17,12 +17,12 @@ import java.util.Random;
 
 @Mod.EventBusSubscriber
 public class DataAttach {
-    @CapabilityInject(DataContainer.class)
-    public static final Capability<DataContainer> LINGQI_CAP = null;
+    @CapabilityInject(IDataContainer.class)
+    public static final Capability<IDataContainer> LINGQI_CAP = null;
 
     @SubscribeEvent
     public static void register(AttachCapabilitiesEvent<Chunk> event) {
-        DataContainer data = new DataContainerImpl();
+        IDataContainer data = new DataContainerImpl();
         if (new Random().nextInt(30) == 1) {
             event.addCapability(new ResourceLocation(XiuXian.MODID, "lingqi"), new ICapabilityProvider() {
                 @Override
@@ -30,9 +30,9 @@ public class DataAttach {
                     return true;
                 }
 
-                @Nullable
                 @Override
                 public <T> T getCapability(@Nonnull Capability<T> capability, @Nullable EnumFacing facing) {
+                    assert false;
                     return LINGQI_CAP.cast(data);
                 }
             });

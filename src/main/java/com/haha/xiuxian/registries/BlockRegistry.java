@@ -22,7 +22,6 @@ public class BlockRegistry {
     public static final List<Item> ITEM_BLOCKS = new ArrayList<>();
 
     public static void init() {
-        // 注册方块
         registerBlock(LingShiOre.Low.MainBlock);
         registerBlock(LingShiOre.Low.Ore1);
         registerBlock(LingShiOre.Low.Ore2);

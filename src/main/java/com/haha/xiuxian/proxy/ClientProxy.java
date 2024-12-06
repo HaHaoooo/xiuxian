@@ -1,26 +1,34 @@
 package com.haha.xiuxian.proxy;
 
-import com.haha.xiuxian.capabilities.chunk.DataContainer;
 import com.haha.xiuxian.capabilities.chunk.DataContainerImpl;
 import com.haha.xiuxian.capabilities.chunk.DataStorage;
-import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
+import com.haha.xiuxian.capabilities.chunk.IDataContainer;
+import com.haha.xiuxian.capabilities.playerdata.DataInject;
+import com.haha.xiuxian.key.KeyBindExGui;
+import com.haha.xiuxian.key.KeyBindMainGui;
+import com.haha.xiuxian.registries.BlockRegistry;
+import com.haha.xiuxian.registries.EntityRegistry;
+import com.haha.xiuxian.registries.ItemRegistry;
+import com.haha.xiuxian.registries.LootRegistry;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
-
-import static com.haha.xiuxian.key.KeyBindProperties.KEY1;
-import static com.haha.xiuxian.key.LingLiExShrink.KEY2;
-
 
 @Mod.EventBusSubscriber
 public class ClientProxy extends CommonProxy {
 
     @Override
     public void preInit() {
-        ClientRegistry.registerKeyBinding(KEY1);
-        ClientRegistry.registerKeyBinding(KEY2);
+        ItemRegistry.init();
+        BlockRegistry.init();
+        EntityRegistry.init();
+        LootRegistry.init();
+        ClientRegistry.registerKeyBinding(KeyBindMainGui.KEY1);
+        ClientRegistry.registerKeyBinding(KeyBindExGui.KEY2);
+        // 玩家cap注册
         DataInject.register();
-        CapabilityManager.INSTANCE.register(DataContainer.class, new DataStorage(), () -> DataContainerImpl.dataContainer);
+        // 区块cap注册
+        CapabilityManager.INSTANCE.register(IDataContainer.class, new DataStorage(), () -> DataContainerImpl.dataContainer);
         super.preInit();
     }
 

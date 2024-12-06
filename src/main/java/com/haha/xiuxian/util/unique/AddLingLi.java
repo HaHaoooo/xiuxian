@@ -1,16 +1,15 @@
 package com.haha.xiuxian.util.unique;
 
-import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
-import com.haha.xiuxian.capabilities.playerdata.storage.DataContainer;
+import com.haha.xiuxian.capabilities.playerdata.DataInject;
+import com.haha.xiuxian.capabilities.playerdata.IDataContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
 public class AddLingLi {
-    private static final DataContainer dataContainer = DataInject.DataContainer;
+    private static final IDataContainer dataContainer = DataInject.DataContainer;
 
-    // 公共方法用于处理属性增加
     private static void addAttribute(double value, EntityPlayer player, World world, ItemStack itemStack,
                                      AttributeGetter getter, AttributeSetter setter, AttributeMaxGetter maxGetter) {
         if (!world.isRemote) {

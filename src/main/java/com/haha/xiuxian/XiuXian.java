@@ -3,7 +3,6 @@ package com.haha.xiuxian;
 import com.haha.xiuxian.gui.GuiHandler;
 import com.haha.xiuxian.packets.*;
 import com.haha.xiuxian.proxy.CommonProxy;
-import com.haha.xiuxian.registries.Registry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -43,7 +42,6 @@ public class XiuXian {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        Registry.init();
         NetworkRegistry.INSTANCE.registerGuiHandler(INSTANCE, new GuiHandler());
         NETWORK.registerMessage(XiuXianEventPacketHandler.class, XiuXianEventPacket.class, 0, Side.SERVER);
         // 注册发包事件

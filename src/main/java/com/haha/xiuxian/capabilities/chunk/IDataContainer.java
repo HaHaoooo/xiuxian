@@ -1,6 +1,6 @@
 package com.haha.xiuxian.capabilities.chunk;
 
-public interface DataContainer {
+public interface IDataContainer {
 
     void setLingQi(int lingqi);
 

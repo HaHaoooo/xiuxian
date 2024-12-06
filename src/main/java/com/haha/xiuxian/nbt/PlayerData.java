@@ -1,7 +1,7 @@
 package com.haha.xiuxian.nbt;
 
-import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
-import com.haha.xiuxian.capabilities.playerdata.storage.DataContainer;
+import com.haha.xiuxian.capabilities.playerdata.DataInject;
+import com.haha.xiuxian.capabilities.playerdata.IDataContainer;
 import com.haha.xiuxian.worldgen.InitialHouse;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -21,7 +21,7 @@ import static com.haha.xiuxian.config.MainConfig.*;
 @Mod.EventBusSubscriber
 public class PlayerData {
 
-    private static final DataContainer container = DataInject.DataContainer;
+    private static final IDataContainer container = DataInject.DataContainer;
 
     private static void checkAndLimit(double current, double max, DoubleConsumer setResource) {
         if (current >= max) {
@@ -58,7 +58,6 @@ public class PlayerData {
 
             if (container != null) {
                 containerInitialized(count);
-                container.showGui(false);
                 container.setLevel("凡人");
             }
             persistence.setBoolean("initialized", true);

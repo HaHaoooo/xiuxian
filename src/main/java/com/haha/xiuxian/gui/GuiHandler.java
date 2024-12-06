@@ -3,7 +3,7 @@ package com.haha.xiuxian.gui;
 
 import com.haha.xiuxian.gui.gongfa.table.GongFaTableContainer;
 import com.haha.xiuxian.gui.gongfa.table.GongFaTableGui;
-import com.haha.xiuxian.gui.gongfa.table.GongFaTableTileEntity;
+import com.haha.xiuxian.entity.tileentities.GongFaTableTileEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;

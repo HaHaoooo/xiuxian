@@ -1,8 +1,8 @@
 package com.haha.xiuxian.gui.propertyshow;
 
 import com.haha.xiuxian.XiuXian;
-import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
-import com.haha.xiuxian.capabilities.playerdata.storage.DataContainer;
+import com.haha.xiuxian.capabilities.playerdata.DataInject;
+import com.haha.xiuxian.capabilities.playerdata.IDataContainer;
 import com.haha.xiuxian.gui.buttons.main.LeftButton;
 import com.haha.xiuxian.gui.buttons.main.Pages;
 import com.haha.xiuxian.gui.buttons.main.RightButton;
@@ -24,11 +24,7 @@ public class PropertyGui extends GuiContainer {
     public static final int HEIGHT = 524;
 
     private static final ResourceLocation resourceLocation = new ResourceLocation(XiuXian.MODID, "gui/main/general.png");
-
-    private static final DataContainer container = DataInject.DataContainer;
-
-    public static final PropertyGui propertyGui = new PropertyGui(new PropertyContainer());
-
+    private static final IDataContainer container = DataInject.DataContainer;
 
     public PropertyGui(Container container) {
         super(container);
@@ -44,7 +40,7 @@ public class PropertyGui extends GuiContainer {
         drawModalRectWithCustomSizedTexture(guiLeft, guiTop, 0, 0, WIDTH / 2, HEIGHT / 2, (float) WIDTH / 2, (float) HEIGHT / 2);
 
         // 页数
-        String pageShow = "页数: " + Pages.currentPage + "/" + Pages.PageSum;
+        String pageShow = "页数: " + Pages.currentPage + "/" + Pages.pageSum;
         this.drawCenteredString(this.fontRenderer, pageShow, this.width / 2, guiTop - 10, Color.WHITE.getRGB());
 
         int health = (int) mc.player.getHealth();

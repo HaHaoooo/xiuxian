@@ -38,7 +38,7 @@ public class MainConfig {
     public static boolean Empty = false;
 
 
-    @Mod.EventBusSubscriber(modid = XiuXian.MODID)
+    @Mod.EventBusSubscriber
     public static class ConfigSyncHandler {
         @SubscribeEvent
         public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {

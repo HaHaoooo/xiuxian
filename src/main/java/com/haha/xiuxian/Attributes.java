@@ -9,6 +9,26 @@ public enum Attributes {
     WATER,
     FIRE,
     DIRT;
+
+    public String getEnglish(){
+        switch (this){
+            case EMPTY:
+                return "empty";
+            case METAL:
+                return "metal";
+            case WOOD:
+                return "wood";
+            case WATER:
+                return "water";
+            case FIRE:
+                return "fire";
+            case DIRT:
+                return "dirt";
+            default:
+                return "unknown";
+        }
+    }
+
     public String getChinese(){
         switch (this){
             case EMPTY:

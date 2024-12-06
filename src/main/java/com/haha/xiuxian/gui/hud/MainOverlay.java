@@ -1,8 +1,8 @@
 package com.haha.xiuxian.gui.hud;
 
 import com.haha.xiuxian.XiuXian;
-import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
-import com.haha.xiuxian.capabilities.playerdata.storage.DataContainer;
+import com.haha.xiuxian.capabilities.playerdata.DataInject;
+import com.haha.xiuxian.capabilities.playerdata.IDataContainer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.GlStateManager;
@@ -15,9 +15,9 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid = XiuXian.MODID)
 public class MainOverlay extends GuiScreen {
-    private final DataContainer dataContainer;
+    private final IDataContainer dataContainer;
 
-    public MainOverlay(DataContainer dataContainer){
+    public MainOverlay(IDataContainer dataContainer){
         this.dataContainer = dataContainer;
     }
     @SubscribeEvent

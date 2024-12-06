@@ -1,4 +1,4 @@
-package com.haha.xiuxian.gui.gongfa.table;
+package com.haha.xiuxian.entity.tileentities;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -9,7 +9,7 @@ import javax.annotation.Nonnull;
 
 public class GongFaTableTileEntity extends TileEntity {
     // 使用ItemStackHandler来处理物品存储
-    private final ItemStackHandler itemStackHandler = new ItemStackHandler(1) {
+    public final ItemStackHandler itemStackHandler = new ItemStackHandler(1) {
         @Override
         protected void onContentsChanged(int slot) {
             markDirty();

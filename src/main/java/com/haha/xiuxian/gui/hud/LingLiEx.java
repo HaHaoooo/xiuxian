@@ -2,9 +2,10 @@ package com.haha.xiuxian.gui.hud;
 
 import com.haha.xiuxian.Attributes;
 import com.haha.xiuxian.XiuXian;
-import com.haha.xiuxian.capabilities.playerdata.attach.DataInject;
-import com.haha.xiuxian.capabilities.playerdata.storage.DataContainer;
-import com.haha.xiuxian.key.LingLiExShrink;
+import com.haha.xiuxian.capabilities.playerdata.DataInject;
+import com.haha.xiuxian.capabilities.playerdata.IDataContainer;
+import com.haha.xiuxian.key.KeyBindExGui;
+import com.haha.xiuxian.nbt.XiuXianWorldData;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
@@ -21,7 +22,7 @@ public class LingLiEx extends Gui {
     private static final ResourceLocation FireLocation = new ResourceLocation(XiuXian.MODID, "gui/lingli/fire_lingli.png");
     private static final ResourceLocation DirtLocation = new ResourceLocation(XiuXian.MODID, "gui/lingli/dirt_lingli.png");
     private static final ResourceLocation LingLiEx = new ResourceLocation(XiuXian.MODID, "gui/lingli/lingliex.png");
-    private static final DataContainer container = DataInject.DataContainer;
+    private static final IDataContainer container = DataInject.DataContainer;
 
     public static int x = 5;
     public static int ybound = 27;
@@ -34,13 +35,14 @@ public class LingLiEx extends Gui {
     @SubscribeEvent
     public static void draw(RenderGameOverlayEvent event) {
 
-        if (event.isCancelable() && event.getType() == RenderGameOverlayEvent.ElementType.ALL && container.getBooleanOfGui()) {
+        XiuXianWorldData data = new XiuXianWorldData("persistence", Minecraft.getMinecraft().world);
+        if (event.isCancelable() && event.getType() == RenderGameOverlayEvent.ElementType.ALL && data.get().getBoolean("showLingLiEx")) {
             GlStateManager.disableDepth();
             GlStateManager.depthMask(false);
             GlStateManager.enableBlend();
             GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 
-            LingLiExShrink.adjustGui(LingLiExShrink.isShrink);
+            KeyBindExGui.adjustGui(KeyBindExGui.isShrink);
 
             if (Attributes.METAL.getConfigValue()) {
                 double MetalWidth = (container.getMetal() / container.getMetalMax()) * 74;
